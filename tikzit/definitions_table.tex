@@ -1,0 +1,55 @@
+\documentclass[aps,pra,showpacs]{revtex4}
+
+
+
+
+\input{tikz_premable} % preamble which globally defines nodes and edges for tikz, edit this file to change nodes and edges
+
+
+\newcommand{\rc}{\mathbf{\rho}}
+
+
+
+\begin{document}
+
+
+
+\begin{table}
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+Symbol & Meaning & file  \tabularnewline
+\hline 
+\hline 
+\input{visual_elements_for_table/simple_edge.tikz}& Interaction between qubits (not-minor embedding) & visual\_elements\_for\_table/simple\_edge.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/added.tikz}& Interaction which is added in Pegasus and not in Chimera (used) & visual\_elements\_for\_table/added.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/unused.tikz}& Interaction which is present in chimera but not used & visual\_elements\_for\_table/unused.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/unused_added.tikz}& Interaction which is added in Pegasus and not in Chimera (not used) & visual\_elements\_for\_table/unused\_added.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/embedding.tikz}& Interaction which is used for minor embedding & visual\_elements\_for\_table/embedding.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/logical_qubit.tikz}& Logical qubit, not part of minor embedding & visual\_elements\_for\_table/logical\_qubit.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/emb_logical_qubit.tikz}& Logical qubit, part of minor embedding & visual\_elements\_for\_table/emb\_logical\_qubit.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/emb_auxiliary_qubit.tikz}& Logical qubit, part of minor embedding & visual\_elements\_for\_table/emb\_auxiliary\_qubit.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/auxiliary_qubit.tikz}& Auxiliary qubit & visual\_elements\_for\_table/auxiliary\_qubit.tikz \tabularnewline
+\hline 
+\input{visual_elements_for_table/unused_qubit.tikz}& Unused qubit & visual\_elements\_for\_table/unused\_qubit.tikz \tabularnewline
+
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\caption{Table defining visual elements used in figures and giving filenames for single visual elements}
+
+
+\end{table}
+
+
+
+\end{document}

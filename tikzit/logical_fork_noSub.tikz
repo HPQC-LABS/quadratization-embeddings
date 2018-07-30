@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=rn] (0) at (0, 6) {};
+		\node [style=gn] (1) at (0, 5) {};
+		\node [style=gn] (2) at (-0.75, 4.25) {};
+		\node [style=gn] (3) at (0.75, 4.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=simple] (0) to (1);
+		\draw [style=simple] (1) to (3);
+		\draw [style=simple] (1) to (2);
+	\end{pgfonlayer}
+\end{tikzpicture}
