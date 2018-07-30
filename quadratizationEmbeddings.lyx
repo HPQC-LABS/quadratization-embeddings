@@ -137,7 +137,7 @@ Discrete optimization problems are often naturally formulated in terms of
 \begin_inset Formula $>2$
 \end_inset
 
-, which are then 'quadratized' into a quadratic function which can be solved
+, which is then `quadratized' into a quadratic function which can be solved
  using standard algorithms for universal classical computers [1], using
  special-purpose classical annealers [2], or using quantum annealers [3].
  With dozens of quadratization methods available [4], one should choose
@@ -148,16 +148,16 @@ Discrete optimization problems are often naturally formulated in terms of
 
 \begin_layout Standard
 When quadratizing a high-degree term, the resulting quadratic function (called
- the 'gadget') will have some connectivity between the binary variables
+ the `gadget') will have some connectivity between the binary variables
  (or bits, or qubits, herein referred to for convenience only as qubits)
  which can be represented by a graph in which vertices represent qubits
  and edges indicate when two different qubits appear together in a quadratic
  term.
  Since this graph incorporates no information about the linear terms, constant
- term, or the coefficient of the quadratic term, many different gadgets
+ term, or the coefficients of the quadratic terms, many different gadgets
  have the same graph, therefore in this paper we will classify all known
  quadratization gadgets into categories according to their corresponding
- graph (herein called their 'gadget graph').
+ graph (herein called their `gadget graph').
  
 \end_layout
 
@@ -166,8 +166,9 @@ Gadget graphs tell us a lot about how costly the quadratic optimization
  problem will be, and those with larger connectivity tend to yield more
  difficult functions to optimize.
  Furthermore, some optimization methods only work if their corresponding
- graph has a certain connectivity, two example's being D-Wave's well-known
- Chimera graph [5], and their very recently presented 
+ graph has a certain connectivity, two examples of such connectivities being
+ the ones in D-Wave's well-known Chimera graph [5], and in their very recently
+ presented 
 \emph on
 Pegasus
 \emph default
@@ -189,10 +190,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -207,10 +204,6 @@ name "fig:ChimeraAndPegasus"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
