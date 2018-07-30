@@ -140,9 +140,19 @@ Discrete optimization problems are often naturally formulated in terms of
 , which is then `quadratized' into a quadratic function which can be solved
  using standard algorithms for universal classical computers [1], using
  special-purpose classical annealers [2], or using quantum annealers [3].
- With dozens of quadratization methods available [4], one should choose
- the best quadratization for a given problem, and for a given method for
- solving the problem.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ for example factoring, Ramsy, ...
+\end_layout
+
+\end_inset
+
+With dozens of quadratization methods available [4], one should choose the
+ best quadratization for a given problem, and for a given method for solving
+ the problem.
  
 \end_layout
 
@@ -159,6 +169,45 @@ When quadratizing a high-degree term, the resulting quadratic function (called
  quadratization gadgets into categories according to their corresponding
  graph (herein called their `gadget graph').
  
+\end_layout
+
+\begin_layout Standard
+Gadget graphs for all known single cubic terms and for all known single
+ quartic terms are given in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:allGraphGadgets"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:allGraphGadgets"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -214,8 +263,47 @@ name "fig:ChimeraAndPegasus"
 
 \begin_layout Standard
 Any graph, can be mapped onto the Chimera or Pegasus graphs by minor-embedding
- [6].
- 
+ [6], where the Chimera graph or the Pegasus graph is a graph minor of the
+ graph representing the problem that needs to be optimized.
+ This often means that one binary variable in the quadratic optimization
+ problem needs to be represented by two qubits instead of one, making the
+ number of qubits needed to solve the original problem much larger than
+ before, and sometimes completely impossible.
+ For example a quartic function with 1000 binary variables has 
+\begin_inset Formula $\binom{1000}{3}>166$
+\end_inset
+
+ million possible cubic terms and 
+\begin_inset Formula $\binom{1000}{4}>40$
+\end_inset
+
+ billion possible quartic terms which have to be quadratized, and then minor-emb
+edded.
+ If our minimization method can only be applied for up to 50 billion qubits,
+ we cannot afford for each quartic-to-quadratic gadget to require its own
+ auxiliary qubit for minor-embedding
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+come up with better example
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We have provided minor-embeddings for all gadget graphs in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:allGraphGadgets"
+
+\end_inset
+
+, for both Chimera and Pegasus.
+ We note that 
 \end_layout
 
 \end_body
