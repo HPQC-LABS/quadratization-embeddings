@@ -6,92 +6,19 @@
 \origin unavailable
 \textclass revtex4-1
 \begin_preamble
-\usepackage{microtype}
-\usepackage{xspace}
 \usepackage{amsfonts}
-\usepackage{palatino}
-\usepackage{MnSymbol}
-\usepackage{bbm}
-%\usepackage{hyperref}
-%\usepackage[hyphenbreaks]{breakurl1}
-\usepackage{url}
-\usepackage{ragged2e}
-\edef\UrlBreaks{\do\-\UrlBreaks}% after loading url or hyperref
-\usepackage{accents}% needed for \underbar that's same as \bar (\underaccent)
-\usepackage{microtype}
-
-
-
-
-\newcommand*{\mathcolor}{}
-\def\mathcolor#1#{\mathcoloraux{#1}}
-\newcommand*{\mathcoloraux}[3]{%
-  \protect\leavevmode
-  \begingroup
-    \color#1{#2}#3%
-  \endgroup
-}
-%%% adding some commands to comment 
-%Some shortcuts added for edits
-%Some shortcuts added for edits
-% \usepackage{ulem}
-\definecolor{dred}{rgb}{.8,0.2,.2}
-\definecolor{ddred}{rgb}{.8,0.5,.5}
-\definecolor{dblue}{rgb}{.2,0.2,.8}
-% suggested change
-\newcommand{\add}[1]{\textcolor{dred}{*#1*}} 
-% \usepackage{ulem}
-\newcommand{\out}[1]{\textcolor{ddred}{\textbf{[}#1\textbf{]}}}
-% comment or remark
-%\newcommand{\yo}[1]{\textcolor{dblue}{\textbf{[}#1\textbf{]}}}
-% \newcommand{\todo}[1]{\textbf{\underline{\textcolor{dblue}{\textbf{[}#1\textbf{]}}}}}
-%\newcommand{\jb}[1]{\textcolor{dblue}{\textbf{[}JB: #1\textbf{]}}}
-
-\newcommand{\yo}[1]{\todo{{\textbf{[}JB: #1\textbf{]}}}}
-\newcommand{\jb}[1]{\todo[inline]{{\textbf{[}JB: #1\textbf{]}}}}
-%%%%%%%%%%
-
-
-
-%% Set space of itemize environment
-\usepackage{enumitem}% Used for setting height of itemize environments
-\setlist[itemize]{topsep=0pt}%topsep=0pt
-
-
-% Bookmarks in PDF (navigation pane)
-\usepackage{bookmark}
-
-
-\newcommand{\hi}{$H_{\rm init}$\xspace}
-\newcommand{\hf}{$H_{\rm final}$\xspace}
-
-%% Set formatting of headers
-\newcommand{\secspace}{\vspace{2mm}}
-
-\newcommand{\summarysec}{\secspace\emph{\textbf{Summary}}}
-\newcommand{\prossec}{\secspace\emph{\textbf{Pros}}}
-\newcommand{\conssec}{\secspace\emph{\textbf{Cons}}}
-\newcommand{\costsec}{\secspace\emph{\textbf{Cost}}}
-\newcommand{\examplesec}{\secspace\emph{\textbf{Example}}}
-\newcommand{\refsec}{\secspace\emph{\textbf{Bibliography}}}
-
-
-
-\usepackage{babel}
+%\usepackage{palatino}
 \end_preamble
-\options notitlepage,showpacs,preprintnumbers,amsmath,amssymb,aps,nofootinbib
+\options showpacs,preprintnumbers,amsmath,amssymb,aps,notitlepage,twocolumn
 \use_default_options false
-\begin_modules
-algorithm2e
-\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding iso8859-15
-\fontencoding T1
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -104,31 +31,21 @@ algorithm2e
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize default
 \spacing single
-\use_hyperref true
-\pdf_bookmarks false
-\pdf_bookmarksnumbered false
-\pdf_bookmarksopen false
-\pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
-\pdf_pdfborder false
-\pdf_colorlinks true
-\pdf_backref section
-\pdf_pdfusetitle false
-\pdf_quoted_options "linkcolor=black,urlcolor=black,bookmarksopen=true"
+\use_hyperref false
 \papersize default
-\use_geometry true
-\use_package amsmath 2
-\use_package amssymb 2
-\use_package cancel 0
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
 \use_package esint 1
-\use_package mathdots 0
-\use_package mathtools 0
-\use_package mhchem 0
-\use_package stackrel 0
-\use_package stmaryrd 0
-\use_package undertilde 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -137,15 +54,11 @@ algorithm2e
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
-\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -213,8 +126,102 @@ status open
 
 .
  In cases where two or more graphs have a minor embedding with the same
- number of overhead in terms of auxiliary variables, we make recommendations
- for which gadgets are best to use for certain problems.
+ overhead in terms of auxiliary variables, we make recommendations for which
+ gadgets are best to use for certain problems.
+ 
+\end_layout
+
+\begin_layout Standard
+Discrete optimization problems are often naturally formulated in terms of
+ minimizing some polynomial of degree 
+\begin_inset Formula $>2$
+\end_inset
+
+, which are then 'quadratized' into a quadratic function which can be solved
+ using standard algorithms for universal classical computers [1], using
+ special-purpose classical annealers [2], or using quantum annealers [3].
+ With dozens of quadratization methods available [4], one should choose
+ the best quadratization for a given problem, and for a given method for
+ solving the problem.
+ 
+\end_layout
+
+\begin_layout Standard
+When quadratizing a high-degree term, the resulting quadratic function (called
+ the 'gadget') will have some connectivity between the binary variables
+ (or bits, or qubits, herein referred to for convenience only as qubits)
+ which can be represented by a graph in which vertices represent qubits
+ and edges indicate when two different qubits appear together in a quadratic
+ term.
+ Since this graph incorporates no information about the linear terms, constant
+ term, or the coefficient of the quadratic term, many different gadgets
+ have the same graph, therefore in this paper we will classify all known
+ quadratization gadgets into categories according to their corresponding
+ graph (herein called their 'gadget graph').
+ 
+\end_layout
+
+\begin_layout Standard
+Gadget graphs tell us a lot about how costly the quadratic optimization
+ problem will be, and those with larger connectivity tend to yield more
+ difficult functions to optimize.
+ Furthermore, some optimization methods only work if their corresponding
+ graph has a certain connectivity, two example's being D-Wave's well-known
+ Chimera graph [5], and their very recently presented 
+\emph on
+Pegasus
+\emph default
+ graph, both shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ChimeraAndPegasus"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ChimeraAndPegasus"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Any graph, can be mapped onto the Chimera or Pegasus graphs by minor-embedding
+ [6].
  
 \end_layout
 
