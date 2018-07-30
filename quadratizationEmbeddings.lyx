@@ -183,7 +183,7 @@ reference "fig:allGraphGadgets"
 .
  
 \begin_inset Float figure
-wide false
+wide true
 sideways false
 status open
 
@@ -215,6 +215,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+all to aux
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
 
 \end_layout
 
@@ -242,6 +253,42 @@ input{all_to_aux.tikz}
 \end_inset
 
 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -251,6 +298,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Y
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
 
 \end_layout
 
@@ -278,6 +336,70 @@ input{logical_fork.tikz}
 \end_inset
 
 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -287,6 +409,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+coat hanger
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
 
 \end_layout
 
@@ -311,6 +444,42 @@ input{k4_missing_2edge.tikz}
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
 \end_inset
 
 
@@ -350,6 +519,42 @@ input{k4_missing_edge.tikz}
 \end_inset
 
 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -359,6 +564,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+all to all
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
 
 \end_layout
 
@@ -487,6 +703,25 @@ reference "fig:allGraphGadgets"
 
 , for both Chimera and Pegasus.
  We note that 
+\series bold
+\emph on
+all
+\series default
+\emph default
+ cubic to quadratic gadgets involvnig one auxiliary qubit can be embedded
+ onto Pegasus without any further auxiliary qubits for the embedding, because
+ Pegasus contains the 
+\begin_inset Formula $K_{4}$
+\end_inset
+
+ graph, which means any possible connections between the three logical qubits
+ and the one auxiliary qubit are already contained in Pegasus.
+ Since Chimera does not contain 
+\begin_inset Formula $K_{4}$
+\end_inset
+
+, only negative cubic terms are so far known to be quadratizable with gadgets
+ that embed directly onto Chimera without any extra qubits for the embedding.
 \end_layout
 
 \end_body
