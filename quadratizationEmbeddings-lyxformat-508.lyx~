@@ -1,15 +1,15 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass revtex4-1
 \begin_preamble
-\usepackage{amsfonts,amsmath} % amsmath added here instead to prevent clash with lyx function
-\input{tikzit/tikz_premable.tex}
+\usepackage{amsfonts}
+\input{tikz_premable.tex}
 \end_preamble
-\options showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn
+\options showpacs,preprintnumbers,amsmath,amssymb,aps,notitlepage,twocolumn
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -26,8 +26,6 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
-\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -48,16 +46,15 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine natbib
-\cite_engine_type authoryear
-\biblio_style plainnat
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 1
-\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -66,10 +63,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\is_math_indent 0
-\math_numbering_side default
-\quotes_style english
-\dynamic_quotes 0
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -91,7 +85,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -104,7 +97,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -248,7 +240,7 @@ status open
 
 
 \backslash
-input{tikzit/all_to_aux.tikz} 
+input{all_to_aux.tikz} 
 \end_layout
 
 \end_inset
@@ -331,7 +323,7 @@ status open
 
 
 \backslash
-input{tikzit/logical_fork.tikz} 
+input{logical_fork.tikz} 
 \end_layout
 
 \end_inset
@@ -442,7 +434,7 @@ status open
 
 
 \backslash
-input{tikzit/k4_missing_2edge.tikz} 
+input{k4_missing_2edge.tikz} 
 \end_layout
 
 \end_inset
@@ -514,7 +506,7 @@ status open
 
 
 \backslash
-input{tikzit/k4_missing_edge.tikz} 
+input{k4_missing_edge.tikz} 
 \end_layout
 
 \end_inset
@@ -597,7 +589,7 @@ status open
 
 
 \backslash
-input{tikzit/k4.tikz} 
+input{k4.tikz} 
 \end_layout
 
 \end_inset
@@ -735,6 +727,10 @@ all
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1922,12 +1918,6 @@ height "0.5pt"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-input{tikzit/k4.tikz}
 \end_layout
 
 \end_body
