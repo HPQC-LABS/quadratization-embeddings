@@ -8,6 +8,7 @@
 \begin_preamble
 \usepackage{amsfonts,amsmath} % amsmath added here instead to prevent clash with lyx function
 \input{tikzit/tikz_premable.tex}
+\newcommand{\intextheight}{13 pt}
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn
 \use_default_options false
@@ -210,6 +211,24 @@ name "fig:allGraphGadgets"
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+thisfigheight}{1.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -246,7 +265,27 @@ status open
 
 
 \backslash
-input{tikzit/all_to_aux.tikz} 
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/all_to_aux.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -329,7 +368,27 @@ status open
 
 
 \backslash
-input{tikzit/logical_fork.tikz} 
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/logical_fork.tikz"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -440,7 +499,27 @@ status open
 
 
 \backslash
-input{tikzit/k4_missing_2edge.tikz} 
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_2edge.tikz"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -512,7 +591,27 @@ status open
 
 
 \backslash
-input{tikzit/k4_missing_edge.tikz} 
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_edge.tikz"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -595,7 +694,27 @@ status open
 
 
 \backslash
-input{tikzit/k4.tikz} 
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -2051,13 +2170,15 @@ all_to_aux_chimera.tikz
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to all_to_aux.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -2154,13 +2275,15 @@ logical_fork_chimera.tikz
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to logical_fork.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -2451,13 +2574,15 @@ k4_chimera.tikz
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to k4.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -2562,13 +2687,15 @@ all_to_aux4_inPegasus.tikz
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to all_to_aux4.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -2661,13 +2788,15 @@ logical_fork3_inPegasus.tikz
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to logical_fork3.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -2790,13 +2919,15 @@ filename "tikzit/2aux_to_all4_1conn_inChimera.tikz"
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to 2aux_to_all4_1conn.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -2889,13 +3020,15 @@ filename "tikzit/2aux_to_all4_allConn_inPegasus.tikz"
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to 2aux_to_all4_allConn.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -3018,13 +3151,15 @@ aux_to_all4_allConn_inChimera.tikz
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to aux_to_all4_allConn.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -3121,13 +3256,15 @@ filename "tikzit/2auxConn_to_all4_allConn_inPegasus.tikz"
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to 2auxConn_to_all4_allConn.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
@@ -3220,13 +3357,15 @@ filename "tikzit/2k4_shared_aux_inPegasus.tikz"
 \begin_layout Standard
 Gadgets with adjacency graph corresponding to 2k4_shared_aux.tikz(
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-scalebox{.25}{
+resizebox{!}{
+\backslash
+intextheight}{
 \end_layout
 
 \end_inset
