@@ -1,0 +1,350 @@
+%% LyX 2.3.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn]{revtex4-1}
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Binom macro for standard LaTeX users
+\newcommand{\binom}[2]{{#1 \choose #2}}
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{amsfonts,amsmath} % amsmath added here instead to prevent clash with lyx function
+\input{tikzit/tikz_premable.tex}
+\newcommand{\intextheight}{13 pt}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Embedding quadratization gadgets on Chimera and Pegasus graphs}
+
+\author{Nike Dattani}
+\email{n.dattani@cfa.harvard.edu}
+
+
+\affiliation{Harvard-Smithsonian Center for Astrophysics}
+
+\author{Nicholas Chancellor}
+\email{nicholas.chancellor@durham.ac.uk}
+
+
+\affiliation{Durham University}
+\begin{abstract}
+We group all known quadratizations of cubic and quartic binary optimization
+problems into five and seven unique graphs respectively. We then perform
+a minor embedding of these graphs onto the well-known Chimera graph,
+and the brand new \emph{Pegasus} graph. In cases where two or more
+graphs have a minor embedding with the same overhead in terms of auxiliary
+variables, we make recommendations for which gadgets are best to use
+for certain problems. 
+\end{abstract}
+\maketitle
+Discrete optimization problems are often naturally formulated in terms
+of minimizing some polynomial of degree $>2$, which is then `quadratized'
+into a quadratic function which can be solved using standard algorithms
+for universal classical computers {[}1{]}, using special-purpose classical
+annealers {[}2{]}, or using quantum annealers {[}3{]}. With dozens
+of quadratization methods available {[}4{]}, one should choose the
+best quadratization for a given problem, and for a given method for
+solving the problem. 
+
+When quadratizing a high-degree term, the resulting quadratic function
+(called the `gadget') will have some connectivity between the binary
+variables (or bits, or qubits, herein referred to for convenience
+only as qubits) which can be represented by a graph in which vertices
+represent qubits and edges indicate when two different qubits appear
+together in a quadratic term. Since this graph incorporates no information
+about the linear terms, constant term, or the coefficients of the
+quadratic terms, many different gadgets have the same graph, therefore
+in this paper we will classify all known quadratization gadgets into
+categories according to their corresponding graph (herein called their
+`gadget graph'). 
+
+Gadget graphs for all known single cubic terms and for all known single
+quartic terms are given in Figure \ref{fig:allGraphGadgets}. 
+\begin{figure*}
+\caption{\label{fig:allGraphGadgets}}
+
+\newcommand{\thisfigheight}{1.5 cm}
+
+\subfloat[``\emph{all to aux}'']{
+
+\resizebox{!}{\thisfigheight}{\input{tikzit/all_to_aux.tikz}}}\ \ \ \ \ \ \ \ \ \subfloat[``\emph{Y}'']{
+
+\resizebox{!}{\thisfigheight}{\input{tikzit/logical_fork.tikz} }}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \subfloat[\mbox{``\emph{coat hanger}''}]{
+
+\resizebox{!}{\thisfigheight}{\input{tikzit/k4_missing_2edge.tikz}
+}}\ \ \ \ \ \ \ \ \ \subfloat[]{
+
+\resizebox{!}{\thisfigheight}{\input{tikzit/k4_missing_edge.tikz}
+}}\ \ \ \ \ \ \ \ \ \subfloat[``\emph{all to all}'']{
+
+\resizebox{!}{\thisfigheight}{\input{tikzit/k4.tikz}}}
+\end{figure*}
+
+Gadget graphs tell us a lot about how costly the quadratic optimization
+problem will be, and those with larger connectivity tend to yield
+more difficult functions to optimize. Furthermore, some optimization
+methods only work if their corresponding graph has a certain connectivity,
+two examples of such connectivities being the ones in D-Wave's well-known
+Chimera graph {[}5{]}, and in their very recently presented \emph{Pegasus}
+graph, both shown in Fig. \ref{fig:ChimeraAndPegasus}.
+
+\begin{figure}
+\caption{\label{fig:ChimeraAndPegasus}}
+\end{figure}
+
+Any graph, can be mapped onto the Chimera or Pegasus graphs by minor-embedding
+{[}6{]}, where the Chimera graph or the Pegasus graph is a graph minor
+of the graph representing the problem that needs to be optimized.
+This often means that one binary variable in the quadratic optimization
+problem needs to be represented by two qubits instead of one, making
+the number of qubits needed to solve the original problem much larger
+than before, and sometimes completely impossible. For example a quartic
+function with 1000 binary variables has $\binom{1000}{3}>166$ million
+possible cubic terms and $\binom{1000}{4}>40$ billion possible quartic
+terms which have to be quadratized, and then minor-embedded. If our
+minimization method can only be applied for up to 50 billion qubits,
+we cannot afford for each quartic-to-quadratic gadget to require its
+own auxiliary qubit for minor-embedding.
+
+We have provided minor-embeddings for all gadget graphs in Figure
+\ref{fig:allGraphGadgets}, for both Chimera and Pegasus. We note
+that \textbf{\emph{all}} cubic to quadratic gadgets involvnig one
+auxiliary qubit can be embedded onto Pegasus without any further auxiliary
+qubits for the embedding, because Pegasus contains the $K_{4}$ graph,
+which means any possible connections between the three logical qubits
+and the one auxiliary qubit are already contained in Pegasus. Since
+Chimera does not contain $K_{4}$, only negative cubic terms are so
+far known to be quadratizable with gadgets that embed directly onto
+Chimera without any extra qubits for the embedding.
+
+\begin{table}
+\caption{}
+
+\rule{1\columnwidth}{0.5pt}
+
+\begin{tabular*}{1\columnwidth}{@{\extracolsep{\fill}}ccccc}
+\hline 
+\noalign{\vskip2mm}
+\multirow{2}{*}{{\footnotesize{}Gadget Graph}} & \multirow{2}{*}{{\footnotesize{}Example Gadgets}} & {\footnotesize{}$N_{{\rm aux}}$} & {\footnotesize{}$N_{{\rm aux}}$ } & {\footnotesize{}$N_{{\rm aux}}$ }\tabularnewline
+ &  & {\scriptsize{}Quadratization} & {\scriptsize{}Chimera} & {\scriptsize{}Pegasus}\tabularnewline[2mm]
+\hline 
+\noalign{\vskip2mm}
+\multicolumn{5}{c}{Cubic $\rightarrow$ Quadratic}\tabularnewline[2mm]
+\hline 
+\noalign{\vskip2mm}
+\multirow{2}{*}{\textbf{\textcolor{blue}{\scriptsize{}All to Aux}}} & {\scriptsize{}NTR-KZFD} & \multirow{2}{*}{{\scriptsize{}1}} & \multirow{2}{*}{{\scriptsize{}0}} & \multirow{2}{*}{{\scriptsize{}0}}\tabularnewline
+ & {\scriptsize{}NTR-ABCG} &  &  & \tabularnewline[0.5mm]
+\textbf{\textcolor{blue}{\scriptsize{}Y}} & {\scriptsize{}NTR-ABCB} & {\scriptsize{}1} & {\scriptsize{}0} & {\scriptsize{}0}\tabularnewline[0.5mm]
+\textbf{\textcolor{blue}{\scriptsize{}Coat Hanger}} & {\scriptsize{}AR} & {\scriptsize{}1} & {\scriptsize{}1} & {\scriptsize{}0}\tabularnewline[0.5mm]
+\textbf{\textcolor{blue}{\scriptsize{}(d)}} & {\scriptsize{}ACR} & {\scriptsize{}1} &  & {\scriptsize{}0}\tabularnewline[0.5mm]
+\multirow{3}{*}{\textbf{\textcolor{blue}{\scriptsize{}All to All}}} & {\scriptsize{}PTR-Ishikawa} & \multirow{3}{*}{{\scriptsize{}1}} & \multirow{3}{*}{} & \multirow{3}{*}{{\scriptsize{}0}}\tabularnewline
+ & {\scriptsize{}PTR-BCR(1-4)} &  &  & \tabularnewline
+ & {\scriptsize{}PTR-KZ} &  &  & \tabularnewline[2mm]
+\hline 
+\noalign{\vskip2mm}
+\multicolumn{5}{c}{{\scriptsize{}Quartic $\rightarrow$ Quadratic}}\tabularnewline[2mm]
+\hline 
+\noalign{\vskip2mm}
+\textbf{\textcolor{blue}{\scriptsize{}All2Aux}} & {\scriptsize{}NTR-KZFD} & {\scriptsize{}1} & {\scriptsize{}0} & {\scriptsize{}0}\tabularnewline
+\textbf{\textcolor{blue}{\scriptsize{}Tripod}} & {\scriptsize{}NTR-ABCB} & {\scriptsize{}1} & {\scriptsize{}0} & {\scriptsize{}0}\tabularnewline
+\textbf{\textcolor{blue}{\scriptsize{}All22Aux+1}} & {\scriptsize{}PTR} & {\scriptsize{}2} & {\scriptsize{}1} & {\scriptsize{}0}\tabularnewline
+\textbf{\textcolor{blue}{\scriptsize{}All2All - 1}} & {\scriptsize{}PTR-Ishikawa} & {\scriptsize{}2} & {\scriptsize{}?} & {\scriptsize{}2}\tabularnewline
+\multirow{2}{*}{\textbf{\textcolor{blue}{\scriptsize{}All2Aux+$K_{4}$}}} & {\scriptsize{}PTR-BCR-2} & \multirow{2}{*}{{\scriptsize{}1}} & \multirow{2}{*}{{\scriptsize{}3}} & \multirow{2}{*}{{\scriptsize{}2}}\tabularnewline
+ & {\scriptsize{}PTR-BCR-4} &  &  & \tabularnewline
+\textbf{\textcolor{blue}{\scriptsize{}All2Aux}} & {\scriptsize{}PTR-BCR-3} & {\scriptsize{}2} & {\scriptsize{}?} & {\scriptsize{}2}\tabularnewline
+\textbf{\textcolor{blue}{\scriptsize{}Two $K_{4}'s$}} & {\scriptsize{}PTR-KZ} & {\scriptsize{}3} & {\scriptsize{}?} & {\scriptsize{}1}\tabularnewline[2mm]
+\hline 
+\end{tabular*}
+
+\rule{1\columnwidth}{0.5pt}
+\end{table}
+
+\begin{figure}
+\input{tikzit/pegasus_v_chimera_uc.tikz} \caption{pegasus\_v\_chimera\_uc.tikz: shows extra edges added to chimera unit
+cell to make Pegasus unit cell}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/pegasus_v_chimera_uc_k44.tikz} \caption{pegasus\_v\_chimera\_uc\_k44.tikz: shows extra edges added to chimera
+unit cell to make Pegasus unit cell}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/all_to_aux.tikz} \caption{all\_to\_aux.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/all_to_aux_chimera.tikz} \caption{all\_to\_aux\_chimera.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to all\_to\_aux.tikz(\resizebox{!}{\intextheight}{\input{tikzit/all_to_aux.tikz}}):
+\begin{itemize}
+\item NTR-KZFD 
+\item NTR-ABCG 
+\end{itemize}
+\begin{figure}
+\input{tikzit/logical_fork.tikz} \caption{logical\_fork.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/logical_fork_chimera.tikz} \caption{logical\_fork\_chimera.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to logical\_fork.tikz(\resizebox{!}{\intextheight}{\input{tikzit/logical_fork.tikz}}):
+\begin{itemize}
+\item NTR-ABCB 
+\end{itemize}
+\begin{figure}
+\input{tikzit/k4_missing_2edge.tikz} \caption{k4\_missing\_2edge.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/k4_missing_2edge_chimera.tikz} \caption{k4\_missing\_2edge\_chimera.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to k4\_missing\_2edge.tikz(\scalebox{.25}{\input{tikzit/k4_missing_2edge.tikz}}):
+\begin{itemize}
+\item Asymmetric reduction 
+\end{itemize}
+\begin{figure}
+\input{tikzit/k4_missing_edge.tikz} \caption{k4\_missing\_edge.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/k4_missing_edge_chimera.tikz} \caption{k4\_missing\_edge\_chimera.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to k4\_missing\_edge.tikz(\scalebox{.25}{\input{tikzit/k4_missing_edge.tikz}}):
+\begin{itemize}
+\item Asymmetric cubic reduction 
+\end{itemize}
+\begin{figure}
+\input{tikzit/k4.tikz} \caption{k4.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/k4_chimera.tikz} \caption{k4\_chimera.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to k4.tikz(\resizebox{!}{\intextheight}{\input{tikzit/k4.tikz}}):
+\begin{itemize}
+\item PTR-Ishikawa 
+\item PTR-BCR (1-4) 
+\item PTR-KZ 
+\item Z version of PTR-KZ 
+\end{itemize}
+\begin{figure}
+\input{tikzit/all_to_aux4.tikz} \caption{all\_to\_aux4.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/all_to_aux4_inPegasus.tikz} \caption{all\_to\_aux4\_inPegasus.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to all\_to\_aux4.tikz(\resizebox{!}{\intextheight}{\input{tikzit/all_to_aux4.tikz}}):
+\begin{itemize}
+\item NTR-KZFD 
+\end{itemize}
+\begin{figure}
+\input{tikzit/logical_fork3.tikz} \caption{logical\_fork3.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/logical_fork3_inPegasus.tikz} \caption{logical\_fork3\_inPegasus.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to logical\_fork3.tikz(\resizebox{!}{\intextheight}{\input{tikzit/logical_fork3.tikz}}):
+\begin{itemize}
+\item NTR-ABCB 
+\end{itemize}
+\begin{figure}
+\input{tikzit/2aux_to_all4_1conn.tikz} \caption{2aux\_to\_all4\_1conn.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/2aux_to_all4_1conn_inPegasus.tikz} \caption{2aux\_to\_all4\_1conn\_inPegasus.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/2aux_to_all4_1conn_inChimera.tikz} \caption{2aux\_to\_all4\_1conn\_inChimera.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to 2aux\_to\_all4\_1conn.tikz(\resizebox{!}{\intextheight}{\input{tikzit/2aux_to_all4_1conn.tikz}}):
+\begin{itemize}
+\item positive term reduction 
+\end{itemize}
+\begin{figure}
+\input{tikzit/2aux_to_all4_allConn.tikz} \caption{2aux\_to\_all4\_allConn.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/2aux_to_all4_allConn_inPegasus.tikz} \caption{2aux\_to\_all4\_allConn\_inPegasus.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to 2aux\_to\_all4\_allConn.tikz(\resizebox{!}{\intextheight}{\input{tikzit/2aux_to_all4_allConn.tikz}}):
+\begin{itemize}
+\item PTR-Ishikawa 
+\end{itemize}
+\begin{figure}
+\input{tikzit/aux_to_all4_allConn.tikz} \caption{aux\_to\_all4\_allConn.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/aux_to_all4_allConn_inPegasus.tikz} \caption{aux\_to\_all4\_allConn\_inPegasus.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/aux_to_all4_allConn_inChimera.tikz} \caption{aux\_to\_all4\_allConn\_inChimera.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to aux\_to\_all4\_allConn.tikz(\resizebox{!}{\intextheight}{\input{tikzit/aux_to_all4_allConn.tikz}}):
+\begin{itemize}
+\item PTR-BCR-2 
+\item PTR-BCR-4 
+\end{itemize}
+\begin{figure}
+\input{tikzit/2auxConn_to_all4_allConn.tikz} \caption{2auxConn\_to\_all4\_allConn.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/2auxConn_to_all4_allConn_inPegasus.tikz} \caption{2auxConn\_to\_all4\_allConn\_inPegasus.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to 2auxConn\_to\_all4\_allConn.tikz(\resizebox{!}{\intextheight}{\input{tikzit/2auxConn_to_all4_allConn.tikz}}):
+\begin{itemize}
+\item PTR-BCR-3 
+\end{itemize}
+\begin{figure}
+\input{tikzit/2k4_shared_aux.tikz} \caption{2k4\_shared\_aux.tikz}
+\end{figure}
+
+\begin{figure}
+\input{tikzit/2k4_shared_aux_inPegasus.tikz} \caption{2k4\_shared\_aux\_inPegasus.tikz}
+\end{figure}
+
+Gadgets with adjacency graph corresponding to 2k4\_shared\_aux.tikz(\resizebox{!}{\intextheight}{\input{tikzit/2k4_shared_aux.tikz}}):
+\begin{itemize}
+\item Two copies of PTR-KZ sharing an auxilla 
+\item Two copies of z-version of PTR-KZ sharing an auxilla 
+\end{itemize}
+
+\end{document}
