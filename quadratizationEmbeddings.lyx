@@ -2640,6 +2640,13 @@ all to aux
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:all-to-auxChimera"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2699,6 +2706,13 @@ status open
 \emph on
 Y
 \begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ychimera"
+
 \end_inset
 
 
@@ -2953,12 +2967,32 @@ status open
 
 \begin_layout Plain Layout
 Minor embeddings of all cubic to quadratic gadgets onto a `unit cell' of
- a Chimera graph.
+ a Pegasus graph.
  Transparent vertices and edges are not used.
- Thick black edges denote graph minors, in which two physical qubits (two
- vertices) represent one logical qubit (this is done when logical qubits
- need to be connected to more qubits than the Chimera unit cell otherwise
- allows).
+ Figs 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:all-to-auxChimera"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ychimera"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ do not need to be altered since the Chimera graph is a sub-graph of Pegasus,
+ so only the gadgets that required auxiliary qubits for minor embedding
+ onto Chimera are embedded for Pegasus here to show that with Pegasus no
+ auxiliary qubits are needed for cubic to quadratic gadgets.
 \end_layout
 
 \end_inset
@@ -2985,130 +3019,6 @@ chimeraFigSize}{3cm}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-
-\emph on
-all to aux
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{!}{
-\backslash
-chimeraFigSize}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/all_to_aux_chimera.tikz"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-
-\emph on
-Y
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{!}{
-\backslash
-chimeraFigSize}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/logical_fork_chimera.tikz"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
