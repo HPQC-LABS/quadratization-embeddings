@@ -1713,7 +1713,7 @@ ACR
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1
 \end_layout
 
 \end_inset
@@ -1763,7 +1763,7 @@ PTR-Ishikawa
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2
 \end_layout
 
 \end_inset
@@ -2298,7 +2298,7 @@ Two
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTR-KZ
+PTR-KZ(?)
 \end_layout
 
 \end_inset
@@ -5197,6 +5197,36 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Recommended gadgets
+\end_layout
+
+\begin_layout Standard
+All gadgets described in this work for quadratizing negative terms (whether
+ cubic or quartic) can be quadratized with only one auxiliary qubit, and
+ can be chimerized and pegasized wihout any futher auxiliary qubits.
+ On Pegasus, there is one 4-local to 2-local gadget for positive terms which
+ stands out over the rest, and it is PTR (which has the 
+\begin_inset Quotes eld
+\end_inset
+
+all22aux+1
+\begin_inset Quotes erd
+\end_inset
+
+ gadget graph).
+ This is the 
+\emph on
+only 
+\emph default
+gadget which embeds positive quartic terms onto Pegasus with only two total
+ auxiliaries (two for the quadratization, and none for the embedding onto
+ the Pegasus graph).
+ All other gadgets for positive quartic terms require three or four total
+ auxiliaries to embed onto Pegasus.
+ 
 \end_layout
 
 \begin_layout Standard
