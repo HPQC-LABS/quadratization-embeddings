@@ -191,7 +191,29 @@ reference "fig:allGraphGadgets"
 \end_inset
 
 .
+ Gadget graphs tell us a lot about how costly the quadratic optimization
+ problem will be, and those with larger connectivity tend to yield more
+ difficult functions to optimize.
+ Furthermore, some optimization methods only work if their corresponding
+ graph has a certain connectivity, two examples of such connectivities being
+ the ones in D-Wave's well-known Chimera graph [5], and in their very recently
+ presented 
+\emph on
+Pegasus
+\emph default
+ graph, both shown in Fig.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ChimeraAndPegasus"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
 \begin_inset Float figure
 wide true
 sideways false
@@ -765,7 +787,16 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -816,7 +847,7 @@ thisfigheight}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/logical_fork3.tikz"
+filename "tikzit/all_to_aux4.tikz"
 
 \end_inset
 
@@ -834,7 +865,9 @@ status collapsed
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -879,6 +912,13 @@ thisfigheight}{
 \end_inset
 
 
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/logical_fork3.tikz"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -895,9 +935,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -924,9 +961,6 @@ all to two aux + 1
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -965,9 +999,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1035,9 +1066,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1109,9 +1137,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1179,9 +1204,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1258,33 +1280,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Gadget graphs tell us a lot about how costly the quadratic optimization
- problem will be, and those with larger connectivity tend to yield more
- difficult functions to optimize.
- Furthermore, some optimization methods only work if their corresponding
- graph has a certain connectivity, two examples of such connectivities being
- the ones in D-Wave's well-known Chimera graph [5], and in their very recently
- presented 
-\emph on
-Pegasus
-\emph default
- graph, both shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:ChimeraAndPegasus"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
