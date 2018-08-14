@@ -10,7 +10,7 @@
 \input{tikzit/tikz_premable.tex}
 \newcommand{\intextheight}{13 pt}
 \end_preamble
-\options showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn
+\options showpacs,preprintnumbers,amssymb,aps,notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
