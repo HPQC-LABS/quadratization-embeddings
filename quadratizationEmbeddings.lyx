@@ -164,55 +164,6 @@ With dozens of quadratization methods available [4], one should choose the
 \end_layout
 
 \begin_layout Standard
-There are ways to quadratize functions of discrete variables without adding
- any auxiliary variables [5], but when those methods cannot be applied we
- introduce auxiliary variables.
- The resulting quadratic functions (called `gadgets') that accurately or
- exactly simulate the original high-degree functions, will have some connectivit
-y between the binary variables (or bits, or qubits, herein referred to for
- convenience only as qubits) which can be represented by a graph in which
- vertices represent qubits and edges indicate when two different qubits
- appear together in a quadratic term.
- Since this graph incorporates no information about the linear terms, constant
- term, or the coefficients of the quadratic terms, many different gadgets
- have the same graph, therefore in this paper we will classify all known
- quadratization gadgets into categories according to their corresponding
- graph (herein called their `gadget graph').
- 
-\end_layout
-
-\begin_layout Standard
-Gadget graphs for all known single cubic terms and for all known single
- quartic terms are given in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:allGraphGadgets"
-
-\end_inset
-
-.
- Gadget graphs tell us a lot about how costly the quadratic optimization
- problem will be, and those with larger connectivity tend to yield more
- difficult functions to optimize.
- Furthermore, some optimization methods only work if their corresponding
- graph has a certain connectivity, two examples of such connectivities being
- the ones in D-Wave's well-known Chimera graph [5], and in their very recently
- presented 
-\emph on
-Pegasus
-\emph default
- graph, both shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:ChimeraAndPegasus"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 \noindent
 \begin_inset Float figure
 wide true
@@ -1283,61 +1234,48 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:ChimeraAndPegasus"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+There are ways to quadratize functions of discrete variables without adding
+ any auxiliary variables [5], but when those methods cannot be applied we
+ introduce auxiliary variables.
+ The resulting quadratic functions (called `gadgets') that accurately or
+ exactly simulate the original high-degree functions, will have some connectivit
+y between the binary variables (or bits, or qubits, herein referred to for
+ convenience only as qubits) which can be represented by a graph in which
+ vertices represent qubits and edges indicate when two different qubits
+ appear together in a quadratic term.
+ Since this graph incorporates no information about the linear terms, constant
+ term, or the coefficients of the quadratic terms, many different gadgets
+ have the same graph, therefore in this paper we will classify all known
+ quadratization gadgets into categories according to their corresponding
+ graph (herein called their `gadget graph').
+ 
 \end_layout
 
 \begin_layout Standard
-Any graph, can be mapped onto the Chimera or Pegasus graphs by minor-embedding
- [6], where the Chimera graph or the Pegasus graph is a graph minor of the
- graph representing the problem that needs to be optimized.
- This often means that one binary variable in the quadratic optimization
- problem needs to be represented by two qubits instead of one, making the
- number of qubits needed to solve the original problem much larger than
- before, and sometimes completely impossible.
- For example a quartic function with 1000 binary variables has 
-\begin_inset Formula $\binom{1000}{3}>166$
+Gadget graphs for all known single cubic terms and for all known single
+ quartic terms are given in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:allGraphGadgets"
+
 \end_inset
 
- million possible cubic terms and 
-\begin_inset Formula $\binom{1000}{4}>40$
-\end_inset
-
- billion possible quartic terms which have to be quadratized, and then minor-emb
-edded.
- If our minimization method can only be applied for up to 50 billion qubits,
- we cannot afford for each quartic-to-quadratic gadget to require its own
- auxiliary qubit for minor-embedding
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-come up with better example
-\end_layout
+.
+ Gadget graphs tell us a lot about how costly the quadratic optimization
+ problem will be, and those with larger connectivity tend to yield more
+ difficult functions to optimize.
+ Furthermore, some optimization methods only work if their corresponding
+ graph has a certain connectivity, two examples of such connectivities being
+ the ones in D-Wave's well-known Chimera graph [5], and in their very recently
+ presented 
+\emph on
+Pegasus
+\emph default
+ graph, both shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ChimeraAndPegasus"
 
 \end_inset
 
@@ -1345,38 +1283,8 @@ come up with better example
 \end_layout
 
 \begin_layout Standard
-We have provided minor-embeddings for all gadget graphs in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:allGraphGadgets"
-
-\end_inset
-
-, for both Chimera and Pegasus.
- We note that 
-\series bold
-\emph on
-all
-\series default
-\emph default
- cubic to quadratic gadgets involvnig one auxiliary qubit can be embedded
- onto Pegasus without any further auxiliary qubits for the embedding, because
- Pegasus contains the 
-\begin_inset Formula $K_{4}$
-\end_inset
-
- graph, which means any possible connections between the three logical qubits
- and the one auxiliary qubit are already contained in Pegasus.
- Since Chimera does not contain 
-\begin_inset Formula $K_{4}$
-\end_inset
-
-, only negative cubic terms are so far known to be quadratizable with gadgets
- that embed directly onto Chimera without any extra qubits for the embedding.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
+placement b
 wide false
 sideways false
 status open
@@ -2576,6 +2484,835 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ChimeraAndPegasus"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Any graph, can be mapped onto the Chimera or Pegasus graphs by minor-embedding
+ [6], where the Chimera graph or the Pegasus graph is a graph minor of the
+ graph representing the problem that needs to be optimized.
+ This often means that one binary variable in the quadratic optimization
+ problem needs to be represented by two qubits instead of one, making the
+ number of qubits needed to solve the original problem much larger than
+ before, and sometimes completely impossible.
+ For example a quartic function with 1000 binary variables has 
+\begin_inset Formula $\binom{1000}{3}>166$
+\end_inset
+
+ million possible cubic terms and 
+\begin_inset Formula $\binom{1000}{4}>40$
+\end_inset
+
+ billion possible quartic terms which have to be quadratized, and then minor-emb
+edded.
+ If our minimization method can only be applied for up to 50 billion qubits,
+ we cannot afford for each quartic-to-quadratic gadget to require its own
+ auxiliary qubit for minor-embedding
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+come up with better example
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We have provided minor-embeddings for all gadget graphs in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:allGraphGadgets"
+
+\end_inset
+
+, for both Chimera and Pegasus.
+ We note that 
+\series bold
+\emph on
+all
+\series default
+\emph default
+ cubic to quadratic gadgets involvnig one auxiliary qubit can be embedded
+ onto Pegasus without any further auxiliary qubits for the embedding, because
+ Pegasus contains the 
+\begin_inset Formula $K_{4}$
+\end_inset
+
+ graph, which means any possible connections between the three logical qubits
+ and the one auxiliary qubit are already contained in Pegasus.
+ Since Chimera does not contain 
+\begin_inset Formula $K_{4}$
+\end_inset
+
+, only negative cubic terms are so far known to be quadratizable with gadgets
+ that embed directly onto Chimera without any extra qubits for the embedding.
+\end_layout
+
+\begin_layout Section
+Minor embeddings for cubic to quadratic gadgets
+\end_layout
+
+\begin_layout Subsection
+Chimera graph
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Minor embeddings of all cubic to quadratic gadgets onto a `unit cell' of
+ a Chimera graph.
+ Transparent vertices and edges are not used.
+ Thick black edges denote graph minors, in which two physical qubits (two
+ vertices) represent one logical qubit (this is done when logical qubits
+ need to be connected to more qubits than the Chimera unit cell otherwise
+ allows).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+chimeraFigSize}{3cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+all to aux
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/all_to_aux_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Y
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/logical_fork_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+coat hanger
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_2edge_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_edge_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+all to all
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pegasus graph
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Minor embeddings of all cubic to quadratic gadgets onto a `unit cell' of
+ a Chimera graph.
+ Transparent vertices and edges are not used.
+ Thick black edges denote graph minors, in which two physical qubits (two
+ vertices) represent one logical qubit (this is done when logical qubits
+ need to be connected to more qubits than the Chimera unit cell otherwise
+ allows).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+chimeraFigSize}{3cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+all to aux
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/all_to_aux_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Y
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/logical_fork_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+coat hanger
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_2edge_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_edge_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+all to all
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
 filename "tikzit/pegasus_v_chimera_uc.tikz"
@@ -2600,7 +3337,7 @@ pegasus_v_chimera_uc.tikz: shows extra edges added to chimera unit cell to
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2631,89 +3368,16 @@ pegasus_v_chimera_uc_k44.tikz: shows extra edges added to chimera unit cell
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/all_to_aux.tikz"
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-all_to_aux.tikz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/all_to_aux_chimera.tikz"
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-all_to_aux_chimera.tikz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Gadgets with adjacency graph corresponding to all_to_aux.4tikz(
 \begin_inset ERT
 status open
@@ -2758,77 +3422,7 @@ NTR-KZFD
 NTR-ABCG 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/logical_fork.tikz"
-
-\end_inset
-
- 
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/logical_fork3_inPegasus.tikz"
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-logical_fork.tikz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/logical_fork_chimera.tikz"
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-logical_fork_chimera.tikz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Gadgets with adjacency graph corresponding to logical_fork.tikz(
 \begin_inset ERT
 status open
@@ -2869,50 +3463,13 @@ status collapsed
 NTR-ABCB 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/k4_missing_2edge.tikz"
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-k4_missing_2edge.tikz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/k4_missing_2edge_chimera.tikz"
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2929,7 +3486,7 @@ k4_missing_2edge_chimera.tikz
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to k4_missing_2edge.tikz(
 \begin_inset ERT
 status collapsed
@@ -2968,50 +3525,13 @@ status collapsed
 Asymmetric reduction 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/k4_missing_edge.tikz"
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-k4_missing_edge.tikz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/k4_missing_edge_chimera.tikz"
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3028,7 +3548,7 @@ k4_missing_edge_chimera.tikz
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to k4_missing_edge.tikz(
 \begin_inset ERT
 status collapsed
@@ -3067,50 +3587,13 @@ status collapsed
 Asymmetric cubic reduction 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/k4.tikz"
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-k4.tikz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/k4_chimera.tikz"
-
-\end_inset
-
- 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3127,7 +3610,7 @@ k4_chimera.tikz
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to k4.tikz(
 \begin_inset ERT
 status open
@@ -3180,7 +3663,7 @@ PTR-KZ
 Z version of PTR-KZ 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3210,7 +3693,7 @@ all_to_aux4_inPegasus.tikz
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to all_to_aux4.tikz(
 \begin_inset ERT
 status open
@@ -3251,7 +3734,7 @@ status collapsed
 NTR-KZFD 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to logical_fork3.tikz(
 \begin_inset ERT
 status open
@@ -3292,7 +3775,7 @@ status collapsed
 NTR-ABCB 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3322,7 +3805,7 @@ filename "tikzit/2aux_to_all4_1conn_inPegasus.tikz"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3352,7 +3835,7 @@ filename "tikzit/2aux_to_all4_1conn_inChimera.tikz"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to 2aux_to_all4_1conn.tikz(
 \begin_inset ERT
 status open
@@ -3393,7 +3876,7 @@ status collapsed
 positive term reduction 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3423,7 +3906,7 @@ filename "tikzit/2aux_to_all4_allConn_inPegasus.tikz"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to 2aux_to_all4_allConn.tikz(
 \begin_inset ERT
 status open
@@ -3464,13 +3947,13 @@ status collapsed
 PTR-Ishikawa 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \backslash
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3500,7 +3983,7 @@ aux_to_all4_allConn_inPegasus.tikz
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3530,7 +4013,7 @@ aux_to_all4_allConn_inChimera.tikz
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to aux_to_all4_allConn.tikz(
 \begin_inset ERT
 status open
@@ -3575,7 +4058,7 @@ PTR-BCR-2
 PTR-BCR-4 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3605,7 +4088,7 @@ filename "tikzit/2auxConn_to_all4_allConn_inPegasus.tikz"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to 2auxConn_to_all4_allConn.tikz(
 \begin_inset ERT
 status open
@@ -3646,7 +4129,7 @@ status collapsed
 PTR-BCR-3 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3676,7 +4159,7 @@ filename "tikzit/2k4_shared_aux_inPegasus.tikz"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to 2k4_shared_aux.tikz(
 \begin_inset ERT
 status open
@@ -3719,6 +4202,11 @@ Two copies of PTR-KZ sharing an auxilla
 
 \begin_layout Itemize
 Two copies of z-version of PTR-KZ sharing an auxilla 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
