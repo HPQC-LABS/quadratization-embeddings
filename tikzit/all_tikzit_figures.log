@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.31)  1 AUG 2018 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.31)  15 AUG 2018 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,18 +382,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (./all_tikzit_figures.aux)
 \openout1 = `all_tikzit_figures.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -460,66 +460,70 @@ e
 (./pegasus_v_chimera_uc.tikz) (./pegasus_v_chimera_uc_k44.tikz)
 (./all_to_aux.tikz) (./all_to_aux_chimera.tikz) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./all_to_aux.tikz)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./all_to_aux_pegasus.tikz
+) (./all_to_aux.tikz)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
  (./logical_fork.tikz)
-(./logical_fork_chimera.tikz) (./logical_fork.tikz) (./k4_missing_2edge.tikz)
-[2] (./k4_missing_2edge_chimera.tikz) (./k4_missing_2edge.tikz)
-(./k4_missing_edge.tikz) (./k4_missing_edge_chimera.tikz)
-(./k4_missing_edge.tikz) [3] (./k4.tikz) (./k4_chimera.tikz) (./k4.tikz)
-(./all_to_aux4.tikz) (./all_to_aux4_inPegasus.tikz) [4] (./all_to_aux4.tikz)
-(./logical_fork3.tikz) (./logical_fork3_inPegasus.tikz) (./logical_fork3.tikz)
-(./2aux_to_all4_1conn.tikz) [5] (./2aux_to_all4_1conn_inPegasus.tikz)
-(./2aux_to_all4_1conn_inChimera.tikz) (./2aux_to_all4_1conn.tikz)
-Overfull \hbox (11.61191pt too wide) in paragraph at lines 157--158
+(./logical_fork_chimera.tikz) [2] (./logical_fork_pegasus.tikz)
+(./logical_fork.tikz) (./k4_missing_2edge.tikz)
+(./k4_missing_2edge_chimera.tikz) [3] (./k4_missing_2edge_pegasus.tikz)
+(./k4_missing_2edge.tikz) (./k4_missing_edge.tikz)
+(./k4_missing_edge_chimera.tikz) [4] (./k4_missing_edge_pegasus.tikz)
+(./k4_missing_edge.tikz) (./k4.tikz) (./k4_chimera.tikz) [5] (./k4_pegasus.tikz
+) (./k4.tikz) (./all_to_aux4.tikz) (./all_to_aux4_inPegasus.tikz) [6]
+(./all_to_aux4.tikz) (./logical_fork3.tikz) (./logical_fork3_inPegasus.tikz)
+(./logical_fork3_inChimera.tikz) [7] (./logical_fork3.tikz)
+(./2aux_to_all4_1conn.tikz) (./2aux_to_all4_1conn_inPegasus.tikz)
+(./2aux_to_all4_1conn_inChimera.tikz) [8] (./2aux_to_all4_1conn.tikz)
+Overfull \hbox (11.61191pt too wide) in paragraph at lines 186--187
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to 2aux[]to[]
 all4[]1conn.tikz([]): 
  []
 
-(./2aux_to_all4_allConn.tikz) [6] (./2aux_to_all4_allConn_inPegasus.tikz)
+(./2aux_to_all4_allConn.tikz) (./2aux_to_all4_allConn_inPegasus.tikz)
 (./2aux_to_all4_allConn.tikz)
-Overfull \hbox (19.94527pt too wide) in paragraph at lines 175--176
+Overfull \hbox (19.94527pt too wide) in paragraph at lines 204--205
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to 2aux[]to[]
 all4[]allConn.tikz([]): 
  []
 
-(./aux_to_all4_allConn.tikz) (./aux_to_all4_allConn_inPegasus.tikz) [7]
+[9] (./aux_to_all4_allConn.tikz) (./aux_to_all4_allConn_inPegasus.tikz)
 (./aux_to_all4_allConn_inChimera.tikz) (./aux_to_all4_allConn.tikz)
-Overfull \hbox (14.94525pt too wide) in paragraph at lines 196--197
+Overfull \hbox (14.94525pt too wide) in paragraph at lines 225--226
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to aux[]to[]a
 ll4[]allConn.tikz([]): 
  []
 
-(./2auxConn_to_all4_allConn.tikz) (./2auxConn_to_all4_allConn_inPegasus.tikz)
-[8] (./2auxConn_to_all4_allConn.tikz)
-Overfull \hbox (43.27866pt too wide) in paragraph at lines 213--214
+(./2auxConn_to_all4_allConn.tikz) [10]
+(./2auxConn_to_all4_allConn_inPegasus.tikz) (./2auxConn_to_all4_allConn.tikz)
+Overfull \hbox (43.27866pt too wide) in paragraph at lines 242--243
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to 2aux-Conn[
 ]to[]all4[]allConn.tikz([]): 
  []
 
-(./2k4_shared_aux.tikz) (./2k4_shared_aux_inPegasus.tikz)
-(./2k4_shared_aux.tikz) [9] [10] (./all_tikzit_figures.aux) ) 
+(./2k4_shared_aux.tikz) (./2k4_shared_aux_inPegasus.tikz) [11]
+(./2k4_shared_aux.tikz) [12] (./all_tikzit_figures.aux) ) 
 Here is how much of TeX's memory you used:
- 12728 strings out of 494953
- 267042 string characters out of 6180977
- 323873 words of memory out of 5000000
+ 12746 strings out of 494953
+ 267468 string characters out of 6180977
+ 323141 words of memory out of 5000000
  15684 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,9n,65p,502b,677s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on all_tikzit_figures.pdf (10 pages, 50051 bytes).
+</usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on all_tikzit_figures.pdf (12 pages, 54633 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

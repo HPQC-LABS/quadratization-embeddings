@@ -9,6 +9,7 @@
 \usepackage{amsfonts,amsmath} % amsmath added here instead to prevent clash with lyx function
 \input{tikzit/tikz_premable.tex}
 \newcommand{\intextheight}{13 pt}
+\let\fileinput\input % to allow conversion without turning tikz to lyx
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage
 \use_default_options false
@@ -92,7 +93,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -105,7 +105,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -1157,11 +1156,11 @@ thisfigheight}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/2auxConn_to_all4_allConn_inPegasus.tikz"
+filename "tikzit/aux_to_all4_allConn.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status collapsed
 
@@ -4141,11 +4140,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/k4_missing_2edge_chimera.tikz"
+filename "tikzit/k4_missing_2edge_pegasus.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -4203,11 +4202,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/k4_missing_edge_chimera.tikz"
+filename "tikzit/k4_missing_edge_pegasus.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -4265,11 +4264,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/k4_chimera.tikz"
+filename "tikzit/k4_pegasus.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -4394,11 +4393,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/all_to_aux4.tikz"
+filename "tikzit/all_to_aux_chimera.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -4463,11 +4462,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/logical_fork3.tikz"
+filename "tikzit/logical_fork3_inChimera.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -4525,11 +4524,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/2aux_to_all4_1conn.tikz"
+filename "tikzit/k4_missing_2edge_chimera.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -4587,11 +4586,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/2aux_to_all4_allConn.tikz"
+filename "tikzit/k4_missing_edge_chimera.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -4849,7 +4848,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/k4_missing_edge_chimera.tikz"
+filename "tikzit/logical_fork3_inPegasus.tikz"
 
 \end_inset
 
@@ -4973,11 +4972,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn.tikz"
+filename "tikzit/2aux_to_all4_allConn_inPegasus.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
@@ -5105,11 +5104,11 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn.tikz"
+filename "tikzit/aux_to_all4_allConn_inPegasus.tikz"
 
 \end_inset
 
-
+ 
 \begin_inset ERT
 status open
 
