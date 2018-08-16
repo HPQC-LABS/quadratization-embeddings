@@ -1,13 +1,13 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
-		\node [style=auxiliary_qubit] (0) at (0, 6) {};
-		\node [style=logical_qubit] (1) at (0, 5) {};
-		\node [style=logical_qubit] (2) at (-0.75, 4.25) {};
-		\node [style=logical_qubit] (3) at (0.75, 4.25) {};
+		\node [style=logical_qubit] (0) at (0, -0) {};
+		\node [style=auxiliary_qubit] (1) at (0, 0.75) {};
+		\node [style=logical_qubit] (2) at (0.75, -0.5) {};
+		\node [style=logical_qubit] (3) at (-0.75, -0.5) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
-		\draw [style=simple] (0) to (1);
-		\draw [style=simple] (1) to (3);
-		\draw [style=simple] (1) to (2);
+		\draw [style=simple] (2) to (0);
+		\draw [style=simple] (3) to (0);
+		\draw [style=simple] (1) to (0);
 	\end{pgfonlayer}
 \end{tikzpicture}

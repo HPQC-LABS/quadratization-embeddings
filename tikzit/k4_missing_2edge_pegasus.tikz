@@ -1,21 +1,21 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
 		\node [style=logical_qubit] (0) at (-2, -0) {};
-		\node [style=emb_auxiliary_qubit] (1) at (-1, -0) {};
-		\node [style=auxiliary_qubit] (2) at (2, -0) {};
-		\node [style=logical_qubit] (3) at (0, 2) {};
-		\node [style=emb_auxiliary_qubit] (4) at (0, 1) {};
+		\node [style=logical_qubit] (1) at (-1, -0) {};
+		\node [style=unused_qubit] (2) at (2, -0) {};
+		\node [style=unused_qubit] (3) at (0, 2) {};
+		\node [style=unused_qubit] (4) at (0, 1) {};
 		\node [style=logical_qubit] (5) at (0, -1) {};
 		\node [style=auxiliary_qubit] (6) at (0, -2) {};
-		\node [style=logical_qubit] (7) at (1, -0) {};
+		\node [style=unused_qubit] (7) at (1, -0) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
-		\draw [style=simple] (3) to (2);
-		\draw [style={embedding}] (1) to (4);
+		\draw [style=unused] (3) to (2);
+		\draw [style=unused] (1) to (4);
 		\draw [style=unused] (0) to (4);
-		\draw [style=simple] (4) to (2);
-		\draw [style=added] (0) to (1);
-		\draw [style=simple] (1) to (5);
+		\draw [style=unused] (4) to (2);
+		\draw [style={unused_added}] (0) to (1);
+		\draw [style=unused] (1) to (5);
 		\draw [style=unused] (5) to (2);
 		\draw [style=simple] (5) to (0);
 		\draw [style=simple] (0) to (6);
@@ -24,11 +24,11 @@
 		\draw [style=added] (5) to (6);
 		\draw [style=unused] (0) to (3);
 		\draw [style=unused] (1) to (3);
-		\draw [style=simple] (7) to (4);
+		\draw [style=unused] (7) to (4);
 		\draw [style=unused] (7) to (5);
 		\draw [style=unused] (7) to (6);
-		\draw [style=simple] (7) to (3);
-		\draw [style=added] (7) to (2);
-		\draw [style=added] (3) to (4);
+		\draw [style=unused] (7) to (3);
+		\draw [style={unused_added}] (7) to (2);
+		\draw [style={unused_added}] (3) to (4);
 	\end{pgfonlayer}
 \end{tikzpicture}

@@ -210,6 +210,36 @@ all_to_aux_chimera.tikz
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/all_to_aux_pegasus.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+all_to_aux_pegasus.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Gadgets with adjacency graph corresponding to all_to_aux.tikz(
 \begin_inset ERT
 status collapsed
@@ -300,6 +330,36 @@ filename "tikzit/logical_fork_chimera.tikz"
 
 \begin_layout Plain Layout
 logical_fork_chimera.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/logical_fork_pegasus.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+logical_fork_pegasus.tikz
 \end_layout
 
 \end_inset
@@ -412,6 +472,36 @@ k4_missing_2edge_chimera.tikz
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_2edge_pegasus.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k4_missing_2edge_pegasus.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Gadgets with adjacency graph corresponding to k4_missing_2edge.tikz(
 \begin_inset ERT
 status collapsed
@@ -511,6 +601,36 @@ k4_missing_edge_chimera.tikz
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_edge_pegasus.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k4_missing_edge_pegasus.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Gadgets with adjacency graph corresponding to k4_missing_edge.tikz(
 \begin_inset ERT
 status collapsed
@@ -597,6 +717,36 @@ filename "tikzit/k4_chimera.tikz"
 
 \begin_layout Plain Layout
 k4_chimera.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_pegasus.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k4_pegasus.tikz
 \end_layout
 
 \end_inset
@@ -807,6 +957,36 @@ filename "tikzit/logical_fork3_inPegasus.tikz"
 
 \begin_layout Plain Layout
 logical_fork3_inPegasus.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/logical_fork3_inChimera.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+logical_fork3_inChimera.tikz
 \end_layout
 
 \end_inset
