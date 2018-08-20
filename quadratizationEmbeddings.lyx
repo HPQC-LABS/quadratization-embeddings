@@ -5054,6 +5054,18 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -5123,6 +5135,18 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -5185,6 +5209,18 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -5244,6 +5280,18 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -5447,6 +5495,18 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -5506,6 +5566,18 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -5700,6 +5772,18 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -5769,6 +5853,18 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -5831,6 +5927,18 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -5890,6 +5998,18 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -6512,6 +6632,17 @@ gadget which embeds positive quartic terms onto Pegasus with only two total
  All other gadgets for positive quartic terms require three or four total
  auxiliaries to embed onto Pegasus.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Talk about logarithmic number of variables method, and how it's not useful
+ here, but may be very useful for highly k-local.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
