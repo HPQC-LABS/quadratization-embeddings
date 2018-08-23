@@ -1328,7 +1328,7 @@ height "0.5pt"
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="21" columns="11">
+<lyxtabular version="3" rows="23" columns="11">
 <features tabularvalignment="middle" tabularwidth="100col%">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
@@ -2256,7 +2256,7 @@ ACR
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2295,7 +2295,7 @@ ACR
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2431,6 +2431,107 @@ PTR-Ishikawa
 \series bold
 \color red
 1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RBL (odd)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3399,7 +3500,7 @@ PTR-BCR-4
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3432,7 +3533,7 @@ PTR-BCR-3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3450,7 +3551,7 @@ PTR-BCR-3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3459,7 +3560,7 @@ PTR-BCR-3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3489,7 +3590,7 @@ PTR-BCR-3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3498,7 +3599,7 @@ PTR-BCR-3
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3506,6 +3607,107 @@ PTR-BCR-3
 \series bold
 \color red
 4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RBL (odd)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
