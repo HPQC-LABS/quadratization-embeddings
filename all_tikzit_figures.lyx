@@ -1408,6 +1408,105 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
+filename "tikzit/aux_to_all4_allConn_extra_qb.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+aux_to_all4_allConn.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/aux_to_all4_allConn_inPegasus_extra_qb.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+aux_to_all4_allConn_inPegasus.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gadgets with adjacency graph corresponding to aux_to_all4_allConn_extra_qb.tikz(
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.25}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/aux_to_all4_allConn_extra_qb.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+RBL (even)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
 filename "tikzit/2auxConn_to_all4_allConn.tikz"
 
 \end_inset

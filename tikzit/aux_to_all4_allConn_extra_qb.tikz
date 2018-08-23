@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=logical_qubit] (0) at (2, -0) {};
+		\node [style=logical_qubit] (1) at (0.5, 2) {};
+		\node [style=auxiliary_qubit] (2) at (0, -1) {};
+		\node [style=logical_qubit] (3) at (-1, -0) {};
+		\node [style=auxiliary_qubit] (4) at (1, -1) {};
+		\node [style=auxiliary_qubit] (5) at (0.5, 0.5) {};
+		\node [style=auxiliary_qubit] (6) at (0.5, 0.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=simple] (1) to (0);
+		\draw [style=simple] (2) to (0);
+		\draw [style=simple] (3) to (0);
+		\draw [style=simple] (4) to (2);
+		\draw [style=simple] (4) to (3);
+		\draw [style=simple] (4) to (1);
+		\draw [style=simple] (4) to (0);
+		\draw [style=simple] (2) to (3);
+		\draw [style=simple] (3) to (1);
+		\draw [style=simple] (2) to (1);
+		\draw [style=simple] (2) to (5);
+		\draw [style=simple] (5) to (4);
+	\end{pgfonlayer}
+\end{tikzpicture}
