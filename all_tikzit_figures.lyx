@@ -871,6 +871,36 @@ all_to_aux4_inPegasus.tikz
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/all_to_aux4_inChimera.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+all_to_aux4_inChimera.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Gadgets with adjacency graph corresponding to all_to_aux4.tikz(
 \begin_inset ERT
 status collapsed

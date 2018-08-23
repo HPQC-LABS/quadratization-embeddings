@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.31)  23 AUG 2018 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.4)  23 AUG 2018 22:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,58 +477,59 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (./k4_missing_edge_chimera.tikz) [4] (./k4_missing_edge_pegasus.tikz)
 (./k4_missing_edge.tikz) (./k4.tikz) (./k4_chimera.tikz) [5] (./k4_pegasus.tikz
 ) (./k4.tikz) (./all_to_aux4.tikz) (./all_to_aux4_inPegasus.tikz) [6]
-(./all_to_aux4.tikz) (./logical_fork3.tikz) (./logical_fork3_inPegasus.tikz)
-(./logical_fork3_inChimera.tikz) [7] (./logical_fork3.tikz)
-(./2aux_to_all4_1conn.tikz) (./2aux_to_all4_1conn_inPegasus.tikz)
-(./2aux_to_all4_1conn_inChimera.tikz) [8] (./2aux_to_all4_1conn.tikz)
-Overfull \hbox (11.61191pt too wide) in paragraph at lines 186--187
+(./all_to_aux4_inChimera.tikz) (./all_to_aux4.tikz) (./logical_fork3.tikz)
+(./logical_fork3_inPegasus.tikz) [7] (./logical_fork3_inChimera.tikz)
+(./logical_fork3.tikz) (./2aux_to_all4_1conn.tikz)
+(./2aux_to_all4_1conn_inPegasus.tikz) [8] (./2aux_to_all4_1conn_inChimera.tikz)
+(./2aux_to_all4_1conn.tikz)
+Overfull \hbox (11.61191pt too wide) in paragraph at lines 191--192
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to 2aux[]to[]
 all4[]1conn.tikz([]): 
  []
 
-(./2aux_to_all4_allConn.tikz) (./2aux_to_all4_allConn_inPegasus.tikz)
+(./2aux_to_all4_allConn.tikz) (./2aux_to_all4_allConn_inPegasus.tikz) [9]
 (./2aux_to_all4_allConn.tikz)
-Overfull \hbox (19.94527pt too wide) in paragraph at lines 204--205
+Overfull \hbox (19.94527pt too wide) in paragraph at lines 209--210
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to 2aux[]to[]
 all4[]allConn.tikz([]): 
  []
 
-[9] (./aux_to_all4_allConn.tikz) (./aux_to_all4_allConn_inPegasus.tikz)
-(./aux_to_all4_allConn_inChimera.tikz) (./aux_to_all4_allConn.tikz)
-Overfull \hbox (14.94525pt too wide) in paragraph at lines 225--226
+(./aux_to_all4_allConn.tikz) (./aux_to_all4_allConn_inPegasus.tikz)
+(./aux_to_all4_allConn_inChimera.tikz) [10] (./aux_to_all4_allConn.tikz)
+Overfull \hbox (14.94525pt too wide) in paragraph at lines 230--231
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to aux[]to[]a
 ll4[]allConn.tikz([]): 
  []
 
-(./aux_to_all4_allConn_extra_qb.tikz) [10]
+(./aux_to_all4_allConn_extra_qb.tikz)
 (./aux_to_all4_allConn_inPegasus_extra_qb.tikz)
 (./aux_to_all4_allConn_extra_qb.tikz)
-Overfull \hbox (55.50645pt too wide) in paragraph at lines 244--245
+Overfull \hbox (55.50645pt too wide) in paragraph at lines 249--250
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to aux[]to[]a
 ll4[]allConn[]extra[]qb.tikz([]): 
  []
 
-(./2auxConn_to_all4_allConn.tikz) (./2auxConn_to_all4_allConn_inPegasus.tikz)
 [11] (./2auxConn_to_all4_allConn.tikz)
-Overfull \hbox (43.27866pt too wide) in paragraph at lines 260--261
+(./2auxConn_to_all4_allConn_inPegasus.tikz) (./2auxConn_to_all4_allConn.tikz)
+Overfull \hbox (43.27866pt too wide) in paragraph at lines 265--266
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to 2aux-Conn[
 ]to[]all4[]allConn.tikz([]): 
  []
 
-(./2k4_shared_aux.tikz) (./2k4_shared_aux_inPegasus.tikz)
-(./2k4_shared_aux.tikz) [12] [13] (./all_tikzit_figures.aux) ) 
+(./2k4_shared_aux.tikz) [12] (./2k4_shared_aux_inPegasus.tikz)
+(./2k4_shared_aux.tikz) [13] (./all_tikzit_figures.aux) ) 
 Here is how much of TeX's memory you used:
- 12754 strings out of 494953
- 267758 string characters out of 6180977
- 323869 words of memory out of 5000000
+ 12757 strings out of 494953
+ 267833 string characters out of 6180978
+ 323539 words of memory out of 5000000
  15684 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,9n,65p,502b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on all_tikzit_figures.pdf (13 pages, 57066 bytes).
+</usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on all_tikzit_figures.pdf (13 pages, 57431 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
