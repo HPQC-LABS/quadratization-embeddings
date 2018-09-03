@@ -2869,7 +2869,7 @@ RBL (even)
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
+5
 \end_layout
 
 \end_inset
@@ -2881,7 +2881,7 @@ RBL (even)
 
 \series bold
 \color red
-?
+8
 \end_layout
 
 \end_inset
@@ -3411,7 +3411,7 @@ PTR-Ishikawa
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
+5
 \end_layout
 
 \end_inset
@@ -3423,7 +3423,7 @@ PTR-Ishikawa
 
 \series bold
 \color red
-?
+7
 \end_layout
 
 \end_inset
@@ -3840,7 +3840,7 @@ PTR-BCR-3
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
+8
 \end_layout
 
 \end_inset
@@ -3852,7 +3852,7 @@ PTR-BCR-3
 
 \series bold
 \color red
-?
+10
 \end_layout
 
 \end_inset
@@ -3871,15 +3871,6 @@ PTR-BCR-3
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
 \end_layout
 
 \end_inset
@@ -3889,6 +3880,18 @@ PTR-BCR-3
 
 \begin_layout Plain Layout
 2
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\color red
+4
 \end_layout
 
 \end_inset
@@ -4052,7 +4055,7 @@ PTR-KZ(?)
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
+5
 \end_layout
 
 \end_inset
@@ -4064,7 +4067,7 @@ PTR-KZ(?)
 
 \series bold
 \color red
-?
+8
 \end_layout
 
 \end_inset
