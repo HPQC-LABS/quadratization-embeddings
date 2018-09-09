@@ -89,7 +89,11 @@ Preliminaries
 \end_layout
 
 \begin_layout Standard
-Start with three LxL chimera graphs with the following associated indexes
+Start with three 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ chimera graphs with the following associated indices
 \end_layout
 
 \begin_layout Itemize
@@ -103,14 +107,14 @@ Start with three LxL chimera graphs with the following associated indexes
 \begin_inset Formula $i\in\{0,L-1\}$
 \end_inset
 
-corresponding to the column which the chimera unit cell is on
+ corresponding to the column which the chimera unit cell is on
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $j\in\{0,L-1\}$
 \end_inset
 
-corresponding to the row of the chimera unit cell
+ corresponding to the row of the chimera unit cell
 \end_layout
 
 \begin_layout Itemize
@@ -129,7 +133,7 @@ Within each side of the
 \begin_inset Formula $k_{4,4}$
 \end_inset
 
-, we further define two more indexes, 
+, we further define two more indices, 
 \end_layout
 
 \begin_layout Itemize
@@ -148,7 +152,7 @@ Within each side of the
 
 \begin_layout Standard
 A node within the Pegasus graph is therefore defined by the following 6
- indexes 
+ indices 
 \begin_inset Formula $(c,i,j,u,p,q)$
 \end_inset
 
@@ -162,11 +166,11 @@ Periodic definition
 \begin_layout Standard
 We now define each of the additional edges which make the three chimera
  graphs into the Pegasus graph, to define this we denote edges in terms
- of the node indexes the connect, so that 
+ of the node indices they connect, so that 
 \begin_inset Formula $(c,i,j,u,p,q)\rightarrow(c',i',j',u',p',q')$
 \end_inset
 
- indicated an edge between the node defined by 
+ indicates an edge between the node defined by 
 \begin_inset Formula $(c,i,j,u,p,q)$
 \end_inset
 
@@ -174,7 +178,7 @@ We now define each of the additional edges which make the three chimera
 \begin_inset Formula $(c',i',j',u',p',q')$
 \end_inset
 
- in this notation, we will often add or subtract numbers to node indexes,
+ in this notation, we will often add or subtract numbers to node indices,
  for 
 \begin_inset Formula $c$
 \end_inset
@@ -195,7 +199,7 @@ We now define each of the additional edges which make the three chimera
 \begin_inset Formula $q,$
 \end_inset
 
-it is taken to be addition modulo 
+ it is taken to be addition modulo 
 \begin_inset Formula $2$
 \end_inset
 
@@ -235,11 +239,11 @@ not
 \end_layout
 
 \begin_layout Standard
-Next, we consider edges which connect to unit cells with the same 
+Next, we consider edges which connect two unit cells with the same 
 \begin_inset Formula $(i,j)$
 \end_inset
 
-, but in a different chimera graph, these are defined as 
+, but in a different layer of chimera graph, these are defined as 
 \end_layout
 
 \begin_layout Standard
@@ -250,15 +254,11 @@ Next, we consider edges which connect to unit cells with the same
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $*$
 \end_inset
 
- indicate that it connects to all valid indexes, the above equation therefore
+ indicate that it connects to all valid indices, the above equation therefore
  actually defines four 
 \begin_inset Quotes eld
 \end_inset
@@ -268,7 +268,7 @@ outgoing
 \end_inset
 
  edges from each vertex.
- Additionally, there for the 
+ Additionally, for the 
 \begin_inset Formula $p=1$
 \end_inset
 
@@ -283,10 +283,6 @@ outgoing
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 and 
 \end_layout
 
@@ -356,7 +352,7 @@ noprefix "false"
 \begin_inset Formula $q$
 \end_inset
 
-) will produce a Pegasus graph, without producing the same edge twice
+) will produce a Pegasus graph, without producing the same edge twice.
 \end_layout
 
 \begin_layout Section
