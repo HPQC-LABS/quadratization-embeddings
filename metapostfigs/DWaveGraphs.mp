@@ -80,10 +80,18 @@ enddef;
 
 numeric L; L := 3;		% size of the Chimera blocks, $L\times L$
 
+% displayed sizes: the ranges of variables c, i, j
+numeric dca; dca := 1;
+numeric dcb; dcb := 2;
+numeric dia; dia := 1;
+numeric dib; dib := L-1;
+numeric dja; dja := 1;
+numeric djb; djb := L-1;
+
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
 	c*L*(vh,0)		% c: label of the Chimera graphs (horizontal index)
-	+ i*(vh,0)		% i: horizontal index of the unit cells
+	- i*(vh,0)		% i: horizontal index of the unit cells
 	+ j*(0,vv)		% j: vertical index of the unit cells
 	+ u*(uh,0)		% u: horizontal index of the vertices inside the unit cells
 	+ (2*p+q)*(0,uv)	% 2*p+q: vertical index of the vertices inside the unit cells
@@ -101,9 +109,9 @@ enddef;
 picture ChimerasX;
 ChimerasX = image(
 	% equation (8): K_{4,4} edges in unit cells
-	for c = 0 upto 2:
-		for i = 0 upto L-1:
-			for j = 0 upto L-1:
+	for c = dca upto dcb:
+		for i = dia upto dib:
+			for j = dja upto djb:
 					for p = 0 upto 1:
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
@@ -117,9 +125,9 @@ ChimerasX = image(
 		endfor;
 	endfor;
 	% equation (1): additional edges in unit cells
-	for c = 0 upto 2:
-		for i = 0 upto L-1:
-			for j = 0 upto L-1:
+	for c = dca upto dcb:
+		for i = dia upto dib:
+			for j = dja upto djb:
 				for u = 0 upto 1:
 					for p = 0 upto 1:
 							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), cgrey );
@@ -129,9 +137,9 @@ ChimerasX = image(
 		endfor;
 	endfor;
 	% equation (9): vertical couplings
-	for c = 0 upto 2:
-		for i = 0 upto L-1:
-			for j = 0 upto L-2:	% !
+	for c = dca upto dcb:
+		for i = dia upto dib:
+			for j = dja upto djb-1: % !
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,0,p,q), PV(c,i,j+1,0,p,q), cgrey );
@@ -141,9 +149,9 @@ ChimerasX = image(
 		endfor;
 	endfor;
 	% equation (10):  horizontal couplings
-	for c = 0 upto 2:
-		for i = 0 upto L-2:	% !
-			for j = 0 upto L-1:
+	for c = dca upto dcb:
+		for i = dia upto dib-1: % !
+			for j = dja upto djb:
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), cgrey );
@@ -160,9 +168,9 @@ ChimerasX = image(
 % all the dots for the vertices
 picture Dots;
 Dots = image(
-	for c = 0 upto 2:
-		for i = 0 upto L-1:
-			for j = 0 upto L-1:
+	for c = dca upto dcb:
+		for i = dia upto dib:
+			for j = dja upto djb:
 				for u = 0 upto 1:
 					for p = 0 upto 1:
 						for q = 0 upto 1:
@@ -183,11 +191,8 @@ picture PegasusEE;
 PegasusEE = image(
 	numeric c,i,j,u,p,q;
 	% ** equation (2) for u=0 ******
-%	for c = 0 upto 2:
 	c := 1;
-%		for i = 0 upto L-1:
 		i := 1;
-%			for j = 0 upto L-1:
 			j := 1;
 				u := 0;
 					for pp = 0 upto 1:
@@ -197,15 +202,9 @@ PegasusEE = image(
 						endfor;
 						endfor;
 					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
 	% ** equation (2) for u=1 ******
-%	for c = 0 upto 2:
 	c := 1;
-%		for i = 0 upto L-1:
 		i := 1;
-%			for j = 0 upto L-1:
 			j := 1;
 				u :=1;
 					for pp = 0 upto 1:
@@ -215,15 +214,9 @@ PegasusEE = image(
 						endfor;
 						endfor;
 					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
 	% ** equation (3) **************
-%	for c = 0 upto 2:
 	c := 1;
-%		for i = 0 upto L-1:
 		i := 1;
-%			for j = 0 upto L-2:	% !
 			j := 1;
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
@@ -232,15 +225,9 @@ PegasusEE = image(
 						endfor;
 						endfor;
 					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
 	% ** equation (4) **************
-%	for c = 0 upto 2:
 	c := 1;
-%		for i = 0 upto L-2:	% !
 		i := 1;
-%			for j = 0 upto L-1:
 			j := 1;
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
@@ -250,79 +237,6 @@ PegasusEE = image(
 						endfor;
 						endfor;
 					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
-	% ** equation (5) for u=0 ****** 
-%	for c = 0 upto 2:
-	c := 1;
-%		for i = 0 upto L-1:
-		i := 1;
-%			for j = 0 upto L-1:
-			j := 1;
-				u := 0;
-					for p = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredged( PV(c,i,j,u,p,q), PV((c-1)mod3,i,j,(u+1)mod2,0,qp), cred );
-						endfor;
-						endfor;
-					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
-	% ** equation (5) for u=1 ******
-%	for c = 0 upto 2:
-	c := 1;
-%		for i = 0 upto L-1:
-		i := 1;
-%			for j = 0 upto L-1:
-			j := 1;
-				u := 1;
-					for p = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredged( PV(c,i,j,u,p,q), PV((c-1)mod3,i,j,(u+1)mod2,0,qp), cblue );
-						endfor;
-						endfor;
-					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
-	% ** equation (6) **************
-%	for c = 0 upto 2:
-	c := 1;
-%		for i = 0 upto L-1:
-		i := 1;
-%			for j = 1 upto L-1:	% !
-			j := 1;
-					for p = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredged( PV(c,i,j,0,p,q), PV((c-1)mod3,i,j-1,1,1,qp), corange );
-						endfor;
-						endfor;
-					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
-	% ** equation (7) **************
-%	for c = 0 upto 2:
-	c := 1;
-%		for i = 1 upto L-1:	% !
-		i := 1;
-%			for j = 0 upto L-1:
-			j := 1;
-					for p = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredged( PV(c,i,j,1,p,q), PV((c-1)mod3,i-1,j,0,1,qp), cgreen );
-						endfor;
-						endfor;
-					endfor;
-%			endfor;
-%		endfor;
-%	endfor;
 
 ); % of PegasusEE
 
