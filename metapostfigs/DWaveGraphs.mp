@@ -90,7 +90,7 @@ numeric djb; djb := L-1;
 
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
-	c*L*(vh,0)		% c: label of the Chimera graphs (horizontal index)
+	c*(dib-dia+1)*(vh,0)		% c: label of the Chimera graphs (horizontal index)
 	- i*(vh,0)		% i: horizontal index of the unit cells
 	+ j*(0,vv)		% j: vertical index of the unit cells
 	+ u*(uh,0)		% u: horizontal index of the vertices inside the unit cells
