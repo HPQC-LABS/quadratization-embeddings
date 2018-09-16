@@ -81,13 +81,38 @@ numeric djb; djb := L-1;
 
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
-	c*(dib-dia+1)*(vh,0)		% c: label of the Chimera graphs (horizontal index)
-	- i*(vh,0)		% i: horizontal index of the unit cells
-	+ j*(0,vv)		% j: vertical index of the unit cells
+
+% original chimeras next to each other
+%	c*(dib-dia+1)*(vh,0)		% c: label of the Chimera graphs (horizontal index)
+%	- i*(vh,0)		% i: horizontal index of the unit cells
+%	+ j*(0,vv)		% j: vertical index of the unit cells
+% new: chimeras inside each other, in 2D works only for two layers
+	c*(vh,-vv)		% c: label of the Chimera graphs (horizontal index)
+	- i*(2vh,0)		% i: horizontal index of the unit cells
+	- j*(0,-2vv)		% j: vertical index of the unit cells
+% common part: unit cells
 	+ u*(uh,0)		% u: horizontal index of the vertices inside the unit cells
 	+ (2*p+q)*(0,uv)	% 2*p+q: vertical index of the vertices inside the unit cells
 	+ ( (2*p+q)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
 enddef;
+
+% only five selected unit cells
+numeric selected[][];
+selected[0][0] := 1;	% c
+selected[0][1] := 1;	% i
+selected[0][2] := 1;	% j ...
+selected[1][0] := 2;
+selected[1][1] := 1;
+selected[1][2] := 1;
+selected[2][0] := 2;
+selected[2][1] := 1;
+selected[2][2] := 2;
+selected[3][0] := 2;
+selected[3][1] := 2;
+selected[3][2] := 1;
+selected[4][0] := 2;
+selected[4][1] := 2;
+selected[4][2] := 2;
 
 
 
@@ -99,10 +124,12 @@ enddef;
 % three Chimera graphs with modified K_{4,4} unit cells
 picture ChimerasX;
 ChimerasX = image(
+	numeric c,i,j,u,p,q;
 	% equation (8): K_{4,4} edges in unit cells
-	for c = dca upto dcb:
-		for i = dia upto dib:
-			for j = dja upto djb:
+	for mi = 0 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
 					for p = 0 upto 1:
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
@@ -112,44 +139,39 @@ ChimerasX = image(
 						endfor;
 					endfor;
 					endfor;
-			endfor;
-		endfor;
 	endfor;
 	% equation (1): additional edges in unit cells
-	for c = dca upto dcb:
-		for i = dia upto dib:
-			for j = dja upto djb:
+	for mi = 0 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
 				for u = 0 upto 1:
 					for p = 0 upto 1:
 							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), cblack );
 					endfor;
 				endfor;
-			endfor;
-		endfor;
 	endfor;
 	% equation (9): vertical couplings
-	for c = dca upto dcb:
-		for i = dia upto dib:
-			for j = dja upto djb-1: % !
+	for mi = 1, 3:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,0,p,q), PV(c,i,j+1,0,p,q), cgrey );
 						endfor;
 					endfor;
-			endfor;
-		endfor;
 	endfor;
 	% equation (10):  horizontal couplings
-	for c = dca upto dcb:
-		for i = dia upto dib-1: % !
-			for j = dja upto djb:
+	for mi = 1, 2:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), cgrey );
 						endfor;
 					endfor;
-			endfor;
-		endfor;
 	endfor;
 ); % of ChimeraX
 
@@ -159,9 +181,10 @@ ChimerasX = image(
 % all the dots for the vertices
 picture Dots;
 Dots = image(
-	for c = dca upto dcb:
-		for i = dia upto dib:
-			for j = dja upto djb:
+	for mi = 0 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
 				for u = 0 upto 1:
 					for p = 0 upto 1:
 						for q = 0 upto 1:
@@ -169,8 +192,6 @@ Dots = image(
 						endfor;
 					endfor;
 				endfor;
-			endfor;
-		endfor;
 	endfor;
 ); % of Dots
 
