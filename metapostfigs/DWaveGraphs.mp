@@ -1,6 +1,5 @@
 % DWaveGraphs.mp -- drawing the Pegasus graph.
 % Szilárd Szalay, Wigner Research Centre for Physics,
-% 2018.09.11.
 %
 % compiling:
 % the required components mpost and a2ping are contained 
@@ -9,7 +8,7 @@
 %     mpost DWaveGraphs.mp
 % if there are LaTeX labels:
 %     TEX=latex mpost DWaveGraphs.mp
-% The script ./a2ping.pl is for converting .eps figures to .pdf figures,
+% The script a2ping is for converting .eps figures to .pdf figures,
 % while not screwing up the bounding box.
 % It drops an error message, but it works fine...
 % One can use the bash script for multiple conversions:
@@ -50,10 +49,6 @@ numeric vv; vv := 4/3*vt;	% vertical
 numeric th; th :=-.2;		% horizontal
 numeric tv; tv := .2;		% vertical
 
-% tilting factors (for the full graph)
-%numeric tgh; tgh :=-.2;	% horizontal
-%numeric tgv; tgv := .2;	% vertical
-
 
 
 
@@ -67,10 +62,6 @@ enddef;
 % default edge for the graph
 vardef gredge(expr A,B,clr) =
 	draw A--B withpen pencircle scaled .7bp withcolor clr;
-enddef;
-
-vardef gredged(expr A,B,clr) =
-	draw A--B withpen pencircle scaled .7bp withcolor clr dashed evenly;
 enddef;
 
 
@@ -130,7 +121,7 @@ ChimerasX = image(
 			for j = dja upto djb:
 				for u = 0 upto 1:
 					for p = 0 upto 1:
-							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), cgrey );
+							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), cblack );
 					endfor;
 				endfor;
 			endfor;
