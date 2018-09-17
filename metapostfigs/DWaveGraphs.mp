@@ -38,7 +38,7 @@ color textgrey; textgrey := (35,31,32)/256;	% for beamer poster/slide
 % base units (for unit cells)
 numeric ut; ut := 28bp;		% base unit for the whole figure
 numeric uh; uh := ut;		% horizontal
-numeric uv; uv := 3/4*ut;	% vertical
+numeric uv; uv := ut; %3/4*ut;	% vertical
 
 % base units (for full graph)
 numeric vt; vt := 3ut; 		% base unit
@@ -46,8 +46,8 @@ numeric vh; vh := vt;		% horizontal
 numeric vv; vv := 4/3*vt;	% vertical
 
 % tilting factors (for the unit cells)
-numeric th; th :=-.2;		% horizontal
-numeric tv; tv := .2;		% vertical
+numeric th; th :=+0.3;		% horizontal
+numeric tv; tv :=+0.1;		% vertical
 
 
 
@@ -71,12 +71,13 @@ enddef;
 
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
-	c*(vh,-vv)		% c: label of the Chimera graphs (horizontal index)
+	c*(vh,vv)		% c: label of the Chimera graphs (horizontal index)
 	- i*(2vh,0)		% i: horizontal index of the unit cells
-	- j*(0,-2vv)		% j: vertical index of the unit cells
+	- j*(0,2vv)		% j: vertical index of the unit cells
 	+ u*(uh,0)		% u: horizontal index of the vertices inside the unit cells
-	+ (2*p+q)*(0,uv)	% 2*p+q: vertical index of the vertices inside the unit cells
+	- (2*p+q)*(0,uv)	% 2*p+q: vertical index of the vertices inside the unit cells
 	+ ( (2*p+q)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
+%	+ ( (2*p+q)*th*uh, u*tv*uv )	% tilting of the unit cells
 enddef;
 
 % only five selected unit cells
