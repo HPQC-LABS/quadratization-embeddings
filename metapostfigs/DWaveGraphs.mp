@@ -47,7 +47,7 @@ numeric vv; vv := 4/3*vt;	% vertical
 
 % tilting factors (for the unit cells)
 numeric th; th :=-0.3;		% horizontal
-numeric tv; tv :=+0.1;		% vertical
+numeric tv; tv :=-0.1;		% vertical
 
 
 
