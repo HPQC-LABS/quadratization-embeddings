@@ -47,6 +47,8 @@ numeric vh; vh := vt;		% horizontal
 %numeric vv; vv := 4/3*vt;	% vertical
 numeric vv; vv := 0.8vt;	% vertical
 
+numeric vs; vs := 1.2;		% scale factor for the L-by-L graph
+
 % tilting factors (for the unit cells)
 numeric th; th :=-0.4;		% horizontal
 numeric tv; tv :=-0.1;		% vertical
@@ -71,29 +73,34 @@ enddef;
 
 % ** definition of the vertex positions ***************************************
 
-vardef cnegpq(expr cnd,p,q) =
-	if cnd=0: 2*p+q else: 2*(1-p)+(1-q) fi
-enddef;
-
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
-numeric pq;
-	if ((i+j)mod2=0) and (u=0) and (c=2):
-		pq := 2*p+q;
-	else:
-		pq := 2*(1-p)+(1-q);	
-	fi;
-% position of the unit cell:
-	c*(vh,vv)		% c: label of the Chimera graphs (horizontal index)
-	- i*(2vh,0)		% i: horizontal index of the unit cells
-	- j*(0,2vv)		% j: vertical index of the unit cells
-% position of the vertex inside the unit cell:
-	+ (u-0.5)*(uh,0)		% u: horizontal index of the vertices inside the unit cells
-	+ (pq-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
-%	+ ( (2*p+q)*th*uh, (-1)**u*tv*uv )				% tilting of the unit cells
-	+ (c-1)*( (-1)**(i+j)*(pq-1.5)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
-%	+ (c-1)*(.1vh,0)
-%	+ ( (2*p+q)*th*uh, u*tv*uv )	% tilting of the unit cells
+
+	if drawingmode = 1:	% this is the 4+1 unit cell mode
+		numeric pq;
+		if ((i+j)mod2=0) and (u=0) and (c=2):
+			pq := 2*p+q;
+		else:
+			pq := 2*(1-p)+(1-q);	
+		fi;
+		% position of the unit cell:
+		c*(vh,vv)			% c: index of the Chimera layers
+		- i*(2vh,0)			% i: horizontal index of the unit cells
+		- j*(0,2vv)			% j: vertical index of the unit cells
+		% position of the vertex inside the unit cell:
+		+ (u-0.5)*(uh,0)		% u: horizontal index of the vertices inside the unit cells
+		+ (pq-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
+		+ (c-1)*( (-1)**(i+j)*(pq-1.5)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
+	elseif drawingmode = 2:	% this is the two-layer L-by-L unit cell mode
+		% position of the unit cell:
+		c*vs*(vh,vv)		% c: index of the Chimera layers
+		- i*vs*(2vh,0)		% i: horizontal index of the unit cells
+		- j*vs*(0,2vv)		% j: vertical index of the unit cells
+		% position of the vertex inside the unit cell:
+		+ (u-0.5)*(.5uh,0)		% u: horizontal index of the vertices inside the unit cells
+		- (2*p+q-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
+		+ ( -(2*p+q-1.5)*th*.5*uh, (-1)**u*tv*uv )				% tilting of the unit cells
+	fi
 enddef;
 
 % only five selected unit cells
@@ -115,20 +122,15 @@ selected[4][1] := 2;
 selected[4][2] := 2;
 
 
+numeric L; L := 3;	% size of the Chimera blocks, $L\times L$
+
 
 
 % ** Pegasus graph ************************************************************
 
-
-
-picture Chimera;
-Chimera = image(
-	numeric c,i,j;
-	% equation (8): K_{4,4} edges in unit cells
-	for mi = 1 upto 4:
-	c := selected[mi][0];
-		i := selected[mi][1];
-			j := selected[mi][2];
+% drawing edges defined by the equations, for given unit cell coordinates c,i,j
+vardef edgeeq(expr eq, c,i,j) =
+	if eq = "8":		% equation (8): K_{4,4} edges in unit cells
 					for p = 0 upto 1:
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
@@ -138,124 +140,97 @@ Chimera = image(
 						endfor;
 					endfor;
 					endfor;
-	endfor;
-	% equation (9): vertical couplings
-	for mi = 1, 3:
-	c := selected[mi][0];
-		i := selected[mi][1];
-			j := selected[mi][2];
+	elseif eq = "9":	% equation (9): vertical couplings
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,0,p,q), PV(c,i,j+1,0,p,q), cgrey );
 						endfor;
 					endfor;
-	endfor;
-	% equation (10):  horizontal couplings
-	for mi = 1, 2:
-	c := selected[mi][0];
-		i := selected[mi][1];
-			j := selected[mi][2];
+	elseif eq = "10":	% equation (10): vertical couplings
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), cgrey );
 						endfor;
 					endfor;
-	endfor;
-); % of Chimera
-
-
-
-
-% Chimera graphs with modified K_{4,4} unit cells
-picture Chimeras;
-Chimeras = image(
-	numeric c,i,j;
-
-	draw Chimera;
-	% equation (8): K_{4,4} edges in unit cells
-	mi := 0;
-	c := selected[mi][0];
-		i := selected[mi][1];
-			j := selected[mi][2];
-					for p = 0 upto 1:
-					for pp = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredge( PV(c,i,j,0,p,q), PV(c,i,j,1,pp,qp), cgrey );
-						endfor;
-						endfor;
-					endfor;
-					endfor;
-); % of Chimeras
-
-
-
-
-% Chimera graphs with modified K_{4,4} unit cells
-picture ChimerasX;
-ChimerasX = image(
-	numeric c,i,j;
-	draw Chimeras;
-	% equation (1): additional edges in unit cells
-	for mi = 0 upto 4:
-	c := selected[mi][0];
-		i := selected[mi][1];
-			j := selected[mi][2];
+	elseif eq = "1":	% equation (1): additional edges in unit cells
 				for u = 0 upto 1:
 					for p = 0 upto 1:
 							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), cblack );
 					endfor;
 				endfor;
+	elseif eq = "2a":	% equation (2) for u=0
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(c,i,j,0,0,q), PV((c+1)mod3,i,j,1,pp,qp), cblue );
+						endfor;
+						endfor;
+					endfor;
+	elseif eq = "2b":	% equation (2) for u=1
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(c,i,j,1,0,q), PV((c+1)mod3,i,j,0,pp,qp), cred );
+						endfor;
+						endfor;
+					endfor;
+	elseif eq = "3":	% equation (3)
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(c,i,j,1,1,q), PV((c+1)mod3,i,j+1,0,pp,qp), corange );
+						endfor;
+						endfor;
+					endfor;
+	elseif eq = "4":	% equation (4)
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(c,i,j,0,1,q), PV((c+1)mod3,i+1,j,1,pp,qp), cgreen );
+						endfor;
+						endfor;
+					endfor;
+	fi;
+enddef;
+
+
+% drawing vertices for unit cell of coordinates c,i,j
+vardef ucvertex(expr c,i,j) =
+				for u = 0 upto 1:
+					for p = 0 upto 1:
+						for q = 0 upto 1:
+							grvertex( PV(c,i,j,u,p,q) );
+						endfor;
+					endfor;
+				endfor;
+enddef;
+
+
+
+
+numeric drawingmode; drawingmode := 1;
+
+picture ChimeraTT;
+ChimeraTT = image(
+	numeric mi,c,i,j;
+	for mi = 1 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				edgeeq("8",c,i,j);
 	endfor;
-	% equation (9): vertical couplings
-); % of ChimeraX
-
-
-% extra edges for the Pegasus
-picture PegasusEE;
-PegasusEE = image(
-	% ** equation (2) for u=0 ******
-					for pp = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredge( PV(1,1,1,0,0,q), PV(2,1,1,1,pp,qp), cblue );
-						endfor;
-						endfor;
-					endfor;
-	% ** equation (2) for u=1 ******
-					for pp = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredge( PV(1,1,1,1,0,q), PV(2,1,1,0,pp,qp), cred );
-						endfor;
-						endfor;
-					endfor;
-	% ** equation (3) **************
-					for pp = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredge( PV(1,1,1,1,1,q), PV(2,1,2,0,pp,qp), corange );
-						endfor;
-						endfor;
-					endfor;
-	% ** equation (4) **************
-					for pp = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-							gredge( PV(1,1,1,0,1,q), PV(2,2,1,1,pp,qp), cgreen );
-						endfor;
-						endfor;
-					endfor;
-
-); % of PegasusEE
-
-
-
-% output
-outputtemplate := "fig_Chimera.eps";
-beginfig(0)
-	draw Chimera;
-	numeric c,i,j;
+	for mi = 1, 3:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				edgeeq("9",c,i,j);
+	endfor;
+	for mi = 1, 2:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				edgeeq("10",c,i,j);
+	endfor;
 	for mi = 1 upto 4:
 	c := selected[mi][0];
 		i := selected[mi][1];
@@ -268,28 +243,184 @@ beginfig(0)
 					endfor;
 				endfor;
 	endfor;
-endfig;
+); % of ChimeraTT
 
 
-outputtemplate := "fig_Pegasus.eps";
-beginfig(0)
-	draw ChimerasX;
-	draw PegasusEE;
-	numeric c,i,j;
+
+picture PegasusTT;
+PegasusTT = image(
+	draw ChimeraTT;
+	numeric mi,c,i,j;
+	mi := 0;
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				edgeeq("8",c,i,j);
 	for mi = 0 upto 4:
 	c := selected[mi][0];
 		i := selected[mi][1];
 			j := selected[mi][2];
-				for u = 0 upto 1:
-					for p = 0 upto 1:
-						for q = 0 upto 1:
-							grvertex( PV(c,i,j,u,p,q) );
-						endfor;
-					endfor;
-				endfor;
+				edgeeq("1",c,i,j);
 	endfor;
+	mi := 0;
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				edgeeq("2a",c,i,j);
+				edgeeq("2b",c,i,j);
+				edgeeq("3",c,i,j);
+				edgeeq("4",c,i,j);
+); % of PegasusTT
+
+
+picture ChimeraTTDots;
+ChimeraTTDots = image(
+	numeric mi,c,i,j;
+	for mi = 1 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				ucvertex(c,i,j);
+	endfor;
+); % of ChimeraTTDots
+
+picture PegasusTTDots;
+PegasusTTDots = image(
+	draw ChimeraTTDots;
+	numeric mi,c,i,j;
+	mi := 0;
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				ucvertex(c,i,j);
+); % of PegasusTTDots
+
+
+% output
+outputtemplate := "fig_ChimeraTT.eps";
+beginfig(0)
+	draw ChimeraTT;
+	draw ChimeraTTDots;
 endfig;
 
+
+outputtemplate := "fig_PegasusTT.eps";
+beginfig(0)
+	draw PegasusTT;
+	draw PegasusTTDots;
+endfig;
+
+
+
+
+drawingmode := 2;
+
+picture ChimeraLL;
+ChimeraLL := image(
+	numeric c;
+	c := 2;
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("8",c,i,j);
+			endfor;
+		endfor;
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("9",c,i,j);
+			endfor;
+		endfor;
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("10",c,i,j);
+			endfor;
+		endfor;
+
+
+); % of ChimeraLL
+
+
+
+picture PegasusLL;
+PegasusLL := image(
+	numeric c;
+	for c = 1 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("8",c,i,j);
+				edgeeq("1",c,i,j);
+			endfor;
+		endfor;
+	endfor;
+	for c = 1 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("9",c,i,j);
+			endfor;
+		endfor;
+	endfor;
+	for c = 1 upto 2:
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("10",c,i,j);
+			endfor;
+		endfor;
+	endfor;
+	c := 1;
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("2a",c,i,j);
+				edgeeq("2b",c,i,j);
+			endfor;
+		endfor;
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("3",c,i,j);
+			endfor;
+		endfor;
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("4",c,i,j);
+			endfor;
+		endfor;
+); % of PegasusLL
+
+
+picture ChimeraLLDots;
+ChimeraLLDots := image(
+	numeric c;
+	c := 2;
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				ucvertex(c,i,j);
+			endfor;
+		endfor;
+); % of ChimeraLLDots
+
+
+
+picture PegasusLLDots;
+PegasusLLDots := image(
+	for c = 1 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				ucvertex(c,i,j);
+			endfor;
+		endfor;
+	endfor;
+); % of PegasusLLDots
+
+
+outputtemplate := "fig_ChimeraLL.eps";
+beginfig(0)
+	draw ChimeraLL;
+	draw ChimeraLLDots;
+endfig;
+
+outputtemplate := "fig_PegasusLL.eps";
+beginfig(0)
+	draw PegasusLL;
+	draw PegasusLLDots;
+endfig;
 
 
 end;
