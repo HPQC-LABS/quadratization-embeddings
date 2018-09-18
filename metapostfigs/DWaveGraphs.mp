@@ -118,12 +118,12 @@ selected[4][2] := 2;
 % ** Pegasus graph ************************************************************
 
 
-% Chimera graphs with modified K_{4,4} unit cells
-picture Chimeras;
-Chimeras = image(
+
+picture Chimera;
+Chimera = image(
 	numeric c,i,j;
 	% equation (8): K_{4,4} edges in unit cells
-	for mi = 0 upto 4:
+	for mi = 1 upto 4:
 	c := selected[mi][0];
 		i := selected[mi][1];
 			j := selected[mi][2];
@@ -165,6 +165,31 @@ Chimeras = image(
 
 
 % Chimera graphs with modified K_{4,4} unit cells
+picture Chimeras;
+Chimeras = image(
+	numeric c,i,j;
+
+	draw Chimera;
+	% equation (8): K_{4,4} edges in unit cells
+	mi := 0;
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+					for p = 0 upto 1:
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(c,i,j,0,p,q), PV(c,i,j,1,pp,qp), cgrey );
+						endfor;
+						endfor;
+					endfor;
+					endfor;
+); % of Chimeras
+
+
+
+
+% Chimera graphs with modified K_{4,4} unit cells
 picture ChimerasX;
 ChimerasX = image(
 	numeric c,i,j;
@@ -182,29 +207,6 @@ ChimerasX = image(
 	endfor;
 	% equation (9): vertical couplings
 ); % of ChimeraX
-
-
-
-
-% all the dots for the vertices
-picture Dots;
-Dots = image(
-	numeric c,i,j;
-	for mi = 0 upto 4:
-	c := selected[mi][0];
-		i := selected[mi][1];
-			j := selected[mi][2];
-				for u = 0 upto 1:
-					for p = 0 upto 1:
-						for q = 0 upto 1:
-							grvertex( PV(c,i,j,u,p,q) );
-						endfor;
-					endfor;
-				endfor;
-	endfor;
-); % of Dots
-
-
 
 
 % extra edges for the Pegasus
@@ -250,8 +252,20 @@ PegasusEE = image(
 % output
 outputtemplate := "fig_Chimera.eps";
 beginfig(0)
-	draw Chimeras;
-	draw Dots;
+	draw Chimera;
+	numeric c,i,j;
+	for mi = 1 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				for u = 0 upto 1:
+					for p = 0 upto 1:
+						for q = 0 upto 1:
+							grvertex( PV(c,i,j,u,p,q) );
+						endfor;
+					endfor;
+				endfor;
+	endfor;
 endfig;
 
 
@@ -259,7 +273,19 @@ outputtemplate := "fig_Pegasus.eps";
 beginfig(0)
 	draw ChimerasX;
 	draw PegasusEE;
-	draw Dots;
+	numeric c,i,j;
+	for mi = 0 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				for u = 0 upto 1:
+					for p = 0 upto 1:
+						for q = 0 upto 1:
+							grvertex( PV(c,i,j,u,p,q) );
+						endfor;
+					endfor;
+				endfor;
+	endfor;
 endfig;
 
 
