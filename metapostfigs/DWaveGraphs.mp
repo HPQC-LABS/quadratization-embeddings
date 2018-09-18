@@ -42,11 +42,11 @@ numeric uv; uv := ut; %3/4*ut;	% vertical
 
 % base units (for full graph)
 numeric vt; vt := 3ut; 		% base unit
-numeric vh; vh := vt;		% horizontal
+numeric vh; vh := .9vt;		% horizontal
 numeric vv; vv := 4/3*vt;	% vertical
 
 % tilting factors (for the unit cells)
-numeric th; th :=-0.3;		% horizontal
+numeric th; th :=-0.4;		% horizontal
 numeric tv; tv :=-0.1;		% vertical
 
 
@@ -69,14 +69,28 @@ enddef;
 
 % ** definition of the vertex positions ***************************************
 
+vardef cnegpq(expr cnd,p,q) =
+	if cnd=0: 2*p+q else: 2*(1-p)+(1-q) fi
+enddef;
+
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
+numeric pq;
+	if ((i+j)mod2=0) and (u=0) and (c=2):
+		pq := 2*p+q;
+	else:
+		pq := 2*(1-p)+(1-q);	
+	fi;
+% position of the unit cell:
 	c*(vh,vv)		% c: label of the Chimera graphs (horizontal index)
 	- i*(2vh,0)		% i: horizontal index of the unit cells
 	- j*(0,2vv)		% j: vertical index of the unit cells
-	+ u*(uh,0)		% u: horizontal index of the vertices inside the unit cells
-	- (2*p+q)*(0,uv)	% 2*p+q: vertical index of the vertices inside the unit cells
-	+ ( (2*p+q)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
+% position of the vertex inside the unit cell:
+	+ (u-0.5)*(uh,0)		% u: horizontal index of the vertices inside the unit cells
+	+ (pq-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
+%	+ ( (2*p+q)*th*uh, (-1)**u*tv*uv )				% tilting of the unit cells
+	+ (c-1)*( (-1)**(i+j)*(pq-1.5)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
+	+ (c-1)*(.1vh,0)
 %	+ ( (2*p+q)*th*uh, u*tv*uv )	% tilting of the unit cells
 enddef;
 
@@ -104,10 +118,9 @@ selected[4][2] := 2;
 % ** Pegasus graph ************************************************************
 
 
-
-% three Chimera graphs with modified K_{4,4} unit cells
-picture ChimerasX;
-ChimerasX = image(
+% Chimera graphs with modified K_{4,4} unit cells
+picture Chimeras;
+Chimeras = image(
 	numeric c,i,j;
 	% equation (8): K_{4,4} edges in unit cells
 	for mi = 0 upto 4:
@@ -123,17 +136,6 @@ ChimerasX = image(
 						endfor;
 					endfor;
 					endfor;
-	endfor;
-	% equation (1): additional edges in unit cells
-	for mi = 0 upto 4:
-	c := selected[mi][0];
-		i := selected[mi][1];
-			j := selected[mi][2];
-				for u = 0 upto 1:
-					for p = 0 upto 1:
-							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), cblack );
-					endfor;
-				endfor;
 	endfor;
 	% equation (9): vertical couplings
 	for mi = 1, 3:
@@ -157,6 +159,28 @@ ChimerasX = image(
 						endfor;
 					endfor;
 	endfor;
+); % of Chimera
+
+
+
+
+% Chimera graphs with modified K_{4,4} unit cells
+picture ChimerasX;
+ChimerasX = image(
+	numeric c,i,j;
+	draw Chimeras;
+	% equation (1): additional edges in unit cells
+	for mi = 0 upto 4:
+	c := selected[mi][0];
+		i := selected[mi][1];
+			j := selected[mi][2];
+				for u = 0 upto 1:
+					for p = 0 upto 1:
+							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), cblack );
+					endfor;
+				endfor;
+	endfor;
+	% equation (9): vertical couplings
 ); % of ChimeraX
 
 
@@ -224,6 +248,13 @@ PegasusEE = image(
 
 
 % output
+outputtemplate := "fig_Chimera.eps";
+beginfig(0)
+	draw Chimeras;
+	draw Dots;
+endfig;
+
+
 outputtemplate := "fig_Pegasus.eps";
 beginfig(0)
 	draw ChimerasX;
