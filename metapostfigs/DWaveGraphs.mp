@@ -36,14 +36,16 @@ color textgrey; textgrey := (35,31,32)/256;	% for beamer poster/slide
 % ** units *********************************************************************
 
 % base units (for unit cells)
-numeric ut; ut := 28bp;		% base unit for the whole figure
+numeric ut; ut := 32bp;		% base unit for the whole figure
 numeric uh; uh := ut;		% horizontal
-numeric uv; uv := ut; %3/4*ut;	% vertical
+numeric uv; uv := 0.4*ut; %ut;	% vertical
 
 % base units (for full graph)
-numeric vt; vt := 3ut; 		% base unit
-numeric vh; vh := .9vt;		% horizontal
-numeric vv; vv := 4/3*vt;	% vertical
+%numeric vt; vt := 2.7ut; 		% base unit
+numeric vt; vt := 2ut; 		% base unit
+numeric vh; vh := vt;		% horizontal
+%numeric vv; vv := 4/3*vt;	% vertical
+numeric vv; vv := 0.8vt;	% vertical
 
 % tilting factors (for the unit cells)
 numeric th; th :=-0.4;		% horizontal
@@ -56,7 +58,7 @@ numeric tv; tv :=-0.1;		% vertical
 
 % default vertex
 vardef grvertex(expr A) =
-	draw A withpen pencircle scaled .15ut;
+	draw A withpen pencircle scaled .1ut;
 enddef;
 
 % default edge for the graph
@@ -90,7 +92,7 @@ numeric pq;
 	+ (pq-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
 %	+ ( (2*p+q)*th*uh, (-1)**u*tv*uv )				% tilting of the unit cells
 	+ (c-1)*( (-1)**(i+j)*(pq-1.5)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
-	+ (c-1)*(.1vh,0)
+%	+ (c-1)*(.1vh,0)
 %	+ ( (2*p+q)*th*uh, u*tv*uv )	% tilting of the unit cells
 enddef;
 
