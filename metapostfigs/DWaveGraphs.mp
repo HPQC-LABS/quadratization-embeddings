@@ -1,4 +1,4 @@
-% DWaveGraphs.mp -- drawing the Pegasus graph.
+% DWaveGraphs.mp -- drawing the Chimera and the Pegasus graph.
 % Szilárd Szalay, Wigner Research Centre for Physics,
 %
 % compiling:
@@ -41,13 +41,14 @@ numeric uh; uh := ut;		% horizontal
 numeric uv; uv := 0.4*ut; %ut;	% vertical
 
 % base units (for full graph)
-%numeric vt; vt := 2.7ut; 		% base unit
+%numeric vt; vt := 2.7ut; 	% base unit
 numeric vt; vt := 2ut; 		% base unit
 numeric vh; vh := vt;		% horizontal
 %numeric vv; vv := 4/3*vt;	% vertical
 numeric vv; vv := 0.8vt;	% vertical
 
-numeric vs; vs := 1.2;		% scale factor for the L-by-L graph
+numeric vs; vs := 1.1;		% scale factor for the L-by-L graph
+%numeric vs; vs := 1.2;		% scale factor for the L-by-L graph
 
 % tilting factors (for the unit cells)
 numeric th; th :=-0.4;		% horizontal
@@ -93,9 +94,10 @@ vardef PV(expr c,i,j,u,p,q) =
 		+ (c-1)*( (-1)**(i+j)*(pq-1.5)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
 	elseif drawingmode = 2:	% this is the two-layer L-by-L unit cell mode
 		% position of the unit cell:
-		c*vs*(vh,vv)		% c: index of the Chimera layers
-		- i*vs*(2vh,0)		% i: horizontal index of the unit cells
-		- j*vs*(0,2vv)		% j: vertical index of the unit cells
+		c*vs*(.75vh,1.23vv)		% c: index of the Chimera layers
+%		- i*vs*(2vh,0)			% i: horizontal index of the unit cells
+		- i*vs*(1.7vh,0.5vv)		% i: horizontal index of the unit cells
+		- j*vs*(0,2vv)			% j: vertical index of the unit cells
 		% position of the vertex inside the unit cell:
 		+ (u-0.5)*(.5uh,0)		% u: horizontal index of the vertices inside the unit cells
 		- (2*p+q-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
@@ -178,7 +180,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,1,1,q), PV((c+1)mod3,i,j+1,0,pp,qp), corange );
+							gredge( PV(c,i,j,1,1,q), PV((c+1)mod3,i,j+1,0,pp,qp), cgreen ); %corange );
 						endfor;
 						endfor;
 					endfor;
@@ -207,7 +209,7 @@ enddef;
 
 
 
-
+% setting drawingmode to the 2x2+1 layout
 numeric drawingmode; drawingmode := 1;
 
 picture ChimeraTT;
@@ -313,6 +315,7 @@ endfig;
 
 
 
+% setting drawingmode to the 2xLxL layout
 drawingmode := 2;
 
 picture ChimeraLL;
