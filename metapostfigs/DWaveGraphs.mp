@@ -102,10 +102,24 @@ vardef PV(expr c,i,j,u,p,q) =
 		+ (u-0.5)*(.5uh,0)		% u: horizontal index of the vertices inside the unit cells
 		- (2*p+q-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
 		+ ( -(2*p+q-1.5)*th*.5*uh, (-1)**u*tv*uv )				% tilting of the unit cells
+	elseif drawingmode = 3:	% this is the two-layer L-by-L unit cell mode with diamond shaped unit cells
+		pair ucl;
+%		if (u<>p):
+%			ucl := ((-1)**u)* (2*p+q-1.5)*(u,(1-u))*ut*.4 rotated -90;
+%		else:
+%			ucl := ((-1)**(1-u))* (2*(1-p)+(1-q)-1.5)*(1-u,u)*ut*.4 rotated -90;
+%		fi;
+		% position of the unit cell:
+		c*vs*(vt,vt)		% c: index of the Chimera layers
+		- i*vs*(2vt,0)		% i: horizontal index of the unit cells
+		- j*vs*(0,2vt)		% j: vertical index of the unit cells
+		% position of the vertex inside the unit cell:
+		+ ((-1)**u)* (2*p+q-1.5)*(u,(1-u))*ut*.4 rotated +90		% 2*p+q:  u: vertical or horizontal
+%		+ ucl
 	fi
 enddef;
 
-% only five selected unit cells
+% only five selected unit cells for the 4+1 mode
 numeric selected[][];
 selected[0][0] := 1;	% c
 selected[0][1] := 1;	% i
@@ -202,6 +216,7 @@ vardef ucvertex(expr c,i,j) =
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							grvertex( PV(c,i,j,u,p,q) );
+%							label(decimal(u)&decimal(i)&decimal(j), PV(c,i,j,u,p,q) );
 						endfor;
 					endfor;
 				endfor;
@@ -425,5 +440,79 @@ beginfig(0)
 	draw PegasusLLDots;
 endfig;
 
+
+
+
+
+
+
+
+
+
+
+
+drawingmode := 3;
+
+
+picture PegasusLL;
+PegasusLL := image(
+	numeric c;
+	for c = 1 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("8",c,i,j);
+				edgeeq("1",c,i,j);
+			endfor;
+		endfor;
+	endfor;
+	for c = 1 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("9",c,i,j);
+			endfor;
+		endfor;
+	endfor;
+	for c = 1 upto 2:
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("10",c,i,j);
+			endfor;
+		endfor;
+	endfor;
+	c := 1;
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("2a",c,i,j);
+				edgeeq("2b",c,i,j);
+			endfor;
+		endfor;
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("3",c,i,j);
+			endfor;
+		endfor;
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("4",c,i,j);
+			endfor;
+		endfor;
+); % of PegasusLL
+
+picture PegasusLLDots;
+PegasusLLDots := image(
+	for c = 1 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				ucvertex(c,i,j);
+			endfor;
+		endfor;
+	endfor;
+); % of PegasusLLDots
+
+outputtemplate := "fig_PegasusLLd.eps";
+beginfig(0)
+	draw PegasusLL;
+	draw PegasusLLDots;
+endfig;
 
 end;
