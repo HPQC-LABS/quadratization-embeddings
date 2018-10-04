@@ -110,9 +110,9 @@ vardef PV(expr c,i,j,u,p,q) =
 %			ucl := ((-1)**(1-u))* (2*(1-p)+(1-q)-1.5)*(1-u,u)*ut*.4 rotated -90;
 %		fi;
 		% position of the unit cell:
-		c*vs*(0.75vt,0.75vt)		% c: index of the Chimera layers
-		- i*vs*(1.5vt,0)		% i: horizontal index of the unit cells
-		- j*vs*(0,1.5vt)		% j: vertical index of the unit cells
+		c*vs*(0.85vt,0.85vt)		% c: index of the Chimera layers
+		- i*vs*(1.7vt,0)		% i: horizontal index of the unit cells
+		- j*vs*(0,1.7vt)		% j: vertical index of the unit cells
 		% position of the vertex inside the unit cell:
 		+ ((-1)**u)* (2*p+q-1.5)*(u,(1-u))*ut*.4 rotated +90		% 2*p+q:  u: vertical or horizontal
 %		+ ucl
