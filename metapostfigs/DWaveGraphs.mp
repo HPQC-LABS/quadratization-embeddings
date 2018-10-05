@@ -2,8 +2,6 @@
 % Szilárd Szalay, Wigner Research Centre for Physics,
 %
 % compiling:
-% the required components mpost and a2ping are contained 
-% in the standard TexLive distribution of Ubuntu
 % simple compiling: 
 %     mpost DWaveGraphs.mp
 % if there are LaTeX labels:
@@ -13,10 +11,17 @@
 % It drops an error message, but it works fine...
 % One can use the bash script for multiple conversions:
 %     for f in fig*.eps; do a2ping $f; done
-%
+% For cropping the figure:
+%     pdfcrop --margins '0 0 -91 -91' fig_ChimeraLL.pdf fig_ChimeraLL_crop.pdf
+% (note that the value here is:  91 = 2vt - (2vt-3ut)/2  )
+%     pdfcrop --margins '0 0 -125 -125' fig_PegasusLL.pdf fig_PegasusLL_crop.pdf
+% (note that the value here is:  125 = 2vt - (vt-3ut)/2  )
+
+
 
 % ** declarations for metaposting **********************************************
 prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf (as far as I remember...)
+
 
 
 % ** color definitions *********************************************************
@@ -29,31 +34,15 @@ color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
 color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
 color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
 
-color textgrey; textgrey := (35,31,32)/256;	% for beamer poster/slide
-
 
 
 % ** units *********************************************************************
 
 % base units (for unit cells)
-numeric ut; ut := 32bp;		% base unit for the whole figure
-numeric uh; uh := ut;		% horizontal
-numeric uv; uv := 0.4*ut; %ut;	% vertical
+numeric ut; ut := 16bp;
 
 % base units (for full graph)
-%numeric vt; vt := 2.7ut; 	% base unit
-numeric vt; vt := 2ut; 		% base unit
-numeric vh; vh := vt;		% horizontal
-%numeric vv; vv := 4/3*vt;	% vertical
-numeric vv; vv := 0.8vt;	% vertical
-
-numeric vs; vs := 1.1;		% scale factor for the L-by-L graph
-%numeric vs; vs := 1.2;		% scale factor for the L-by-L graph
-
-% tilting factors (for the unit cells)
-numeric th; th :=-0.4;		% horizontal
-numeric tv; tv :=-0.1;		% vertical
-
+numeric vt; vt := 4.2ut;
 
 
 
@@ -61,7 +50,7 @@ numeric tv; tv :=-0.1;		% vertical
 
 % default vertex
 vardef grvertex(expr A) =
-	draw A withpen pencircle scaled .1ut;
+	draw A withpen pencircle scaled .2ut;
 enddef;
 
 % default edge for the graph
@@ -71,52 +60,14 @@ enddef;
 
 
 
-
 % ** definition of the vertex positions ***************************************
 
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
-
-	if drawingmode = 1:	% this is the 4+1 unit cell mode
-		numeric pq;
-		if ((i+j)mod2=0) and (u=0) and (c=2):
-			pq := 2*p+q;
-		else:
-			pq := 2*(1-p)+(1-q);	
-		fi;
-		% position of the unit cell:
-		c*(vh,vv)			% c: index of the Chimera layers
-		- i*(2vh,0)			% i: horizontal index of the unit cells
-		- j*(0,2vv)			% j: vertical index of the unit cells
-		% position of the vertex inside the unit cell:
-		+ (u-0.5)*(uh,0)		% u: horizontal index of the vertices inside the unit cells
-		+ (pq-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
-		+ (c-1)*( (-1)**(i+j)*(pq-1.5)*th*uh, (-1)**u*tv*uv )	% tilting of the unit cells
-	elseif drawingmode = 2:	% this is the two-layer L-by-L unit cell mode
-		% position of the unit cell:
-		c*vs*(.75vh,1.23vv)		% c: index of the Chimera layers
-%		- i*vs*(2vh,0)			% i: horizontal index of the unit cells
-		- i*vs*(1.7vh,0.5vv)		% i: horizontal index of the unit cells
-		- j*vs*(0,2vv)			% j: vertical index of the unit cells
-		% position of the vertex inside the unit cell:
-		+ (u-0.5)*(.5uh,0)		% u: horizontal index of the vertices inside the unit cells
-		- (2*p+q-1.5)*(0,uv)		% 2*p+q: vertical index of the vertices inside the unit cells
-		+ ( -(2*p+q-1.5)*th*.5*uh, (-1)**u*tv*uv )				% tilting of the unit cells
-	elseif drawingmode = 3:	% this is the two-layer L-by-L unit cell mode with diamond shaped unit cells
-		pair ucl;
-%		if (u<>p):
-%			ucl := ((-1)**u)* (2*p+q-1.5)*(u,(1-u))*ut*.4 rotated -90;
-%		else:
-%			ucl := ((-1)**(1-u))* (2*(1-p)+(1-q)-1.5)*(1-u,u)*ut*.4 rotated -90;
-%		fi;
-		% position of the unit cell:
-		c*vs*(0.85vt,0.85vt)		% c: index of the Chimera layers
-		- i*vs*(1.7vt,0)		% i: horizontal index of the unit cells
-		- j*vs*(0,1.7vt)		% j: vertical index of the unit cells
-		% position of the vertex inside the unit cell:
-		+ ((-1)**u)* (2*p+q-1.5)*(u,(1-u))*ut*.4 rotated +90		% 2*p+q:  u: vertical or horizontal
-%		+ ucl
-	fi
+	c*(vt,vt)	% c: index of the Chimera layers
+	- i*(2vt,0)		% i: horizontal index of the unit cells
+	- j*(0,2vt)		% j: vertical index of the unit cells
+	+ ((-1)**u)*(2*p+q-1.5)*(u,(1-u))*ut rotated +90		% 2*p+q:  u: vertical or horizontal
 enddef;
 
 % only five selected unit cells for the 4+1 mode
@@ -137,12 +88,12 @@ selected[4][0] := 2;
 selected[4][1] := 2;
 selected[4][2] := 2;
 
-
 numeric L; L := 3;	% size of the Chimera blocks, $L\times L$
 
 
 
-% ** Pegasus graph ************************************************************
+
+% ** Graph definitions ********************************************************
 
 % drawing edges defined by the equations, for given unit cell coordinates c,i,j
 vardef edgeeq(expr eq, c,i,j) =
@@ -224,8 +175,7 @@ enddef;
 
 
 
-% setting drawingmode to the 2x2+1 layout
-numeric drawingmode; drawingmode := 1;
+% ** 2x2+1 layout *************************************************************
 
 picture ChimeraTT;
 ChimeraTT = image(
@@ -320,7 +270,6 @@ beginfig(0)
 	draw ChimeraTTDots;
 endfig;
 
-
 outputtemplate := "fig_PegasusTT.eps";
 beginfig(0)
 	draw PegasusTT;
@@ -330,8 +279,7 @@ endfig;
 
 
 
-% setting drawingmode to the 2xLxL layout
-drawingmode := 2;
+% ** 2xLxL layout *************************************************************
 
 picture ChimeraLL;
 ChimeraLL := image(
@@ -428,6 +376,7 @@ PegasusLLDots := image(
 ); % of PegasusLLDots
 
 
+% output
 outputtemplate := "fig_ChimeraLL.eps";
 beginfig(0)
 	draw ChimeraLL;
@@ -445,74 +394,5 @@ endfig;
 
 
 
-
-
-
-
-
-
-drawingmode := 3;
-
-
-picture PegasusLL;
-PegasusLL := image(
-	numeric c;
-	for c = 1 upto 2:
-		for i = 0 upto L-1:
-			for j = 0 upto L-1:
-				edgeeq("8",c,i,j);
-				edgeeq("1",c,i,j);
-			endfor;
-		endfor;
-	endfor;
-	for c = 1 upto 2:
-		for i = 0 upto L-1:
-			for j = 0 upto L-2:
-				edgeeq("9",c,i,j);
-			endfor;
-		endfor;
-	endfor;
-	for c = 1 upto 2:
-		for i = 0 upto L-2:
-			for j = 0 upto L-1:
-				edgeeq("10",c,i,j);
-			endfor;
-		endfor;
-	endfor;
-	c := 1;
-		for i = 0 upto L-1:
-			for j = 0 upto L-1:
-				edgeeq("2a",c,i,j);
-				edgeeq("2b",c,i,j);
-			endfor;
-		endfor;
-		for i = 0 upto L-1:
-			for j = 0 upto L-2:
-				edgeeq("3",c,i,j);
-			endfor;
-		endfor;
-		for i = 0 upto L-2:
-			for j = 0 upto L-1:
-				edgeeq("4",c,i,j);
-			endfor;
-		endfor;
-); % of PegasusLL
-
-picture PegasusLLDots;
-PegasusLLDots := image(
-	for c = 1 upto 2:
-		for i = 0 upto L-1:
-			for j = 0 upto L-1:
-				ucvertex(c,i,j);
-			endfor;
-		endfor;
-	endfor;
-); % of PegasusLLDots
-
-outputtemplate := "fig_PegasusLLd.eps";
-beginfig(0)
-	draw PegasusLL;
-	draw PegasusLLDots;
-endfig;
 
 end;
