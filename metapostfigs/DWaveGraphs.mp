@@ -116,7 +116,7 @@ vardef edgeeq(expr eq, c,i,j) =
 	elseif eq = "10":	% equation (10): vertical couplings
 					for p = 0 upto 1:
 						for q = 0 upto 1:
-							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), cgrey );
+							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), cblack );
 						endfor;
 					endfor;
 	elseif eq = "1":	% equation (1): additional edges in unit cells
@@ -129,7 +129,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,0,0,q), PV((c+1)mod3,i,j,1,pp,qp), cblue );
+							gredge( PV(c,i,j,0,0,q), PV((c+1)mod3,i,j,1,pp,qp), cblack );
 						endfor;
 						endfor;
 					endfor;
@@ -137,7 +137,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,1,0,q), PV((c+1)mod3,i,j,0,pp,qp), cred );
+							gredge( PV(c,i,j,1,0,q), PV((c+1)mod3,i,j,0,pp,qp), cblack );
 						endfor;
 						endfor;
 					endfor;
@@ -145,7 +145,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,1,1,q), PV((c+1)mod3,i,j+1,0,pp,qp), cgreen ); %corange );
+							gredge( PV(c,i,j,1,1,q), PV((c+1)mod3,i,j+1,0,pp,qp), cblack ); %corange );
 						endfor;
 						endfor;
 					endfor;
@@ -153,7 +153,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,0,1,q), PV((c+1)mod3,i+1,j,1,pp,qp), cgreen );
+							gredge( PV(c,i,j,0,1,q), PV((c+1)mod3,i+1,j,1,pp,qp), cblack );
 						endfor;
 						endfor;
 					endfor;
