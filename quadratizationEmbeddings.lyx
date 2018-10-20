@@ -10,6 +10,18 @@
 \input{tikzit/tikz_premable.tex}
 \newcommand{\intextheight}{13 pt}
 \let\fileinput\input % to allow conversion without turning tikz to lyx
+\usepackage[font=small,labelfont=bf,
+   justification=justified,
+   singlelinecheck=false,
+   format=plain]{caption}
+
+\usepackage{threeparttable}
+%\captionsetup[table]{
+%  labelsep=newline,
+%  justification=justified,
+%  singlelinecheck=false,
+%  textfont=it,
+%}
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage
 \use_default_options false
@@ -156,7 +168,7 @@ Discrete optimization problems are often naturally formulated in terms of
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Dattani2014j"
 literal "false"
 
@@ -175,14 +187,33 @@ book
 which can be solved using standard algorithms for universal classical computers
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Kolmogorov"
 literal "false"
 
 \end_inset
 
-, using special-purpose classical annealers [?], or using quantum annealers
- [?].
+, using special-purpose classical annealers
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ [?]
+\end_layout
+
+\end_inset
+
+, or using quantum annealers
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ [?]
+\end_layout
+
+\end_inset
+
+.
  
 \begin_inset Note Note
 status open
@@ -212,7 +243,7 @@ book
 There are ways to quadratize functions of discrete variables without adding
  any auxiliary variables 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Ishikawa2014,Tanburn2015a,Okada2015,Dridi2017"
 literal "false"
 
@@ -716,7 +747,17 @@ name "fig:allGraphGadgets"
 
 \end_inset
 
-
+Gadget graphs.
+ Graphs showing the connectivity between qubits in quadratization gadgets
+ for cubic to quadratic gadgets (top row), and quartic to quadratic gadgets
+ (bottom row).
+ Red vertices represent auxiliary qubits and black vertices represent logical
+ qubits.
+ Black edges denote the existence of a quadratic term in the gadget, involving
+ the two corresponding qubits represented by vertices connected by the edge.
+ 
+\emph on
+Linear terms in the gadget are completely ignored in these gadget graphs.
 \end_layout
 
 \end_inset
@@ -864,15 +905,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-
 \begin_inset Formula $S_{3}$
-\end_inset
-
-
-\begin_inset Quotes erd
 \end_inset
 
 
@@ -1216,15 +1249,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-
 \begin_inset Formula $K_{4}$
-\end_inset
-
-
-\begin_inset Quotes erd
 \end_inset
 
 
@@ -1498,18 +1523,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
 
 \emph on
-all to all - 1
-\emph default
-
-\begin_inset Quotes erd
+\begin_inset Formula $K_{6}$
 \end_inset
 
-
+- 1
 \end_layout
 
 \end_inset
@@ -1565,19 +1584,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
 
 \emph on
-
 \begin_inset Formula $K_{6}$
-\end_inset
-
-
-\emph default
-
-\begin_inset Quotes erd
 \end_inset
 
 
@@ -1636,19 +1645,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
 
 \emph on
-
 \begin_inset Formula $K_{5}$
-\end_inset
-
-
-\emph default
-
-\begin_inset Quotes erd
 \end_inset
 
 
@@ -1707,22 +1706,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
 
 \emph on
-
 \begin_inset Formula $K_{5}$
 \end_inset
 
 
 \emph default
 +1
-\begin_inset Quotes erd
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1783,8 +1774,8 @@ status open
 
 
 \emph on
-two 
-\begin_inset Formula $K_{4}'s$
+Double 
+\begin_inset Formula $K_{4}$
 \end_inset
 
 
@@ -1862,8 +1853,17 @@ reference "fig:allGraphGadgets"
  difficult functions to optimize.
  Furthermore, some optimization methods only work if their corresponding
  graph has a certain connectivity, two examples of such connectivities being
- the ones in D-Wave's well-known Chimera graph [?], and in their very recently
- presented 
+ the ones in D-Wave's well-known Chimera graph
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ [?]
+\end_layout
+
+\end_inset
+
+, and in their very recently presented 
 \emph on
 Pegasus
 \emph default
@@ -1892,7 +1892,16 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Grouping of all known quadratization gadgets for singe 
+\series bold
+\emph on
+cubic
+\series default
+\emph default
+ terms, into categories corresponding to their gadget graphs.
+ For each unique gadget graph, the nuber of auxiliary qubits required for
+ construction of the gadget is listed, followed by the number of auxiliary
+ qubits required to minor-embed the gadget graph onto Chimera and Pegasus.
 \end_layout
 
 \end_inset
@@ -3490,7 +3499,16 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Grouping of all known quadratization gadgets for single 
+\series bold
+\emph on
+quartic
+\series default
+\emph default
+ terms, into categories corresponding to their gadget graphs.
+ For each unique gadget graph, the nuber of auxiliary qubits required for
+ construction of the gadget is listed, followed by the number of auxiliary
+ qubits required to minor-embed the gadget graph onto Chimera and Pegasus.
 \end_layout
 
 \end_inset
@@ -4744,8 +4762,8 @@ PTR-BCR-3
 
 \series bold
 \color blue
-Two 
-\begin_inset Formula $K_{4}'s$
+Double 
+\begin_inset Formula $K_{4}$
 \end_inset
 
 
@@ -6106,7 +6124,7 @@ name "fig:ChimeraAndPegasus"
 Any graph, can be mapped onto the Chimera or Pegasus graphs by minor-embedding
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Choi2008,Choi2011"
 literal "false"
 
@@ -6193,9 +6211,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Minor embeddings of all cubic to quadratic gadgets onto a `unit cell' of
- a Chimera graph.
- Transparent vertices and edges are not used.
+Minor embeddings of all 
+\series bold
+\emph on
+cubic 
+\series default
+\emph default
+to quadratic gadgets onto a `unit cell' of a Chimera graph.
+ Grey vertices and edges are not used.
  Thick black edges denote graph minors, in which two physical qubits (two
  vertices) represent one logical qubit (this is done when logical qubits
  need to be connected to more qubits than the Chimera unit cell otherwise
@@ -6628,10 +6651,15 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Minor embeddings of all cubic to quadratic gadgets onto a `unit cell' of
- a Pegasus graph.
- Transparent vertices and edges are not used.
- Figs 
+Minor embeddings of all 
+\series bold
+\emph on
+cubic 
+\series default
+\emph default
+to quadratic gadgets onto a `unit cell' of a Pegasus graph.
+ Grey vertices and edges are not used.
+ Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:all-to-auxChimera"
@@ -6980,9 +7008,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Minor embeddings of all cubic to quadratic gadgets onto a `unit cell' of
- a Chimera graph.
- Transparent vertices and edges are not used.
+Minor embeddings of all 
+\series bold
+\emph on
+quartic
+\series default
+\emph default
+ to quadratic gadgets onto a `unit cell' of a Chimera graph.
+ Grey vertices and edges are not used.
  Thick black edges denote graph minors, in which two physical qubits (two
  vertices) represent one logical qubit (this is done when logical qubits
  need to be connected to more qubits than the Chimera unit cell otherwise
@@ -7347,10 +7380,20 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Minor embeddings of all cubic to quadratic gadgets onto a `unit cell' of
- a Pegasus graph.
- Transparent vertices and edges are not used.
- Figures 
+Minor embeddings of all 
+\series bold
+\emph on
+quartic
+\series default
+\emph default
+ to quadratic gadgets onto a `unit cell' of a Pegasus graph.
+ Grey vertices and edges are not used.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:all-to-auxChimera-1"
@@ -7374,6 +7417,11 @@ noprefix "false"
  so only the gadgets that required auxiliary qubits for minor embedding
  onto Chimera are embedded for Pegasus here to show that with Pegasus no
  auxiliary qubits are needed for cubic to quadratic gadgets.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
