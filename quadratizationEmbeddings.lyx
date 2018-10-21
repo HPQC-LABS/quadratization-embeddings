@@ -191,23 +191,19 @@ literal "false"
 
 \end_inset
 
-, using special-purpose classical annealers
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- [?]
-\end_layout
+, using special-purpose classical annealers 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "MasanaoYamaoka2016"
+literal "false"
 
 \end_inset
 
-, or using quantum annealers
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- [?]
-\end_layout
+, or using quantum annealers 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Johnson2011"
+literal "false"
 
 \end_inset
 
@@ -1887,19 +1883,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
-Grouping of all known quadratization gadgets for singe 
-\series bold
-\emph on
-cubic
-\series default
-\emph default
- terms, into categories corresponding to their gadget graphs.
+
+
+\backslash
+captionof{table}[cubic]{Grouping of all known quadratization gadgets for
+ singe cubic terms, into categories corresponding to their gadget graphs.
  For each unique gadget graph, the nuber of auxiliary qubits required for
  construction of the gadget is listed, followed by the number of auxiliary
- qubits required to minor-embed the gadget graph onto Chimera and Pegasus.
+ qubits required to minor-embed the gadget graph onto Chimera and Pegasus}.
 \end_layout
 
 \end_inset
