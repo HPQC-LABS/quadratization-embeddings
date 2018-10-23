@@ -1,5 +1,5 @@
-% DWaveGraphs.mp -- drawing the Chimera and the Pegasus graph.
-% Szilárd Szalay, Wigner Research Centre for Physics,
+% DWaveGraphs.mp -- drawing the Chimera and the Pegasus graphs.
+% Szilárd Szalay, Wigner Research Centre for Physics, Budapest.
 %
 % compiling:
 % simple compiling: 
@@ -11,14 +11,19 @@
 % It drops an error message, but it works fine...
 % One can use the bash script for multiple conversions:
 %     for f in fig*.eps; do a2ping $f; done
-
+% For cropping the figures:
+%     pdfcrop --margins '0 0 -160 -160' fig_ChimeraLL.pdf fig_ChimeraLL_crop.pdf
+%     pdfcrop --margins '0 0 -125 -125' fig_PegasusLL.pdf fig_PegasusLL_crop.pdf
+%     pdfcrop --margins '0 0 -200 -200' fig_PegasusLLfull.pdf fig_PegasusLLfull_crop.pdf
 
 % ** declarations for metaposting **********************************************
-prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf (as far as I remember...)
+prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf
 
-input TEX;
-TEXPRE("%&latex" & char(10) & "\documentclass{article}\begin{document}");
-TEXPOST("\end{document}");
+% for writing out the indices:
+%input TEX;
+%TEXPRE("%&latex" & char(10) & "\documentclass{article}\begin{document}");
+%TEXPOST("\end{document}");
+
 
 % ** color definitions *********************************************************
 color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   ?,  0,  0
@@ -34,12 +39,13 @@ color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
 
 % ** units *********************************************************************
 
-% base units (for unit cells)
+% base unit (general, and for unit cells)
 numeric ut; ut := 16bp;
 
-% base units (for full graph)
+% base unit (for graph)
 numeric vt; vt := 4.5ut;
 
+numeric urt; urt := 10; % rotation of the unit cell
 
 
 % ** drawing routines **********************************************************
@@ -72,26 +78,26 @@ vardef PV(expr c,i,j,u,p,q) =
 %	- j*(0,2vt)		% j: vertical index of the unit cells
 %	+ ((-1)**u)*(2*p+q-1.5)*(u,(1-u))*ut rotated +90		% 2*p+q:  u: vertical or horizontal
 	- c*(vt,vt)	% c: index of the Chimera layers
-	+ i*(3.5vt,0)		% i: horizontal index of the unit cells
-	+ j*(0,3.5vt)		% j: vertical index of the unit cells
-	+ ((-1)**u)*(2*p+q-1.5)*(u,(1-u))*ut rotated -80		% 2*p+q:  u: vertical or horizontal
+	+ i*(3.25vt,0)		% i: horizontal index of the unit cells
+	+ j*(0,3.25vt)		% j: vertical index of the unit cells
+	+ ((-1)**u)*(2*p+q-1.5)*(u,(1-u))*ut rotated (-90+urt)		% 2*p+q:  u: vertical or horizontal
 enddef;
 
 % only five selected unit cells for the 4+1 mode
 numeric selected[][];
-selected[0][0] := 1;	% c
+selected[0][0] := 0;	% c
 selected[0][1] := 1;	% i
 selected[0][2] := 1;	% j ...
-selected[1][0] := 2;
+selected[1][0] := 1;
 selected[1][1] := 1;
 selected[1][2] := 1;
-selected[2][0] := 2;
+selected[2][0] := 1;
 selected[2][1] := 1;
 selected[2][2] := 2;
-selected[3][0] := 2;
+selected[3][0] := 1;
 selected[3][1] := 2;
 selected[3][2] := 1;
-selected[4][0] := 2;
+selected[4][0] := 1;
 selected[4][1] := 2;
 selected[4][2] := 2;
 
@@ -120,10 +126,10 @@ vardef edgeeq(expr eq, c,i,j) =
 							gredge( PV(c,i,j,0,p,q), PV(c,i,j+1,0,p,q), cgrey, "continuous" );
 						endfor;
 					endfor;
-	elseif eq = "10":	% equation (10): vertical couplings
+	elseif eq = "10":	% equation (10): horizontal couplings
 					for p = 0 upto 1:
 						for q = 0 upto 1:
-							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), cblack, "continuous" );
+							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), cgrey, "continuous" );
 						endfor;
 					endfor;
 	elseif eq = "1":	% equation (1): additional edges in unit cells
@@ -206,7 +212,8 @@ vardef ucvertex(expr c,i,j) =
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							grvertex( PV(c,i,j,u,p,q) );
-							label.top(TEX("\tiny $"&decimal(c)&decimal(i)&decimal(j)&decimal(u)&decimal(p)&decimal(q)&"$") rotated 20, PV(c,i,j,u,p,q) );
+% uncomment the following line to write out the indices
+%							label.top(TEX("\tiny $"&decimal(c)&decimal(i)&decimal(j)&decimal(u)&decimal(p)&decimal(q)&"$") rotated 20, PV(c,i,j,u,p,q) );
 						endfor;
 					endfor;
 				endfor;
