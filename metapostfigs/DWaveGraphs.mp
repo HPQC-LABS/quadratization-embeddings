@@ -8,7 +8,7 @@
 %     TEX=latex mpost DWaveGraphs.mp
 % The script a2ping is for converting .eps figures to .pdf figures,
 % while not screwing up the bounding box.
-% It drops an error message, but it works fine...
+% It gives an error message, but it works fine...
 % One can use the bash script for multiple conversions:
 %     for f in fig*.eps; do a2ping $f; done
 % For cropping the figures:
@@ -158,7 +158,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,1,1,q), PV((c+1)mod3,i,j+1,0,pp,qp), corange, "continuous" ); %cgreen %corange );
+							gredge( PV(c,i,j,1,1,q), PV((c+1)mod3,i,j+1,0,pp,qp), corange, "continuous" ); %corange %corange );
 						endfor;
 						endfor;
 					endfor;
@@ -166,7 +166,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,0,1,q), PV((c+1)mod3,i+1,j,1,pp,qp), cgreen, "continuous" );
+							gredge( PV(c,i,j,0,1,q), PV((c+1)mod3,i+1,j,1,pp,qp), corange, "continuous" );
 						endfor;
 						endfor;
 					endfor;
@@ -198,7 +198,7 @@ vardef edgeeq(expr eq, c,i,j) =
 					for p = 0 upto 1:
 					for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,1,p,q), PV((c-1)mod3,i-1,j,0,1,qp), cgreen, "dashed" );
+							gredge( PV(c,i,j,1,p,q), PV((c-1)mod3,i-1,j,0,1,qp), corange, "dashed" );
 						endfor;
 					endfor;
 					endfor;
