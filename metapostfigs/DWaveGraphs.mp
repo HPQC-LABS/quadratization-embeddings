@@ -27,7 +27,7 @@ prologues := 3;	% needed if there are LaTeX labels and also for converting to pd
 
 % ** color definitions *********************************************************
 color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   ?,  0,  0
-color cgrey;	cgrey  := ( 7*16+ 0, 7*16+ 0, 7*16+ 0)/256;	% hsv:   
+color cgrey;	cgrey  := (12*16+ 0,12*16+ 0,12*16+ 0)/256;	% hsv:   
 color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
 color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;	% hsv: 240, 22, 67
 color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
