@@ -105,7 +105,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -118,7 +117,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -499,6 +497,10 @@ Graph connectivities for D-Wave's Chimera and Pegasus graphs.
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -572,9 +574,7 @@ Pegasus
 
 \end_layout
 
-\end_inset
-
-
+\begin_layout Plain Layout
 \begin_inset space ~
 \end_inset
 
@@ -588,6 +588,16 @@ Pegasus
 
 
 \begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -600,7 +610,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Chimera repeated
+Chimera
 \end_layout
 
 \end_inset
@@ -611,7 +621,7 @@ Chimera repeated
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraLL_crop.pdf
-	width 23text%
+	width 48text%
 
 \end_inset
 
@@ -646,7 +656,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pegasus repeated
+Pegasus
 \end_layout
 
 \end_inset
@@ -656,8 +666,8 @@ Pegasus repeated
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusLL_crop.pdf
-	width 23text%
+	filename metapostfigs/fig_PegasusLLfull_allBlue_0_crop.pdf
+	width 48text%
 
 \end_inset
 
@@ -1013,6 +1023,24 @@ all to aux
 \end_inset
 
 
+\emph on
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Also 
+\begin_inset Formula $K_{1,3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1113,7 +1141,33 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+propeller
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph on
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Also 
+\begin_inset Formula $K_{1,3}$
+\end_inset
+
+ or 
 \begin_inset Formula $S_{3}$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -1542,6 +1596,22 @@ status open
 
 all to aux
 \begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Also 
+\begin_inset Formula $K_{1,5}$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -2806,10 +2876,7 @@ NTR-ABCG
 
 \series bold
 \color blue
-\begin_inset Formula $\boldsymbol{\textcolor{blue}{\ensuremath{S_{3}}}}$
-\end_inset
-
-
+Propeller
 \end_layout
 
 \end_inset
