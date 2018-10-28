@@ -1,11 +1,16 @@
 % this is the preamble created by tikzit, we can edit this in the final document to change the shapes we use for nodes, edge styles, etc... 
 % just be sure to use the same name for the same kind of node/edge in any figures you make
 
+
 \usepackage[svgnames]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{shapes.geometric}
 %\pagestyle{empty}
+
+\newcommand\scaledLW{0.5} % scaled linewidth for fig 2, defined globally so they can be changed easily
+
+\newcommand\scaledNodeSize{0.5} % scaled node size for fig 2, defined globally so they can be changed easily
 
 \pgfdeclarelayer{edgelayer}
 \pgfdeclarelayer{nodelayer}
