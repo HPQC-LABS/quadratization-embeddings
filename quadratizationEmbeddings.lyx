@@ -6463,7 +6463,17 @@ all
 \end_inset
 
 , only negative cubic terms are so far known to be quadratizable with gadgets
- that embed directly onto Chimera without any extra qubits for the embedding.
+ that embed directly onto Chimera without any extra qubits for the embedding
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Nick said this sentence was quite confusing
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
