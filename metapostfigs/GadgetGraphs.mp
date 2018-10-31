@@ -10,7 +10,9 @@
 % while not screwing up the bounding box.
 % It gives an error message, but it works fine...
 % One can use the bash script for multiple conversions:
-%     for f in fig*.eps; do a2ping $f; done
+%     for f in fig_G*.eps; do a2ping $f; done
+%     << or >>
+%     for f in fig_G*.eps; do epspdf $f; done
 
 % setting the sizes (also in DWaveGraphs.mp) are needed
 
@@ -28,13 +30,13 @@ numeric it; it := 1.0bp; % 0.7bp	% width of an edge
 
 % default vertex (dot)
 vardef grvertex(expr A) =
-	draw A withpen pencircle scaled dt withcolor black;
+	draw A withpen pencircle scaled dt withcolor red;
 enddef;
 
 % default vertex (circle)
 vardef grvertexc(expr A) =
 	draw A withpen pencircle scaled dt withcolor black;
-	draw A withpen pencircle scaled (dt-2it) withcolor white;
+	draw A withpen pencircle scaled (dt-2it) withcolor black;
 enddef;
 
 % default edge for the graph
