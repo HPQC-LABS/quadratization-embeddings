@@ -10,9 +10,9 @@
 % while not screwing up the bounding box.
 % It gives an error message, but it works fine...
 % One can use the bash script for multiple conversions:
-%     for f in fig_G*.eps; do a2ping $f; done
+%     for f in fig_Gadget*.eps; do ./a2ping.pl $f; done
 %     << or >>
-%     for f in fig_G*.eps; do epspdf $f; done
+%     for f in fig_Gadget*.eps; do epspdf $f; done
 
 % setting the sizes (also in DWaveGraphs.mp) are needed
 
@@ -28,15 +28,16 @@ numeric it; it := 1.0bp; % 0.7bp	% width of an edge
 
 % ** drawing routines **********************************************************
 
-% default vertex (dot)
-vardef grvertex(expr A) =
-	draw A withpen pencircle scaled dt withcolor red;
+% default vertex for data qubit
+vardef grvertexdata(expr A) =
+	draw A withpen pencircle scaled dt withcolor black;
 enddef;
 
-% default vertex (circle)
-vardef grvertexc(expr A) =
+% default vertex for aux qubit
+vardef grvertexaux(expr A) =
 	draw A withpen pencircle scaled dt withcolor black;
-	draw A withpen pencircle scaled (dt-2it) withcolor black;
+%	draw A withpen pencircle scaled (dt-2it) withcolor red;
+	draw A withpen pencircle scaled (dt-it) withcolor red;
 enddef;
 
 % default edge for the graph
@@ -55,9 +56,9 @@ pair A,B;
 	for i = 0 upto 2:
 		B := ut*dir(i*360/3+90);
 		gredge(A,B);
-		grvertexc(B);
+		grvertexdata(B);
 	endfor;
-	grvertex(A);
+	grvertexaux(A);
 endfig;
 
 
@@ -68,9 +69,9 @@ pair A,B;
 	for i = 1 upto 3:
 		B := ut*dir(i*360/4+90);
 		gredge(A,B);
-		grvertexc(B);
+		grvertexdata(B);
 	endfor;
-	grvertex(A);
+	grvertexaux(A);
 endfig;
 
 
@@ -84,9 +85,9 @@ pair A,B;
 	for i = 0 upto 3:
 		B := ut*dir(i*360/4);
 		gredge(A,B);
-		grvertexc(B);
+		grvertexdata(B);
 	endfor;
-	grvertex(A);
+	grvertexaux(A);
 endfig;
 
 outputtemplate := "fig_Gadget41_AllToAuxv.eps";
@@ -96,9 +97,9 @@ pair A,B;
 	for i = 0 upto 3:
 		B := ut*dir(i*360/4+45);
 		gredge(A,B);
-		grvertexc(B);
+		grvertexdata(B);
 	endfor;
-	grvertex(A);
+	grvertexaux(A);
 endfig;
 
 outputtemplate := "fig_Gadget41_Tripod.eps";
@@ -108,12 +109,12 @@ pair A,B;
 	for i = 0 upto 2:
 		B := ut*dir(i*360/4);
 		gredge(A,B);
-		grvertexc(B);
+		grvertexdata(B);
 	endfor;
 	B := ut*dir(3*360/4);
 	gredge(A,B);
-	grvertex(B);
-	grvertexc(A);
+	grvertexaux(B);
+	grvertexdata(A);
 endfig;
 
 outputtemplate := "fig_Gadget41_K5.eps";
@@ -127,9 +128,9 @@ pair A,B;
 	endfor;
 	for i = 0 upto 3:
 		B := ut*dir(i*360/4+45);
-		grvertexc(B);
+		grvertexdata(B);
 	endfor;
-	grvertex(A);
+	grvertexaux(A);
 endfig;
 
 
@@ -151,9 +152,13 @@ beginfig(0)
 		for j = 1 upto 2:
 			gredge(P[3i],P[3i+j]);
 			gredge(P[3(1-i)],P[3i+j]);
-			grvertexc(P[3i+j]);
 		endfor;
-		grvertex(P[3i]);
+	endfor;
+	for i = 0 upto 1:
+		for j = 1 upto 2:
+			grvertexdata(P[3i+j]);
+		endfor;
+		grvertexaux(P[3i]);
 	endfor;
 endfig;
 
@@ -167,9 +172,13 @@ beginfig(0)
 		for j = 1 upto 2:
 			gredge(P[3i],P[3i+j]);
 			gredge(P[3(1-i)],P[3i+j]);
-			grvertexc(P[3i+j]);
 		endfor;
-		grvertex(P[3i]);
+	endfor;
+	for i = 0 upto 1:
+		for j = 1 upto 2:
+			grvertexdata(P[3i+j]);
+		endfor;
+		grvertexaux(P[3i]);
 	endfor;
 endfig;
 
@@ -184,9 +193,13 @@ beginfig(0)
 		for j = 1 upto 2:
 			gredge(P[3i],P[3i+j]);
 			gredge(P[3(1-i)],P[3i+j]);
-			grvertexc(P[3i+j]);
 		endfor;
-		grvertex(P[3i]);
+	endfor;
+	for i = 0 upto 1:
+		for j = 1 upto 2:
+			grvertexdata(P[3i+j]);
+		endfor;
+		grvertexaux(P[3i]);
 	endfor;
 endfig;
 
@@ -207,8 +220,8 @@ beginfig(0)
 		gredge(P[5],P[i]);
 	endfor;
 	for i = 0 upto 2:
-		grvertexc(P[i]);
-		grvertex(P[3+i]);
+		grvertexdata(P[i]);
+		grvertexaux(P[3+i]);
 	endfor;
 endfig;
 
@@ -231,10 +244,10 @@ beginfig(0)
 		gredge(P[3i+1],P[3i+2]);
 	endfor;
 	for ij = 0, 5, 6:
-		grvertex(P[ij]);
+		grvertexaux(P[ij]);
 	endfor;
 	for ij = 1 upto 4:
-		grvertexc(P[ij]);
+		grvertexdata(P[ij]);
 	endfor;
 endfig;
 
