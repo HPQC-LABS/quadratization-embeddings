@@ -243,24 +243,7 @@ Next, we consider edges which connect two unit cells with the same
 \begin_inset Formula $(i,j)$
 \end_inset
 
-, but in a different layer of chimera graph, these are defined as, note
- that these connections only happen when 
-\begin_inset Formula $c=0$
-\end_inset
-
- or 
-\begin_inset Formula $c=1$
-\end_inset
-
-, there is a shift in 
-\begin_inset Formula $i$
-\end_inset
-
- and 
-\begin_inset Formula $j$
-\end_inset
-
- when we wrap around the periodic boundaries which will be discussed later.
+, but in a different layer of chimera graph, these are defined as 
 \end_layout
 
 \begin_layout Standard
@@ -370,27 +353,6 @@ noprefix "false"
 \end_inset
 
 ) will produce a Pegasus graph, without producing the same edge twice.
- We now need to worry about what happens when we wrap around the periodic
- boundaries, in this case both 
-\begin_inset Formula $i$
-\end_inset
-
- and 
-\begin_inset Formula $j$
-\end_inset
-
- get shifted by one, resulting in
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-(2,i,j,u,p=0,q)\rightarrow(0,i+1,j+1,u+1,*,*),\label{eq:outgoing_periodic_wrap}
-\end{equation}
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -449,11 +411,7 @@ noprefix "false"
 
 \end_inset
 
- are (
-\begin_inset Formula $c=1,2$
-\end_inset
-
-)
+ are
 \end_layout
 
 \begin_layout Standard
@@ -490,7 +448,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-From Eq.
+Finally from Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -508,33 +466,6 @@ noprefix "false"
 \begin_inset Formula 
 \begin{equation}
 (c,i,j,u=1,*,*)\leftarrow(c+2,i-1,j,u=0,p=1,*).\label{eq:incoming_ip1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Finally, we need to consider the incoming edges which go across the periodic
- boundaries from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:outgoing_periodic_wrap"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-,
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-(0,i,j,u,*,*)\leftarrow(2,i-1,j-1,u+1,p=0,*).\label{eq:incoming_periodic_wrap}
 \end{equation}
 
 \end_inset
