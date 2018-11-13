@@ -49,6 +49,7 @@ enddef;
 
 % ** 3+1 gadgets ***************************************************************
 
+
 outputtemplate := "fig_Gadget31_AllToAux.eps";
 beginfig(0)
 pair A,B;
@@ -73,6 +74,82 @@ pair A,B;
 	endfor;
 	grvertexaux(A);
 endfig;
+
+outputtemplate := "fig_Gadget31_T.eps";
+beginfig(0)
+pair A,B;
+	A := (0,0);
+	for i = 1 upto 3:
+		B := ut*dir(i*360/4+90);
+		gredge(A,B);
+		if i = 2:
+			grvertexaux(B);
+		else:
+			grvertexdata(B);
+		fi;
+	endfor;
+	grvertexdata(A);
+endfig;
+
+outputtemplate := "fig_Gadget31_Tv.eps";
+beginfig(0)
+pair A,B;
+	A := (0,0);
+	for i = 1 upto 3:
+		B := ut*dir(i*360/3+90);
+		gredge(A,B);
+		if i = 3:
+			grvertexaux(B);
+		else:
+			grvertexdata(B);
+		fi;
+	endfor;
+	grvertexdata(A);
+endfig;
+
+outputtemplate := "fig_Gadget31_Coathanger.eps";
+beginfig(0)
+pair A,B;
+	A := (0,0);
+	for i = 0 upto 2:
+		B := ut*dir(i*360/3+90);
+		gredge(A,B);
+		if i=1: gredge(B,ut*dir((i+1)*360/3+90)); fi;
+		grvertexdata(B);
+	endfor;
+	grvertexaux(A);
+endfig;
+
+
+outputtemplate := "fig_Gadget31_K4m1.eps";
+beginfig(0)
+pair A,B;
+	A := (0,0);
+	for i = 0 upto 2:
+		B := ut*dir(i*360/3+90);
+		gredge(A,B);
+		if i<>1: gredge(B,ut*dir((i+1)*360/3+90)); fi;
+		grvertexdata(B);
+	endfor;
+	grvertexaux(A);
+endfig;
+
+
+outputtemplate := "fig_Gadget31_K4.eps";
+beginfig(0)
+pair A,B;
+	A := (0,0);
+	for i = 0 upto 2:
+		B := ut*dir(i*360/3+90);
+		gredge(A,B);
+		gredge(B,ut*dir((i+1)*360/3+90));
+		grvertexdata(B);
+	endfor;
+	grvertexaux(A);
+endfig;
+
+
+
 
 
 
@@ -103,6 +180,23 @@ pair A,B;
 endfig;
 
 outputtemplate := "fig_Gadget41_Tripod.eps";
+beginfig(0)
+pair A,B;
+	A := (0,0);
+	for i = 2,5,6,7:
+		B := ut*dir(i*360/8);
+		if (i=6) or (i=2): B:=B/sqrt(2); fi;
+		gredge(A,B);
+		if i = 6:
+			grvertexaux(B);
+		else:
+			grvertexdata(B);
+		fi;
+	endfor;
+	grvertexdata(A);
+endfig;
+
+outputtemplate := "fig_Gadget41_Tripodv.eps";
 beginfig(0)
 pair A,B;
 	A := (0,0);
