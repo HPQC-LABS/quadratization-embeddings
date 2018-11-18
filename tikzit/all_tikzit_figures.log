@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.8)  18 NOV 2018 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.8)  18 NOV 2018 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,21 +512,23 @@ Overfull \hbox (55.50645pt too wide) in paragraph at lines 283--284
 ll4[]allConn[]extra[]qb.tikz([]): 
  []
 
+(./2aux_to_3.tikz) (./2aux_to_3_inChimera.tikz) [13]
+(./2aux_to_3_inPegasus.tikz) (./2aux_to_3.tikz)
 (./2auxConn_to_all4_allConn.tikz) (./2auxConn_to_all4_allConn_inChimera.tikz)
-[13] (./2auxConn_to_all4_allConn_inPegasus.tikz)
+[14] (./2auxConn_to_all4_allConn_inPegasus.tikz)
 (./2auxConn_to_all4_allConn.tikz)
-Overfull \hbox (43.27866pt too wide) in paragraph at lines 304--305
+Overfull \hbox (43.27866pt too wide) in paragraph at lines 330--331
 []\OT1/cmr/m/n/10 Gadgets with ad-ja-cency graph cor-re-spond-ing to 2aux-Conn[
 ]to[]all4[]allConn.tikz([]): 
  []
 
-(./2k4_shared_aux.tikz) [14] (./2k4_shared_aux_inChimera.tikz)
-(./2k4_shared_aux_inPegasus.tikz) (./2k4_shared_aux.tikz) [15] [16]
+(./2k4_shared_aux.tikz) [15] (./2k4_shared_aux_inChimera.tikz)
+(./2k4_shared_aux_inPegasus.tikz) (./2k4_shared_aux.tikz) [16] [17]
 (./all_tikzit_figures.aux) ) 
 Here is how much of TeX's memory you used:
- 12885 strings out of 494953
- 269821 string characters out of 6180977
- 346041 words of memory out of 5000000
+ 12896 strings out of 494953
+ 270028 string characters out of 6180977
+ 337602 words of memory out of 5000000
  15789 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -534,10 +536,10 @@ Here is how much of TeX's memory you used:
 </usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb>
-Output written on all_tikzit_figures.pdf (16 pages, 67536 bytes).
+Output written on all_tikzit_figures.pdf (17 pages, 69610 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

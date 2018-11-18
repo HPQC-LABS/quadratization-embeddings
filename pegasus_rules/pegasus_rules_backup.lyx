@@ -1,0 +1,817 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+% this document previews all of the tikzit figures I have made in one pdf, the names are printed before the figures
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+A mathematical definition of the Bulk Pegasus graph
+\end_layout
+
+\begin_layout Section
+Preliminaries
+\end_layout
+
+\begin_layout Standard
+Firstly note that these rules are only intended to reproduce the bulk (i.e.
+ far from the edge of the graph) behavior of the Pegasus graph, and not
+ the boundaries, which are different in the definition used in the Pegasus
+ whitepaper.
+ In particular, our 
+\begin_inset Formula $L$
+\end_inset
+
+ is not the same as the 
+\begin_inset Formula $M$
+\end_inset
+
+ defined in the whitepaper.
+ This work is motivated by trying to gain a better understanding of the
+ structure of the Pegasus graph, rather than designing alternative algorithms
+ to produce a 
+\begin_inset Formula $P(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Start with three 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ chimera graphs with the following associated indices
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c\in\{0,2\}$
+\end_inset
+
+ corresponding to the three chimera graphs
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $i\in\{0,L-1\}$
+\end_inset
+
+ corresponding to the column which the chimera unit cell is on
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $j\in\{0,L-1\}$
+\end_inset
+
+ corresponding to the row of the chimera unit cell
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u\in\{0,1\}$
+\end_inset
+
+ corresponding to which side of the chimera 
+\begin_inset Formula $k_{4,4}$
+\end_inset
+
+ the vertex is
+\end_layout
+
+\begin_layout Standard
+Within each side of the 
+\begin_inset Formula $k_{4,4}$
+\end_inset
+
+, we further define two more indices, 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\in\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $q\in\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A node within the Pegasus graph is therefore defined by the following 6
+ indices 
+\begin_inset Formula $(c,i,j,u,p,q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Periodic definition
+\end_layout
+
+\begin_layout Standard
+We now define each of the additional edges which make the three chimera
+ graphs into the Pegasus graph, to define this we denote edges in terms
+ of the node indices they connect, so that 
+\begin_inset Formula $(c,i,j,u,p,q)\rightarrow(c',i',j',u',p',q')$
+\end_inset
+
+ indicates an edge between the node defined by 
+\begin_inset Formula $(c,i,j,u,p,q)$
+\end_inset
+
+ and the one defined by 
+\begin_inset Formula $(c',i',j',u',p',q')$
+\end_inset
+
+ in this notation, we will often add or subtract numbers to node indices,
+ for 
+\begin_inset Formula $c$
+\end_inset
+
+ this is taken to be addition modulo 
+\begin_inset Formula $3$
+\end_inset
+
+, while for 
+\begin_inset Formula $u$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+, and 
+\begin_inset Formula $q,$
+\end_inset
+
+ it is taken to be addition modulo 
+\begin_inset Formula $2$
+\end_inset
+
+ the graph is not periodic in 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $j$
+\end_inset
+
+, so addition in these directions is 
+\shape italic
+not
+\shape default
+ modulo 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ To start with, let us consider the two edges added to each 
+\begin_inset Formula $k_{4,4}$
+\end_inset
+
+, these are defined as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u,p,q=0)\rightarrow(c,i,j,u,p,q=1)\label{eq:uc_add}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, we consider edges which connect two unit cells with the same 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, but in a different layer of chimera graph, these are defined as, note
+ that these connections only happen when 
+\begin_inset Formula $c=0$
+\end_inset
+
+ or 
+\begin_inset Formula $c=1$
+\end_inset
+
+, there is a shift in 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ when we wrap around the periodic boundaries which will be discussed later.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c\in\{0,1\},i,j,u,p=0,q)\rightarrow(c+1,i,j,u+1,*,*),\label{eq:outgoing_same_ij}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $*$
+\end_inset
+
+ indicate that it connects to all valid indices, the above equation therefore
+ actually defines four 
+\begin_inset Quotes eld
+\end_inset
+
+outgoing
+\begin_inset Quotes erd
+\end_inset
+
+ edges from each vertex.
+ Additionally, for the 
+\begin_inset Formula $p=1$
+\end_inset
+
+ vertexes, there will be the following connections
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u=1,p=1,*)\rightarrow(c+1,i,j+1,u=0,*,*)\label{eq:outgoing_jp1}
+\end{equation}
+
+\end_inset
+
+and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u=0,p=1,*)\rightarrow(c+1,i+1,j,u=1,*,*).\label{eq:outgoing_ip1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now need to worry about what happens when we wrap around the periodic
+ boundaries, in this case both 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ get shifted by one, resulting in
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(2,i,j,u,p=0,q)\rightarrow(0,i+1,j+1,u+1,*,*),\label{eq:outgoing_periodic_wrap}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_same_ij"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_periodic_wrap"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to obtain additional connections to every chimera unit cell (and summing
+ over 
+\begin_inset Formula $u$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+, and 
+\begin_inset Formula $q$
+\end_inset
+
+) will produce a Pegasus graph, without producing the same edge twice.
+\end_layout
+
+\begin_layout Section
+Incoming edges
+\end_layout
+
+\begin_layout Standard
+Based on Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_same_ij"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we also have 
+\begin_inset Quotes eld
+\end_inset
+
+incoming
+\begin_inset Quotes erd
+\end_inset
+
+ edges from other unit cells, for instance the incoming edges defined by
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_same_ij"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are (
+\begin_inset Formula $c\in1,2$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c\in\{1,2\},i,j,u,*,*)\leftarrow(c+2,i,j,u+1,p=0,*).\label{eq:incoming_same_ij}
+\end{equation}
+
+\end_inset
+
+Similarly from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we obtain 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u=0,*,*)\leftarrow(c+2,i,j-1,u=1,p=1,*).\label{eq:incoming_jp1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we obtain 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u=1,*,*)\leftarrow(c+2,i-1,j,u=0,p=1,*).\label{eq:incoming_ip1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, we need to consider the incoming edges which go across the periodic
+ boundaries from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_periodic_wrap"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(0,i,j,u,*,*)\leftarrow(2,i-1,j-1,u+1,p=0,*).\label{eq:incoming_periodic_wrap}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From these rules, we are now able to count the number of edges incident
+ on a vertex which is not near the border of the graph, to start off, each
+ vertex will have 
+\begin_inset Formula $6$
+\end_inset
+
+ edges coming from its chimera graph.
+ The vertex will also have an additional edge from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, leading to a total of 
+\begin_inset Formula $7$
+\end_inset
+
+ edges If 
+\begin_inset Formula $p=0$
+\end_inset
+
+, the vertex will additionally have four incident edges from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_same_ij"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and an additional two edges from Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incoming_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incoming_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, as well as two from Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incoming_same_ij"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incoming_periodic_wrap"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, leading to to a total degree of 
+\begin_inset Formula $15$
+\end_inset
+
+.
+ If instead 
+\begin_inset Formula $p=1$
+\end_inset
+
+, then the degree is still 
+\begin_inset Formula $15$
+\end_inset
+
+, but with four edges from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, two from Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incoming_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incoming_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and two from Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_same_ij"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:outgoing_periodic_wrap"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Chimera Edges
+\end_layout
+
+\begin_layout Standard
+For completeness, it is worth defining the chimera edges with the same definitio
+ns as before, to start with, the 
+\begin_inset Formula $k_{4,4}$
+\end_inset
+
+ can be defined as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u=0,*,*)\rightarrow(c,i,j,u=1,*,*).\label{eq:k44}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, we define the vertical coupling between unit cells with different
+ 
+\begin_inset Formula $j$
+\end_inset
+
+ values
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u=0,p,q)\rightarrow(c,i,j+1,u=0,p,q).\label{eq:chimera_vertical}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, the horizontal coupling with different 
+\begin_inset Formula $i$
+\end_inset
+
+ values
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(c,i,j,u=1,p,q)\rightarrow(c,i+1,j,u=1,p,q).\label{eq:chimera_horizontal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that we are only defining 'outgoing' edges, eqch qubit will have an
+ additional edge coming from 
+\begin_inset Formula $i-1$
+\end_inset
+
+ or 
+\begin_inset Formula $j-1$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
