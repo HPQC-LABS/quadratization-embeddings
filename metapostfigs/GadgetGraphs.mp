@@ -16,8 +16,21 @@
 
 % setting the sizes (also in DWaveGraphs.mp) are needed
 
+
 % ** declarations for metaposting **********************************************
 prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf
+
+% for writing out the indices:
+numeric showindices;
+showindices := 0;       % hide the indices
+%showindices := 1;      % show the indices
+
+if showindices=1:
+        input TEX;
+        TEXPRE("%&latex" & char(10) & "\documentclass{article}\begin{document}");
+        TEXPOST("\end{document}");
+fi;
+
 
 % ** units *********************************************************************
 
@@ -46,209 +59,262 @@ vardef gredge(expr A,B) =
 enddef;
 
 
+% ** gadget definitions ********************************************************
+
+string gdlabel[];
+numeric gdNvert[];
+pair gdvert[][];
+numeric gdverttype[][];		% 0: data, 1: aux
+numeric gdNedge[];
+numeric gdedge[][][];
+
+picture gadget[];
+
+numeric gd,gdN;
+gd := 0;
+
+def gdadd(expr gdl)=
+	gd := gd+1;
+	gdlabel[gd] := gdl;
+	gdNedge[gd] := 0;
+	gdNvert[gd] := 0;
+enddef;
+
+def gdaddvert(expr A,t)=
+	gdvert[gd][ gdNvert[gd] ] := A;
+	gdverttype[gd][ gdNvert[gd] ] := t;
+	gdNvert[gd] := gdNvert[gd]+1;
+	
+enddef;
+
+def gdaddedge(expr ei,ej)=
+	gdedge[gd][ gdNedge[gd] ][0] := ei;
+	gdedge[gd][ gdNedge[gd] ][1] := ej;
+	gdNedge[gd] := gdNedge[gd]+1;
+enddef;
+
 
 % ** 3+1 gadgets ***************************************************************
 
-outputtemplate := "fig_Gadget31_AllToAux.eps";
-beginfig(0)
-pair A,B;
-	A := (0,0);
-	for i = 0 upto 2:
-		B := ut*dir(i*360/3+90);
-		gredge(A,B);
-		grvertexdata(B);
-	endfor;
-	grvertexaux(A);
-endfig;
+
+gdadd("31_AllToAux");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(ut*dir(i*360/3+90),0);
+	gdaddedge(0,i+1);
+endfor;
 
 
-outputtemplate := "fig_Gadget31_AllToAuxT.eps";
-beginfig(0)
-pair A,B;
-	A := (0,0);
-	for i = 1 upto 3:
-		B := ut*dir(i*360/4+90);
-		gredge(A,B);
-		grvertexdata(B);
-	endfor;
-	grvertexaux(A);
-endfig;
+gdadd("31_AllToAuxT");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(ut*dir(i*360/4+180),0);
+	gdaddedge(0,i+1);
+endfor;
 
+
+gdadd("31_T");
+gdaddvert((0,0),0);
+for i = 0 upto 2:
+	gdaddvert(ut*dir(i*360/4+180),if i = 1: 1 else: 0 fi);
+	gdaddedge(0,i+1);
+endfor;
+
+
+gdadd("31_Tv");
+gdaddvert((0,0),0);
+for i = 0 upto 2:
+	gdaddvert(ut*dir((i+1)*360/3+90),if i = 2: 1 else: 0 fi);
+	gdaddedge(0,i+1);
+endfor;
+
+
+gdadd("31_Coathanger");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(ut*dir(i*360/3+90),0);
+	gdaddedge(0,i+1);
+endfor;
+gdaddedge(2,3);
+
+
+gdadd("31_K4m1");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(ut*dir(i*360/3+90),0);
+	gdaddedge(0,i+1);
+endfor;
+gdaddedge(1,2);
+gdaddedge(1,3);
+
+
+gdadd("31_K4");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(ut*dir(i*360/3+90),0);
+	gdaddedge(0,i+1);
+	gdaddedge(i+1,(i+1) mod 3 +1);
+endfor;
 
 
 % ** 4+1 gadgets ***************************************************************
 
-outputtemplate := "fig_Gadget41_AllToAux.eps";
-beginfig(0)
-pair A,B;
-	A := (0,0);
-	for i = 0 upto 3:
-		B := ut*dir(i*360/4);
-		gredge(A,B);
-		grvertexdata(B);
-	endfor;
-	grvertexaux(A);
-endfig;
 
-outputtemplate := "fig_Gadget41_AllToAuxv.eps";
-beginfig(0)
-pair A,B;
-	A := (0,0);
-	for i = 0 upto 3:
-		B := ut*dir(i*360/4+45);
-		gredge(A,B);
-		grvertexdata(B);
-	endfor;
-	grvertexaux(A);
-endfig;
+gdadd("41_AllToAux");
+gdaddvert((0,0),1);
+for i = 0 upto 3:
+	gdaddvert(ut*dir(i*360/4),0);
+	gdaddedge(0,i+1);
+endfor;
 
-outputtemplate := "fig_Gadget41_Tripod.eps";
-beginfig(0)
-pair A,B;
-	A := (0,0);
-	for i = 0 upto 2:
-		B := ut*dir(i*360/4);
-		gredge(A,B);
-		grvertexdata(B);
-	endfor;
-	B := ut*dir(3*360/4);
-	gredge(A,B);
-	grvertexaux(B);
-	grvertexdata(A);
-endfig;
 
-outputtemplate := "fig_Gadget41_K5.eps";
-beginfig(0)
-pair A,B;
-	A := (0,0);
-	for i = 0 upto 3:
-		B := ut*dir(i*360/4+45);
-		gredge(A,B);
-		gredge(B,ut*dir((i+1)*360/4+45));
-	endfor;
-	for i = 0 upto 3:
-		B := ut*dir(i*360/4+45);
-		grvertexdata(B);
-	endfor;
-	grvertexaux(A);
-endfig;
+gdadd("41_AllToAuxv");
+gdaddvert((0,0),1);
+for i = 0 upto 3:
+	gdaddvert(ut*dir(i*360/4+45),0);
+	gdaddedge(0,i+1);
+endfor;
 
+
+gdadd("41_Tripod");
+gdaddvert((0,0),0);
+for i = 0 upto 3:
+	gdaddvert(if i mod 2 = 1: (1/sqrt(2))* fi ut*dir(i*360/4 if i mod 2 = 0: + (i-1)*360/8 fi),if i = 3: 1 else: 0 fi);
+	gdaddedge(0,i+1);
+endfor;
+
+
+gdadd("41_Tripodv");
+gdaddvert((0,0),0);
+for i = 0 upto 3:
+	gdaddvert(ut*dir(i*360/4),if i = 3: 1 else: 0 fi);
+	gdaddedge(0,i+1);
+endfor;
+
+
+gdadd("41_K5");
+gdaddvert((0,0),1);
+for i = 0 upto 3:
+	gdaddvert(ut*dir(i*360/4+45),0);
+	gdaddedge(0,i+1);
+	gdaddedge(i+1,(i+1) mod 4 +1);
+endfor;
 
 
 % ** 4+2 gadgets ***************************************************************
 
-pair P[];
+
+gdadd("42_AllToAuxp1");
 for i = 0 upto 1:
-	P[3i] := .25ut*dir(i*360/2);
+	gdaddvert(.25ut*dir(i*360/2),1);
 	for j = 1 upto 2:
-		P[3i+j] := P[3i] + ut*dir((2i+j)*360/4-135);
+		gdaddvert(.25ut*dir(i*360/2) + ut*dir((2i+j)*360/4-135),0);
+		gdaddedge(3i,3i+j);
+		gdaddedge(3(1-i),3i+j);
 	endfor;
 endfor;
+gdaddedge(5,1);
 
-outputtemplate := "fig_Gadget42_AllToAuxp1.eps";
-beginfig(0)
-	gredge(P[5],P[1]);
-	for i = 0 upto 1:
-		for j = 1 upto 2:
-			gredge(P[3i],P[3i+j]);
-			gredge(P[3(1-i)],P[3i+j]);
-		endfor;
-	endfor;
-	for i = 0 upto 1:
-		for j = 1 upto 2:
-			grvertexdata(P[3i+j]);
-		endfor;
-		grvertexaux(P[3i]);
-	endfor;
-endfig;
 
-outputtemplate := "fig_Gadget42_K6m1.eps";
-beginfig(0)
-	gredge(P[1],P[2]);
-	gredge(P[2],P[4]);
-	gredge(P[4],P[5]);
-	gredge(P[5],P[1]);
-	for i = 0 upto 1:
-		for j = 1 upto 2:
-			gredge(P[3i],P[3i+j]);
-			gredge(P[3(1-i)],P[3i+j]);
-		endfor;
+gdadd("42_K6m1");
+for i = 0 upto 1:
+	gdaddvert(.25ut*dir(i*360/2),1);
+	for j = 1 upto 2:
+		gdaddvert(.25ut*dir(i*360/2) + ut*dir((2i+j)*360/4-135),0);
+		gdaddedge(3i,3i+j);
+		gdaddedge(3(1-i),3i+j);
 	endfor;
-	for i = 0 upto 1:
-		for j = 1 upto 2:
-			grvertexdata(P[3i+j]);
-		endfor;
-		grvertexaux(P[3i]);
-	endfor;
-endfig;
+endfor;
+gdaddedge(1,2);
+gdaddedge(2,4);
+gdaddedge(4,5);
+gdaddedge(5,1);
 
-outputtemplate := "fig_Gadget42_K6.eps";
-beginfig(0)
-	gredge(P[1],P[2]);
-	gredge(P[2],P[4]);
-	gredge(P[4],P[5]);
-	gredge(P[5],P[1]);
-	gredge(P[0],P[3]);
-	for i = 0 upto 1:
-		for j = 1 upto 2:
-			gredge(P[3i],P[3i+j]);
-			gredge(P[3(1-i)],P[3i+j]);
-		endfor;
+
+gdadd("42_K6");
+for i = 0 upto 1:
+	gdaddvert(.25ut*dir(i*360/2),1);
+	for j = 1 upto 2:
+		gdaddvert(.25ut*dir(i*360/2) + ut*dir((2i+j)*360/4-135),0);
+		gdaddedge(3i,3i+j);
+		gdaddedge(3(1-i),3i+j);
 	endfor;
-	for i = 0 upto 1:
-		for j = 1 upto 2:
-			grvertexdata(P[3i+j]);
-		endfor;
-		grvertexaux(P[3i]);
-	endfor;
-endfig;
+endfor;
+gdaddedge(1,2);
+gdaddedge(2,4);
+gdaddedge(4,5);
+gdaddedge(5,1);
+gdaddedge(0,3);
 
 
 % ** 3+3 gadgets ***************************************************************
 
+
+gdadd("33_K5p1");
 for i = 0 upto 2:
-	P[i] := ut*dir(i*360/3+90);
-	P[3+i] := .5P[i];
+	gdaddvert(ut*dir(i*360/3+90),0);
+	gdaddvert(.5ut*dir(i*360/3+90),1);
+	gdaddedge(2i,2*((i+1)mod3));
+	gdaddedge(2i+1,2*((i+1)mod3)+1);
+	gdaddedge(3,2*i);
+	gdaddedge(5,2*i);
 endfor;
 
-outputtemplate := "fig_Gadget33_K5p1.eps"; % "bad name"
-beginfig(0)
-	for i = 0 upto 2:
-		gredge(P[i],P[(i+1)mod3]);
-		gredge(P[3+i],P[3+(i+1)mod3]);
-		gredge(P[4],P[i]);
-		gredge(P[5],P[i]);
-	endfor;
-	for i = 0 upto 2:
-		grvertexdata(P[i]);
-		grvertexaux(P[3+i]);
-	endfor;
-endfig;
 
 % ** 4+3 gadgets ***************************************************************
 
+gdadd("43_DoubleK4v");
 for i = 0 upto 1:
 	for j = 0 upto 2:
-		P[3i+j] := .5ut*dir(i*360/2)  + .5ut*dir(j*360/4-90 + i*360/2);
+		gdaddvert(.5ut*dir(i*360/2) + .5ut*dir(j*360/4-90 + i*360/2), if j=1: 1 else: 0 fi);
+		gdaddedge(3i+j,6);
+		gdaddedge(3i+j,3i);
 	endfor;
+	gdaddedge(3i+1,3i+2);
 endfor;
-P[6] := (0,0);
+gdaddvert((0,0),1);
 
-outputtemplate := "fig_Gadget43_DoubleK4.eps"; % "bad name"
-beginfig(0)
-	for i = 0 upto 1:
-		for j = 0 upto 2:
-			gredge(P[3i+j],P[6]);
-		endfor;
-		gredge(P[3i],P[3i+1]);
-		gredge(P[3i+1],P[3i+2]);
+
+
+gdadd("43_DoubleK4");
+for i = 0 upto 1:
+	gdaddvert(.5ut*dir(i*360/2),1);
+	for j = 0 upto 2:
+		if j<>0: gdaddvert(.5ut*dir(i*360/2)+ut*dir(j*360/4-135+i*360/2),0) fi;
+		gdaddedge(3i+j,6);
+		gdaddedge(3i+j,3i);
 	endfor;
-	for ij = 0, 5, 6:
-		grvertexaux(P[ij]);
+	gdaddedge(3i+1,3i+2);
+endfor;
+gdaddvert((0,0),1);
+
+
+% ** drawing the figures and output ********************************************
+
+gdN := gd;
+
+for gd = 1 upto gdN:
+gadget[gd]:= image(
+	for ie = 0 upto gdNedge[gd]-1:
+		gredge( gdvert[gd][gdedge[gd][ie][0]], gdvert[gd][gdedge[gd][ie][1]] );
 	endfor;
-	for ij = 1 upto 4:
-		grvertexdata(P[ij]);
+	for iv = 0 upto gdNvert[gd]-1:
+		if gdverttype[gd][iv] = 0:
+			grvertexdata(gdvert[gd][iv]);
+		elseif gdverttype[gd][iv] = 1:
+			grvertexaux(gdvert[gd][iv]);
+		fi;
+		if showindices=1: label.urt(TEX("\tiny $"&decimal(iv)&"$"), gdvert[gd][iv] ); fi;
 	endfor;
-endfig;
+);
+endfor;
+
+
+for gd = 1 upto gdN:
+	show gdlabel[gd];
+	outputtemplate := "fig_Gadget"&gdlabel[gd]&".eps";
+	beginfig(0) draw gadget[gd]; endfig;
+endfor;
 
 end;
+
