@@ -1365,6 +1365,36 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
+filename "tikzit/2aux_to_all4_allConn_inChimera.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+2aux_to_all4_allConn_inChimera.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
 filename "tikzit/2aux_to_all4_allConn_inPegasus.tikz"
 
 \end_inset
@@ -1597,6 +1627,36 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
+filename "tikzit/aux_to_all4_allConn_inChimera_extra_qb.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+aux_to_all4_allConn_inChimera.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
 filename "tikzit/aux_to_all4_allConn_inPegasus_extra_qb.tikz"
 
 \end_inset
@@ -1696,6 +1756,36 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
+filename "tikzit/2auxConn_to_all4_allConn_inChimera.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+2auxConn_to_all4_allConn_inChimera.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
 filename "tikzit/2auxConn_to_all4_allConn_inPegasus.tikz"
 
 \end_inset
@@ -1774,6 +1864,36 @@ filename "tikzit/2k4_shared_aux.tikz"
 
 \begin_layout Plain Layout
 2k4_shared_aux.tikz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/2k4_shared_aux_inChimera.tikz"
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+2k4_shared_aux_inChimera.tikz
 \end_layout
 
 \end_inset
