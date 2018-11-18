@@ -1605,7 +1605,7 @@ filename "tikzit/aux_to_all4_allConn_extra_qb.tikz"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-aux_to_all4_allConn.tikz
+aux_to_all4_allConn_extra_qb.tikz
 \end_layout
 
 \end_inset
@@ -1635,7 +1635,7 @@ filename "tikzit/aux_to_all4_allConn_inChimera_extra_qb.tikz"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-aux_to_all4_allConn_inChimera.tikz
+aux_to_all4_allConn_inChimera_extra_qb.tikz
 \end_layout
 
 \end_inset
@@ -1665,7 +1665,7 @@ filename "tikzit/aux_to_all4_allConn_inPegasus_extra_qb.tikz"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-aux_to_all4_allConn_inPegasus.tikz
+aux_to_all4_allConn_inPegasus_extra_qb.tikz
 \end_layout
 
 \end_inset
