@@ -2275,6 +2275,135 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+<<<<<<< HEAD
+=======
+
+\emph on
+\begin_inset Formula $K_{5}$
+\end_inset
+
+
+\emph default
++1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/aux_to_all4_allConn_extra_qb.tikz"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_Gadget33_K5p1.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/2aux_to_3.tikz"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+>>>>>>> 28bc02bae198c896a573e99f43e006209ad0b342
 \begin_inset Quotes eld
 \end_inset
 
@@ -7220,7 +7349,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn_inChimera_extra_qb.tikz"
+filename "tikzit/2aux_to_3_inChimera.tikz"
 
 \end_inset
 
@@ -7671,7 +7800,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn_inPegasus_extra_qb.tikz"
+filename "tikzit/2aux_to_3_inPegasus.tikz"
 
 \end_inset
 
