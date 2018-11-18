@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=gn] (0) at (0, 2) {};
+		\node [style=gn] (1) at (0, 1) {};
+		\node [style=gn] (2) at (-2, -0) {};
+		\node [style=gn] (3) at (-1, -0) {};
+		\node [style=gn] (4) at (1, -0) {};
+		\node [style=gn] (5) at (2, -0) {};
+		\node [style=gn] (6) at (0, -1) {};
+		\node [style=gn] (7) at (0, -2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=simple] (7) to (5);
+		\draw [style=simple] (5) to (0);
+		\draw [style=simple] (0) to (2);
+		\draw [style=simple] (7) to (2);
+		\draw [style=simple] (7) to (3);
+		\draw [style=simple] (7) to (4);
+		\draw [style=simple] (6) to (3);
+		\draw [style=simple] (6) to (2);
+		\draw [style=simple] (6) to (4);
+		\draw [style=simple] (4) to (1);
+		\draw [style=simple] (3) to (1);
+		\draw [style=simple] (6) to (5);
+		\draw [style=simple] (4) to (0);
+		\draw [style=simple] (3) to (0);
+		\draw [style=simple] (1) to (2);
+		\draw [style=simple] (1) to (5);
+		\draw [style=CNOT] (2) to (3);
+		\draw [style=CNOT] (0) to (1);
+		\draw [style=CNOT] (4) to (5);
+		\draw [style=CNOT] (6) to (7);
+	\end{pgfonlayer}
+\end{tikzpicture}
