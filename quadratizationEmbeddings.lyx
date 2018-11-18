@@ -1721,10 +1721,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_Gadget33_K5p1.pdf
 
@@ -1733,10 +1729,9 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1756,7 +1751,7 @@ thisfigheight}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/2aux_to_3.tikz"
+filename "tikzit/aux_to_all4_allConn_extra_qb.tikz"
 
 \end_inset
 
@@ -1767,6 +1762,11 @@ status collapsed
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
