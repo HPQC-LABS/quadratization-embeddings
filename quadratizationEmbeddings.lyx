@@ -1751,7 +1751,7 @@ thisfigheight}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn_extra_qb.tikz"
+filename "tikzit/2aux_to_3.tikz"
 
 \end_inset
 
