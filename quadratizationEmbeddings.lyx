@@ -105,7 +105,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -118,7 +117,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -1721,6 +1719,10 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_Gadget33_K5p1.pdf
 
@@ -1729,9 +1731,10 @@ status collapsed
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1751,7 +1754,7 @@ thisfigheight}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn_extra_qb.tikz"
+filename "tikzit/2aux_to_3.tikz"
 
 \end_inset
 
@@ -1762,11 +1765,6 @@ status collapsed
 \begin_layout Plain Layout
 
 }
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -7209,7 +7207,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/k4_chimera.tikz"
+filename "tikzit/2aux_to_3_inChimera.tikz"
 
 \end_inset
 
@@ -7220,48 +7218,6 @@ status open
 \begin_layout Plain Layout
 
 }
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{!}{
-\backslash
-chimeraFigSize}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/aux_to_all4_allConn_inChimera_extra_qb.tikz"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -7704,7 +7660,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn_inPegasus_extra_qb.tikz"
+filename "tikzit/2aux_to_3_inPegasus.tikz"
 
 \end_inset
 
