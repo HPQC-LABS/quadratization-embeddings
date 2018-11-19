@@ -61,14 +61,16 @@ enddef;
 
 % ** gadget definitions ********************************************************
 
+picture gadget[];
+
+
+% internal database, don't touch direclty, only through "gdadd..." routines.
 string gdlabel[];
 numeric gdNvert[];
 pair gdvert[][];
 numeric gdverttype[][];		% 0: data, 1: aux
 numeric gdNedge[];
 numeric gdedge[][][];
-
-picture gadget[];
 
 numeric gd,gdN;
 gd := 0;
@@ -154,6 +156,19 @@ for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
 	gdaddedge(0,i+1);
 	gdaddedge(i+1,(i+1) mod 3 +1);
+endfor;
+
+% ** 3+2 gadgets ***************************************************************
+
+
+gdadd("32_K5");
+for i = 0 upto 2:
+	gdaddvert(ut*dir(i*360/3+90),0);
+	if i<>0: gdaddvert(.5ut*dir(i*360/3+90),1) fi;
+	gdaddedge(2i,2*((i+1)mod3));
+	gdaddedge(1,2*i);
+	gdaddedge(3,2*i);
+	gdaddedge(1,3);
 endfor;
 
 
@@ -248,18 +263,18 @@ gdaddedge(0,3);
 
 
 % ** 3+3 gadgets ***************************************************************
-
-
-gdadd("33_K5p1");
-for i = 0 upto 2:
-	gdaddvert(ut*dir(i*360/3+90),0);
-	gdaddvert(.5ut*dir(i*360/3+90),1);
-	gdaddedge(2i,2*((i+1)mod3));
-	gdaddedge(2i+1,2*((i+1)mod3)+1);
-	gdaddedge(3,2*i);
-	gdaddedge(5,2*i);
-endfor;
-
+% 
+% 
+% gdadd("33_K5p1");
+% for i = 0 upto 2:
+% 	gdaddvert(ut*dir(i*360/3+90),0);
+% 	gdaddvert(.5ut*dir(i*360/3+90),1);
+% 	gdaddedge(2i,2*((i+1)mod3));
+% 	gdaddedge(2i+1,2*((i+1)mod3)+1);
+% 	gdaddedge(3,2*i);
+% 	gdaddedge(5,2*i);
+% endfor;
+% 
 
 % ** 4+3 gadgets ***************************************************************
 
