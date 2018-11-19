@@ -105,6 +105,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -117,6 +118,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -1666,8 +1668,6 @@ status open
 \end_inset
 
 
-\emph default
-+1
 \end_layout
 
 \end_inset
@@ -2004,6 +2004,89 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
+\begin_inset Formula $K_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+thisfigheight}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/aux_to_all4_allConn.tikz"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_Gadget41_K5.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
 \begin_inset Quotes eld
 \end_inset
 
@@ -2223,85 +2306,6 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_Gadget42_K6.pdf
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\emph on
-\begin_inset Formula $K_{5}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{!}{
-\backslash
-thisfigheight}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/aux_to_all4_allConn.tikz"
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_Gadget41_K5.pdf
 
 \end_inset
 
@@ -3920,10 +3924,10 @@ PTR-KZ
 
 \series bold
 \color blue
-\begin_inset Formula $K_{5}$
+\begin_inset Formula $\boldsymbol{K_{5}}$
 \end_inset
 
-+1
+(2 aux)
 \end_layout
 
 \end_inset
@@ -3954,6 +3958,24 @@ PTR-RBL-(3
 \begin_inset Text
 
 \begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 3
 \end_layout
 
@@ -3964,14 +3986,8 @@ PTR-RBL-(3
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\series bold
+\color red
 5
 \end_layout
 
@@ -3982,9 +3998,6 @@ PTR-RBL-(3
 
 \begin_layout Plain Layout
 
-\series bold
-\color red
-8
 \end_layout
 
 \end_inset
@@ -4002,16 +4015,7 @@ PTR-RBL-(3
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
+0
 \end_layout
 
 \end_inset
@@ -4023,7 +4027,7 @@ PTR-RBL-(3
 
 \series bold
 \color red
-4
+2
 \end_layout
 
 \end_inset
@@ -4895,10 +4899,10 @@ PTR-Ishikawa
 
 \series bold
 \color blue
-\begin_inset Formula $K_{5}$
+\begin_inset Formula $\boldsymbol{K_{5}}$
 \end_inset
 
-
+(1 aux)
 \end_layout
 
 \end_inset
@@ -5214,7 +5218,7 @@ NTR-RBL-(4
 
 \series bold
 \color blue
-\begin_inset Formula $K_{6}$
+\begin_inset Formula $\boldsymbol{K_{6}}$
 \end_inset
 
 
@@ -5328,7 +5332,7 @@ PTR-BCR-3
 \series bold
 \color blue
 Double 
-\begin_inset Formula $K_{4}$
+\begin_inset Formula $\boldsymbol{K_{4}}$
 \end_inset
 
 
@@ -6771,8 +6775,22 @@ Nick said this sentence was quite confusing
 Minor embeddings for cubic to quadratic gadgets
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -4mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Chimera graph
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6894,18 +6912,6 @@ status open
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -6975,18 +6981,6 @@ status open
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -7046,18 +7040,6 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 
@@ -7130,18 +7112,6 @@ status open
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -7204,26 +7174,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -7233,21 +7183,52 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-
-\emph on
-
-\begin_inset Quotes erd
-\end_inset
-
-
+placeholder
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -7276,6 +7257,11 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7381,6 +7367,68 @@ status open
 
 
 \emph on
+placeholder
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/all_to_aux4_inPegasus.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
 coat hanger
 \begin_inset Quotes erd
 \end_inset
@@ -7426,18 +7474,6 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 
@@ -7503,18 +7539,6 @@ status open
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -7577,18 +7601,6 @@ status open
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -7648,18 +7660,6 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 
@@ -7769,6 +7769,88 @@ quartic
 
 
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted1.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -8179,6 +8261,10 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset space ~
 \end_inset
 
@@ -8205,7 +8291,7 @@ status open
 
 
 \emph on
-
+Double K4
 \begin_inset Quotes erd
 \end_inset
 
@@ -8253,26 +8339,22 @@ status open
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
 \align center
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -8287,7 +8369,7 @@ status open
 
 
 \emph on
-
+K6
 \begin_inset Quotes erd
 \end_inset
 
@@ -8304,9 +8386,9 @@ status open
 
 
 \backslash
-resizebox{!}{
+resizebox{!}{0.3
 \backslash
-chimeraFigSize}{
+textwidth}{
 \end_layout
 
 \end_inset
@@ -8325,6 +8407,11 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8444,6 +8531,19 @@ all to aux
 \begin_inset Quotes erd
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -8810,6 +8910,66 @@ status open
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\size tiny
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\size tiny
+\emph on
+PLACEHOLDER
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/2k4_shared_aux_inPegasus.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8860,7 +9020,7 @@ Talk about logarithmic number of variables method, and how it's not useful
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -8931,7 +9091,7 @@ pegasus_v_chimera_uc_k44.tikz: shows extra edges added to chimera unit cell
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to all_to_aux.4tikz(
