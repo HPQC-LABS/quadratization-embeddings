@@ -7089,7 +7089,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn_inChimera.tikz"
+filename "tikzit/k4_missing_edge_chimera.tikz"
 
 \end_inset
 
@@ -8905,7 +8905,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/2k4_shared_aux_inPegasus.tikz"
+filename "tikzit/2aux_to_all4_allConn_inPegasus.tikz"
 
 \end_inset
 
