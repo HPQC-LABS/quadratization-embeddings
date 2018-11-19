@@ -1719,10 +1719,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_Gadget33_K5p1.pdf
 
@@ -1731,10 +1727,9 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1765,6 +1760,11 @@ status collapsed
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
