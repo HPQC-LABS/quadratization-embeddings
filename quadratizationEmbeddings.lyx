@@ -1011,8 +1011,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Propeller
 \begin_inset Note Note
 status open
@@ -1151,13 +1149,8 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-\begin_inset Quotes eld
-\end_inset
-
 T
-\begin_inset Quotes erd
-\end_inset
-
+\emph default
 
 \begin_inset Note Note
 status open
@@ -1298,34 +1291,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mbox{
-\end_layout
-
-\end_inset
-
-
-\emph on
 Coat hanger
-\emph default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1651,7 +1617,9 @@ status open
 \begin_inset Formula $K_{5}$
 \end_inset
 
- (2 aux)
+ 
+\emph default
+(2 aux)
 \end_layout
 
 \end_inset
@@ -1792,14 +1760,7 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-\begin_inset Quotes eld
-\end_inset
-
 X
-\begin_inset Quotes erd
-\end_inset
-
-
 \begin_inset Note Note
 status open
 
@@ -1905,8 +1866,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Tripod
 \end_layout
 
@@ -1987,7 +1946,9 @@ status open
 \begin_inset Formula $K_{5}$
 \end_inset
 
- (1 aux)
+ 
+\emph default
+(1 aux)
 \end_layout
 
 \end_inset
@@ -2301,8 +2262,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Double 
 \begin_inset Formula $K_{4}$
 \end_inset
@@ -2929,7 +2888,6 @@ Cubic
 \begin_layout Plain Layout
 
 \series bold
-\emph on
 \color blue
 Propeller
 \end_layout
@@ -3254,7 +3212,6 @@ NTR-ABCB
 \begin_layout Plain Layout
 
 \series bold
-\emph on
 \color blue
 Coat hanger
 \end_layout
@@ -3903,7 +3860,9 @@ PTR-KZ
 \begin_inset Formula $\boldsymbol{\boldsymbol{K_{5}}}$
 \end_inset
 
-(2 aux)
+
+\emph default
+ (2 aux)
 \end_layout
 
 \end_inset
@@ -4545,7 +4504,6 @@ NTR-KZFD
 \begin_layout Plain Layout
 
 \series bold
-\emph on
 \color blue
 Tripod
 \end_layout
@@ -4661,7 +4619,9 @@ NTR-ABCB
 \begin_inset Formula $\boldsymbol{K_{5}}$
 \end_inset
 
- (1 aux)
+ 
+\emph default
+(1 aux)
 \end_layout
 
 \end_inset
@@ -5315,9 +5275,10 @@ PTR-BCR-3
 \begin_layout Plain Layout
 
 \series bold
-\emph on
 \color blue
 Double 
+\emph on
+
 \begin_inset Formula $\boldsymbol{\boldsymbol{K_{4}}}$
 \end_inset
 
@@ -6847,9 +6808,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Propeller
 \emph on
-Proppeler
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:all-to-auxChimera"
@@ -6971,8 +6932,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Coat hanger
 \end_layout
 
@@ -7143,7 +7102,9 @@ status open
 \begin_inset Formula $K_{5}$
 \end_inset
 
- (2 aux)
+ 
+\emph default
+(2 aux)
 \end_layout
 
 \end_inset
@@ -7280,8 +7241,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Propeller
 \end_layout
 
@@ -7390,8 +7349,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Coat hanger
 \end_layout
 
@@ -7566,7 +7523,9 @@ status open
 \begin_inset Formula $K_{5}$
 \end_inset
 
- (2 aux)
+ 
+\emph default
+(2 aux)
 \end_layout
 
 \end_inset
@@ -8428,8 +8387,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Tripod
 \end_layout
 
@@ -8546,7 +8503,9 @@ status open
 
 
 \emph on
- (1 aux)
+ 
+\emph default
+(1 aux)
 \end_layout
 
 \end_inset
@@ -8719,9 +8678,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 Double 
+\emph on
+
 \begin_inset Formula $K_{4}$
 \end_inset
 
