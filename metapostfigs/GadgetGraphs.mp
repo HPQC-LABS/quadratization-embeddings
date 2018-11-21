@@ -164,12 +164,13 @@ endfor;
 gdadd("32_K5");
 for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
-	if i<>0: gdaddvert(.5ut*dir(i*360/3+90),1) fi;
-	gdaddedge(2i,2*((i+1)mod3));
-	gdaddedge(1,2*i);
-	gdaddedge(3,2*i);
-	gdaddedge(1,3);
+	gdaddedge(i,((i+1)mod3));
+	gdaddedge(3,i);
+	gdaddedge(4,i);
 endfor;
+gdaddvert(.25ut*dir(+0),1);
+gdaddvert(.25ut*dir(180),1);
+gdaddedge(3,4);
 
 
 % ** 4+1 gadgets ***************************************************************
@@ -221,9 +222,9 @@ endfor;
 
 gdadd("42_AllToAuxp1");
 for i = 0 upto 1:
-	gdaddvert(.25ut*dir(i*360/2),1);
+	gdaddvert(.35ut*dir(i*360/2),1);
 	for j = 1 upto 2:
-		gdaddvert(.25ut*dir(i*360/2) + ut*dir((2i+j)*360/4-135),0);
+		gdaddvert(ut*dir((2i+j)*360/4-135),0);
 		gdaddedge(3i,3i+j);
 		gdaddedge(3(1-i),3i+j);
 	endfor;
@@ -233,9 +234,9 @@ gdaddedge(5,1);
 
 gdadd("42_K6m1");
 for i = 0 upto 1:
-	gdaddvert(.25ut*dir(i*360/2),1);
+	gdaddvert(.35ut*dir(i*360/2),1);
 	for j = 1 upto 2:
-		gdaddvert(.25ut*dir(i*360/2) + ut*dir((2i+j)*360/4-135),0);
+		gdaddvert(ut*dir((2i+j)*360/4-135),0);
 		gdaddedge(3i,3i+j);
 		gdaddedge(3(1-i),3i+j);
 	endfor;
@@ -248,9 +249,9 @@ gdaddedge(5,1);
 
 gdadd("42_K6");
 for i = 0 upto 1:
-	gdaddvert(.25ut*dir(i*360/2),1);
+	gdaddvert(.35ut*dir(i*360/2),1);
 	for j = 1 upto 2:
-		gdaddvert(.25ut*dir(i*360/2) + ut*dir((2i+j)*360/4-135),0);
+		gdaddvert(ut*dir((2i+j)*360/4-135),0);
 		gdaddedge(3i,3i+j);
 		gdaddedge(3(1-i),3i+j);
 	endfor;
@@ -293,9 +294,9 @@ gdaddvert((0,0),1);
 
 gdadd("43_DoubleK4");
 for i = 0 upto 1:
-	gdaddvert(.5ut*dir(i*360/2),1);
+	gdaddvert(.4ut*dir(i*360/2),1);
 	for j = 0 upto 2:
-		if j<>0: gdaddvert(.5ut*dir(i*360/2)+ut*dir(j*360/4-135+i*360/2),0) fi;
+		if j<>0: gdaddvert(ut*dir(j*360/4-135+i*360/2),0) fi;
 		gdaddedge(3i+j,6);
 		gdaddedge(3i+j,3i);
 	endfor;
