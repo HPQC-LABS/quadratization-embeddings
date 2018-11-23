@@ -105,8 +105,11 @@ post[0] := ut*dir(90)/sqrt(2);
 post[1] := ut*dir(270-45);
 post[2] := ut*dir(270+45);
 
+pair centralt; centralt:=(post[0]+post[1]+post[2])/3;
+%centralt:=(0,-ut*2/sqrt(2)/6);
+
 gdadd("31_AllToAux");
-gdaddvert((0,0),1);
+gdaddvert(centralt,1);
 for i = 0 upto 2:
 	gdaddvert(post[i],0);
 	gdaddedge(0,i+1);
@@ -137,7 +140,7 @@ endfor;
 
 
 gdadd("31_Tv");
-gdaddvert((0,0),0);
+gdaddvert(centralt,0);
 for i = 0 upto 2:
 	gdaddvert(post[i],if i = 0: 1 else: 0 fi);
 	gdaddedge(0,i+1);
@@ -152,7 +155,7 @@ endfor;
 
 
 gdadd("31_Coathanger");
-gdaddvert((0,0),1);
+gdaddvert(centralt,1);
 for i = 0 upto 2:
 	gdaddvert(post[i],0);
 	gdaddedge(0,i+1);
@@ -169,7 +172,7 @@ gdaddedge(2,3);
 
 
 gdadd("31_K4m1");
-gdaddvert((0,0),1);
+gdaddvert(centralt,1);
 for i = 0 upto 2:
 	gdaddvert(post[i],0);
 	gdaddedge(0,i+1);
@@ -188,7 +191,7 @@ gdaddedge(1,3);
 
 
 gdadd("31_K4");
-gdaddvert((0,0),1);
+gdaddvert(centralt,1);
 for i = 0 upto 2:
 	gdaddvert(post[i],0);
 	gdaddedge(0,i+1);
@@ -213,8 +216,8 @@ for i = 0 upto 2:
 	gdaddedge(3,i);
 	gdaddedge(4,i);
 endfor;
-gdaddvert(.15ut*dir(+0),1);
-gdaddvert(.15ut*dir(180),1);
+gdaddvert(.20ut*dir(+0)+centralt,1);
+gdaddvert(.20ut*dir(180)+centralt,1);
 gdaddedge(3,4);
 
 gdadd("32_K5t");
