@@ -37,9 +37,9 @@ fi;
 %numeric ut; ut := 24bp; 
 numeric ut; ut := 30bp; 
 
-%numeric dt; dt := .2ut;			% size of a vertex
-numeric dt; dt := .15ut;			% size of a vertex
-numeric it; it := 1.0bp; % 0.7bp	% width of an edge
+numeric dt; dt := .2ut;			% size of a vertex
+%numeric dt; dt := .15ut;		% size of a vertex
+numeric it; it := 1.5bp; % 0.7bp	% width of an edge
 
 % ** drawing routines **********************************************************
 
@@ -50,7 +50,7 @@ enddef;
 
 % default vertex for aux qubit
 vardef grvertexaux(expr A) =
-	draw A withpen pencircle scaled dt withcolor black;
+	draw A withpen pencircle scaled dt withcolor red;
 %	draw A withpen pencircle scaled (dt-2it) withcolor red;
 	draw A withpen pencircle scaled (dt-1.2it) withcolor red;
 enddef;
