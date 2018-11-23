@@ -34,9 +34,11 @@ fi;
 
 % ** units *********************************************************************
 
-numeric ut; ut := 24bp; 
+%numeric ut; ut := 24bp; 
+numeric ut; ut := 30bp; 
 
-numeric dt; dt := .2ut;			% size of a vertex
+%numeric dt; dt := .2ut;			% size of a vertex
+numeric dt; dt := .15ut;			% size of a vertex
 numeric it; it := 1.0bp; % 0.7bp	% width of an edge
 
 % ** drawing routines **********************************************************
@@ -50,7 +52,7 @@ enddef;
 vardef grvertexaux(expr A) =
 	draw A withpen pencircle scaled dt withcolor black;
 %	draw A withpen pencircle scaled (dt-2it) withcolor red;
-	draw A withpen pencircle scaled (dt-it) withcolor red;
+	draw A withpen pencircle scaled (dt-1.2it) withcolor red;
 enddef;
 
 % default edge for the graph
@@ -98,8 +100,19 @@ enddef;
 
 % ** 3+1 gadgets ***************************************************************
 
+pair post[];
+post[0] := ut*dir(90)/sqrt(2);
+post[1] := ut*dir(270-45);
+post[2] := ut*dir(270+45);
 
 gdadd("31_AllToAux");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(post[i],0);
+	gdaddedge(0,i+1);
+endfor;
+
+gdadd("31_AllToAuxt");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
@@ -126,12 +139,27 @@ endfor;
 gdadd("31_Tv");
 gdaddvert((0,0),0);
 for i = 0 upto 2:
+	gdaddvert(post[i],if i = 0: 1 else: 0 fi);
+	gdaddedge(0,i+1);
+endfor;
+
+gdadd("31_Tt");
+gdaddvert((0,0),0);
+for i = 0 upto 2:
 	gdaddvert(ut*dir((i+1)*360/3+90),if i = 2: 1 else: 0 fi);
 	gdaddedge(0,i+1);
 endfor;
 
 
 gdadd("31_Coathanger");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(post[i],0);
+	gdaddedge(0,i+1);
+endfor;
+gdaddedge(2,3);
+
+gdadd("31_Coathangert");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
@@ -141,6 +169,15 @@ gdaddedge(2,3);
 
 
 gdadd("31_K4m1");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
+	gdaddvert(post[i],0);
+	gdaddedge(0,i+1);
+endfor;
+gdaddedge(1,2);
+gdaddedge(1,3);
+
+gdadd("31_K4m1t");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
@@ -153,6 +190,14 @@ gdaddedge(1,3);
 gdadd("31_K4");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
+	gdaddvert(post[i],0);
+	gdaddedge(0,i+1);
+	gdaddedge(i+1,(i+1) mod 3 +1);
+endfor;
+
+gdadd("31_K4t");
+gdaddvert((0,0),1);
+for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
 	gdaddedge(0,i+1);
 	gdaddedge(i+1,(i+1) mod 3 +1);
@@ -162,6 +207,17 @@ endfor;
 
 
 gdadd("32_K5");
+for i = 0 upto 2:
+	gdaddvert(post[i],0);
+	gdaddedge(i,((i+1)mod3));
+	gdaddedge(3,i);
+	gdaddedge(4,i);
+endfor;
+gdaddvert(.15ut*dir(+0),1);
+gdaddvert(.15ut*dir(180),1);
+gdaddedge(3,4);
+
+gdadd("32_K5t");
 for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
 	gdaddedge(i,((i+1)mod3));
