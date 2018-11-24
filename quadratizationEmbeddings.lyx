@@ -105,6 +105,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -117,6 +118,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -7611,6 +7613,10 @@ quartic
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset space ~
 \end_inset
 
@@ -7688,9 +7694,10 @@ quartic
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -7709,6 +7716,25 @@ chimeraFigSize}{2.5cm}
 
 
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -7993,20 +8019,36 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
 \begin_layout Plain Layout
 \align center
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -8068,89 +8110,14 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace -6mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\emph on
-\begin_inset Formula $K_{6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{!}{0.3
-\backslash
-textwidth}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/2auxConn_to_all4_allConn_inChimera.tikz"
-
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -8212,6 +8179,129 @@ status open
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "33text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\emph on
+\begin_inset Formula $K_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rotatebox{270}{
+\backslash
+resizebox{!}{0.93
+\backslash
+textwidth}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/2auxConn_to_all4_allConn_inChimera.tikz"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
 \end_inset
 
 
@@ -9551,6 +9641,46 @@ Two copies of z-version of PTR-KZ sharing an auxilla
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+Acknowledgements
+\end_layout
+
+\begin_layout Plain Layout
+We wish to thank Alexander Condellor of D-Wave for providing us with a more
+ efficient 
+\begin_inset Formula $K_{6}$
+\end_inset
+
+ gadget.
+ Welllllll my 23 November email at 19:30 gives an embedding that is equally
+ efficient, just with chain edges crossing, while Alex's doesn't have that.
+ Really Alex's contributions will probably come when we start embedding
+ higher-order gadgets (or SFR gadgets?) and start needing to embed things
+ on multi-cell Pegasus 
+\begin_inset Quotes eld
+\end_inset
+
+patches
+\begin_inset Quotes erd
+\end_inset
+
+ if 
+\begin_inset Quotes eld
+\end_inset
+
+patch
+\begin_inset Quotes erd
+\end_inset
+
+ is the right word.
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
