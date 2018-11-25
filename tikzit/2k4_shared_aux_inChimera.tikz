@@ -18,37 +18,47 @@
 		\node [style={auxiliary_qubit}] (15) at (3, 0) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
-		\draw [style=simple] (1) to (3);
-		\draw [style=simple] (0) to (3);
 		\draw [style=unused] (3) to (2);
-		\draw [style=embedding] (1) to (4);
-		\draw [style=unused] (4) to (2);
-		\draw [style=simple] (4) to (0);
 		\draw [style=unused] (0) to (5);
 		\draw [style=unused] (5) to (2);
 		\draw [style=unused] (5) to (1);
-		\draw [style=embedding] (6) to (3);
+		\draw [style=unused] (4) to (2);
 		\draw [style=unused] (6) to (4);
 		\draw [style=unused] (6) to (5);
-		\draw [style=simple] (0) to (7);
-		\draw [style=simple] (6) to (7);
 		\draw [style=unused] (7) to (2);
-		\draw [style=simple] (1) to (7);
-		\draw [style=simple] (9) to (11);
-		\draw [style=simple] (8) to (11);
 		\draw [style=unused] (11) to (10);
-		\draw [style=embedding] (9) to (12);
-		\draw [style=unused] (12) to (10);
-		\draw [style=simple] (12) to (8);
 		\draw [style=unused] (8) to (13);
 		\draw [style=unused] (13) to (10);
 		\draw [style=unused] (13) to (9);
-		\draw [style=embedding] (14) to (11);
+		\draw [style=unused] (12) to (10);
 		\draw [style=unused] (14) to (12);
 		\draw [style=unused] (14) to (13);
+		\draw [style=unused] (15) to (10);
+		\draw [style=simple] (1) to (3);
+		\draw [style=simple] (0) to (3);
+		
+		\draw [style=embedding] (1) to (4);
+		
+		\draw [style=simple] (4) to (0);
+		
+		\draw [style=embedding] (6) to (3);
+
+		\draw [style=simple] (0) to (7);
+		\draw [style=simple] (6) to (7);
+		
+		\draw [style=simple] (1) to (7);
+		\draw [style=simple] (9) to (11);
+		\draw [style=simple] (8) to (11);
+
+		\draw [style=embedding] (9) to (12);
+		
+		\draw [style=simple] (12) to (8);
+		
+		\draw [style=embedding] (14) to (11);
+		
 		\draw [style=simple] (8) to (15);
 		\draw [style=simple] (14) to (15);
-		\draw [style=unused] (15) to (10);
+		
 		\draw [style=simple] (9) to (15);
 		\draw [style={embedding_aux}] (0) to (8);
 	\end{pgfonlayer}

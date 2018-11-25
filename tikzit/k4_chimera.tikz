@@ -10,21 +10,26 @@
 		\node [style={auxiliary_qubit}] (7) at (0, 2) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
-		\draw [style=simple] (1) to (3);
-		\draw [style=simple] (0) to (3);
-		\draw [style=unused] (3) to (2);
-		\draw [style={embedding}] (1) to (4);
-		\draw [style=unused] (4) to (2);
-		\draw [style=simple] (4) to (0);
 		\draw [style=unused] (0) to (5);
 		\draw [style=unused] (5) to (2);
 		\draw [style=unused] (5) to (1);
-		\draw [style={embedding}] (6) to (3);
 		\draw [style=unused] (6) to (4);
 		\draw [style=unused] (6) to (5);
+		\draw [style=unused] (4) to (2);
+		\draw [style=unused] (7) to (2);
+		\draw [style=unused] (3) to (2);
+		\draw [style=simple] (1) to (3);
+		\draw [style=simple] (0) to (3);
+		
+		\draw [style={embedding}] (1) to (4);
+		
+		\draw [style=simple] (4) to (0);
+		
+		\draw [style={embedding}] (6) to (3);
+		
 		\draw [style=simple] (0) to (7);
 		\draw [style=simple] (6) to (7);
-		\draw [style=unused] (7) to (2);
+		
 		\draw [style=simple] (1) to (7);
 	\end{pgfonlayer}
 \end{tikzpicture}

@@ -10,21 +10,25 @@
 		\node [style=emb_logical_qubit] (7) at (1, -0) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
+		\draw [style=unused] (0) to (6);
+		\draw [style=unused] (6) to (2);
+		\draw [style=unused] (6) to (1);
+		\draw [style=unused] (1) to (5);
+		\draw [style=unused] (7) to (6);
+		\draw [style=unused] (5) to (0);
 		\draw [style=simple] (3) to (2);
 		\draw [style=simple] (1) to (4);
 		\draw [style=simple] (0) to (4);
 		\draw [style=simple] (4) to (2);
-		\draw [style=unused] (1) to (5);
+		
 		\draw [style=simple] (5) to (2);
-		\draw [style=unused] (5) to (0);
-		\draw [style=unused] (0) to (6);
-		\draw [style=unused] (6) to (2);
-		\draw [style=unused] (6) to (1);
+		
+		
 		\draw [style=simple] (0) to (3);
 		\draw [style=simple] (1) to (3);
 		\draw [style=simple] (7) to (4);
 		\draw [style={embedding}] (7) to (5);
-		\draw [style=unused] (7) to (6);
+		
 		\draw [style=simple] (7) to (3);
 	\end{pgfonlayer}
 \end{tikzpicture}
