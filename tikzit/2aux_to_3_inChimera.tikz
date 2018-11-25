@@ -6,7 +6,7 @@
 		\node [style={auxiliary_qubit}] (3) at (0, 2) {};
 		\node [style={emb_logical_qubit}] (4) at (0, 1) {};
 		\node [style={emb_logical_qubit}] (5) at (0, -1) {};
-		\node [style={auxiliary_qubit}] (6) at (0, -2) {};
+		\node [style={emb_auxiliary_qubit}] (6) at (0, -2) {};
 		\node [style={emb_logical_qubit}] (7) at (1, 0) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
