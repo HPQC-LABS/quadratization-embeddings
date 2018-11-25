@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.8)  18 NOV 2018 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.8)  25 NOV 2018 13:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -526,17 +526,17 @@ Overfull \hbox (43.27866pt too wide) in paragraph at lines 330--331
 (./2k4_shared_aux_inPegasus.tikz) (./2k4_shared_aux.tikz) [16] [17]
 (./all_tikzit_figures.aux) ) 
 Here is how much of TeX's memory you used:
- 12896 strings out of 494953
- 270028 string characters out of 6180977
- 337602 words of memory out of 5000000
- 15789 multiletter control sequences out of 15000+600000
+ 12906 strings out of 494953
+ 270234 string characters out of 6180977
+ 337822 words of memory out of 5000000
+ 15799 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,9n,65p,502b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb>
-Output written on all_tikzit_figures.pdf (17 pages, 69610 bytes).
+Output written on all_tikzit_figures.pdf (17 pages, 69830 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
