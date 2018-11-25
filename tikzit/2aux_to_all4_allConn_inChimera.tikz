@@ -1,21 +1,21 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
-		\node [style={emb_logical_qubit}] (0) at (0, 2) {};
-		\node [style={emb_logical_qubit}] (1) at (0, 1) {};
-		\node [style={emb_logical_qubit}] (2) at (0, -2) {};
+		\node [style={emb_logical_qubit}] (0) at (0, -2) {};
+		\node [style={emb_logical_qubit}] (1) at (0, -1) {};
+		\node [style={emb_logical_qubit}] (2) at (0, 2) {};
 		\node [style={auxiliary_qubit}] (3) at (2, 0) {};
 		\node [style={auxiliary_qubit}] (4) at (1, 0) {};
 		\node [style={emb_logical_qubit}] (5) at (-1, 0) {};
 		\node [style={emb_logical_qubit}] (6) at (-2, 0) {};
-		\node [style={emb_logical_qubit}] (7) at (0, -1) {};
-		\node [style={unused_qubit}] (8) at (5, 2) {};
-		\node [style={unused_qubit}] (9) at (5, 1) {};
-		\node [style={emb_logical_qubit}] (10) at (5, -2) {};
+		\node [style={emb_logical_qubit}] (7) at (0, 1) {};
+		\node [style={unused_qubit}] (8) at (5, -2) {};
+		\node [style={unused_qubit}] (9) at (5, -1) {};
+		\node [style={emb_logical_qubit}] (10) at (5, 2) {};
 		\node [style={unused_qubit}] (11) at (7, 0) {};
 		\node [style={emb_logical_qubit}] (12) at (6, 0) {};
 		\node [style={unused_qubit}] (13) at (4, 0) {};
 		\node [style={unused_qubit}] (14) at (3, 0) {};
-		\node [style={emb_logical_qubit}] (15) at (5, -1) {};
+		\node [style={emb_logical_qubit}] (15) at (5, 1) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [style=simple] (3) to (2);

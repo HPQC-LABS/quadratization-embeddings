@@ -17,7 +17,7 @@
 		\draw [style=embedding] (1) to (5);
 		\draw [style=simple] (5) to (2);
 		\draw [style=unused] (5) to (0);
-		\draw [style=embedding] (0) to (6);
+		\draw [style={embedding_aux}] (0) to (6);
 		\draw [style=simple] (6) to (2);
 		\draw [style=simple] (6) to (1);
 		\draw [style=simple] (0) to (3);

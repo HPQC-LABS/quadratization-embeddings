@@ -21,3 +21,4 @@
 \tikzstyle{unused_added}=[draw=red, {|-}]
 \tikzstyle{embedding}=[-, draw=blue]
 \tikzstyle{arrow}=[->]
+\tikzstyle{embedding_aux}=[-, draw=green]

@@ -50,6 +50,6 @@
 		\draw [style=simple] (14) to (15);
 		\draw [style=unused] (15) to (10);
 		\draw [style=simple] (9) to (15);
-		\draw [style=embedding] (0) to (8);
+		\draw [style={embedding_aux}] (0) to (8);
 	\end{pgfonlayer}
 \end{tikzpicture}

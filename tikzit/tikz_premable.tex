@@ -12,20 +12,35 @@
 
 \newcommand\scaledNodeSize{0.5} % scaled node size for fig 2, defined globally so they can be changed easily
 
+\newcommand\nodescale{1.25} % global scaling factor for nodes
+
 \pgfdeclarelayer{edgelayer}
 \pgfdeclarelayer{nodelayer}
 \pgfsetlayers{edgelayer,nodelayer,main}
 
 \tikzstyle{none}=[inner sep=0pt]
 
+
+% old node definitions
+%\tikzstyle{rn}=[circle,fill=Red,draw=Black,line width=0.8 pt]
+%\tikzstyle{gn}=[circle,fill=Lime,draw=Black,line width=0.8 pt]
+%\tikzstyle{yn}=[circle,fill=Yellow,draw=Black,line width=0.8 pt]
+%\tikzstyle{auxiliary_qubit}=[circle,fill=Red,draw=Black,scale=0.8]
+%\tikzstyle{logical_qubit}=[circle,fill=Black,draw=Black,scale=0.8]
+%\tikzstyle{emb_logical_qubit}=[circle,fill=Black,draw=Black,scale=0.8,line width=2.000]
+%\tikzstyle{emb_auxiliary_qubit}=[circle,fill=Red,draw=Black,scale=0.8,line width=2.000]
+%\tikzstyle{unused_qubit}=[circle,fill=Gray,draw=Gray,scale=0.8]
+%\tikzstyle{arrow_end}=[circle,fill=none,draw=none,scale=.1]
+
+
 \tikzstyle{rn}=[circle,fill=Red,draw=Black,line width=0.8 pt]
 \tikzstyle{gn}=[circle,fill=Lime,draw=Black,line width=0.8 pt]
 \tikzstyle{yn}=[circle,fill=Yellow,draw=Black,line width=0.8 pt]
-\tikzstyle{auxiliary_qubit}=[circle,fill=Red,draw=Black,scale=0.8]
-\tikzstyle{logical_qubit}=[circle,fill=Black,draw=Black,scale=0.8]
-\tikzstyle{emb_logical_qubit}=[circle,fill=Black,draw=Black,scale=0.8,line width=2.000]
-\tikzstyle{emb_auxiliary_qubit}=[circle,fill=Red,draw=Black,scale=0.8,line width=2.000]
-\tikzstyle{unused_qubit}=[circle,fill=Gray,draw=Gray,scale=0.8]
+\tikzstyle{auxiliary_qubit}=[circle,fill=Red,draw=Black,scale=\nodescale,draw=none]
+\tikzstyle{logical_qubit}=[circle,fill=Black,draw=Black,scale=\nodescale,draw=none]
+\tikzstyle{emb_logical_qubit}=[circle,fill=Black,draw=Black,scale=\nodescale,draw=none]
+\tikzstyle{emb_auxiliary_qubit}=[circle,fill=Red,draw=Black,scale=\nodescale,draw=none]
+\tikzstyle{unused_qubit}=[circle,fill=Gray,draw=Gray,scale=\nodescale,draw=none]
 \tikzstyle{arrow_end}=[circle,fill=none,draw=none,scale=.1]
 
 
@@ -42,6 +57,7 @@
 %\tikzstyle{unused_added}=[-,draw=cyan,draw opacity=1,line width=0.5]
 \tikzstyle{unused_added}=[-,draw=tempcolor,draw opacity=1,line width=0.5]
 \tikzstyle{embedding}=[-,draw=Black,line width=3.250]
+\tikzstyle{embedding_aux}=[-,draw=Red,line width=3.250]
 \tikzstyle{arrow}=[-,draw=Black,postaction={decorate},decoration={markings,mark=at position .5 with {\arrow{>}}},line width=2.000]
 
 
