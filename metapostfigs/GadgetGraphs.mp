@@ -51,8 +51,9 @@ enddef;
 % default vertex for aux qubit
 vardef grvertexaux(expr A) =
 	draw A withpen pencircle scaled dt withcolor red;
+%	draw A withpen pencircle scaled dt withcolor black;
 %	draw A withpen pencircle scaled (dt-2it) withcolor red;
-	draw A withpen pencircle scaled (dt-1.2it) withcolor red;
+%	draw A withpen pencircle scaled (dt-1.2it) withcolor red;
 enddef;
 
 % default edge for the graph
@@ -107,7 +108,9 @@ post[2] := ut*dir(270+45);
 
 pair centralt; centralt:=(post[0]+post[1]+post[2])/3;
 %centralt:=(0,-ut*2/sqrt(2)/6);
+%centralt:=(0,0);
 
+% square-fit triangle shape
 gdadd("31_AllToAux");
 gdaddvert(centralt,1);
 for i = 0 upto 2:
@@ -115,6 +118,7 @@ for i = 0 upto 2:
 	gdaddedge(0,i+1);
 endfor;
 
+% equilateral triangle shape
 gdadd("31_AllToAuxt");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
@@ -122,7 +126,7 @@ for i = 0 upto 2:
 	gdaddedge(0,i+1);
 endfor;
 
-
+% T shape
 gdadd("31_AllToAuxT");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
@@ -130,7 +134,23 @@ for i = 0 upto 2:
 	gdaddedge(0,i+1);
 endfor;
 
+% square-fit triangle shape
+gdadd("31_Bipod");	% "31_Tv" before
+gdaddvert(centralt,0);
+for i = 0 upto 2:
+	gdaddvert(post[i],if i = 0: 1 else: 0 fi);
+	gdaddedge(0,i+1);
+endfor;
 
+% equilateral triangle shape
+gdadd("31_Bipodt");		% "31_Tt" before
+gdaddvert((0,0),0);
+for i = 0 upto 2:
+	gdaddvert(ut*dir((i+1)*360/3+90),if i = 2: 1 else: 0 fi);
+	gdaddedge(0,i+1);
+endfor;
+
+% T shape
 gdadd("31_T");
 gdaddvert((0,0),0);
 for i = 0 upto 2:
@@ -138,22 +158,7 @@ for i = 0 upto 2:
 	gdaddedge(0,i+1);
 endfor;
 
-
-gdadd("31_Tv");
-gdaddvert(centralt,0);
-for i = 0 upto 2:
-	gdaddvert(post[i],if i = 0: 1 else: 0 fi);
-	gdaddedge(0,i+1);
-endfor;
-
-gdadd("31_Tt");
-gdaddvert((0,0),0);
-for i = 0 upto 2:
-	gdaddvert(ut*dir((i+1)*360/3+90),if i = 2: 1 else: 0 fi);
-	gdaddedge(0,i+1);
-endfor;
-
-
+% square-fit triangle shape
 gdadd("31_Coathanger");
 gdaddvert(centralt,1);
 for i = 0 upto 2:
@@ -162,6 +167,7 @@ for i = 0 upto 2:
 endfor;
 gdaddedge(2,3);
 
+% equilateral triangle shape
 gdadd("31_Coathangert");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
@@ -170,7 +176,7 @@ for i = 0 upto 2:
 endfor;
 gdaddedge(2,3);
 
-
+% square-fit triangle shape
 gdadd("31_K4m1");
 gdaddvert(centralt,1);
 for i = 0 upto 2:
@@ -180,6 +186,7 @@ endfor;
 gdaddedge(1,2);
 gdaddedge(1,3);
 
+% equilateral triangle shape
 gdadd("31_K4m1t");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
@@ -189,7 +196,7 @@ endfor;
 gdaddedge(1,2);
 gdaddedge(1,3);
 
-
+% square-fit triangle shape 
 gdadd("31_K4");
 gdaddvert(centralt,1);
 for i = 0 upto 2:
@@ -198,6 +205,7 @@ for i = 0 upto 2:
 	gdaddedge(i+1,(i+1) mod 3 +1);
 endfor;
 
+% equilateral triangle shape
 gdadd("31_K4t");
 gdaddvert((0,0),1);
 for i = 0 upto 2:
@@ -208,7 +216,7 @@ endfor;
 
 % ** 3+2 gadgets ***************************************************************
 
-
+% square-fit triangle shape
 gdadd("32_K5");
 for i = 0 upto 2:
 	gdaddvert(post[i],0);
@@ -220,6 +228,7 @@ gdaddvert(.20ut*dir(+0)+centralt,1);
 gdaddvert(.20ut*dir(180)+centralt,1);
 gdaddedge(3,4);
 
+% equilateral triangle shape
 gdadd("32_K5t");
 for i = 0 upto 2:
 	gdaddvert(ut*dir(i*360/3+90),0);
@@ -254,7 +263,7 @@ endfor;
 gdadd("41_Tripod");
 gdaddvert((0,0),0);
 for i = 0 upto 3:
-	gdaddvert(if i mod 2 = 1: (1/sqrt(2))* fi ut*dir(i*360/4 if i mod 2 = 0: + (i-1)*360/8 fi),if i = 3: 1 else: 0 fi);
+	gdaddvert(if i mod 2 = 1: (1/sqrt(2))* fi ut*dir(i*360/4 if i mod 2 = 0: + (i-1)*360/8 fi),if i = 1: 1 else: 0 fi);
 	gdaddedge(0,i+1);
 endfor;
 
@@ -262,7 +271,7 @@ endfor;
 gdadd("41_Tripodv");
 gdaddvert((0,0),0);
 for i = 0 upto 3:
-	gdaddvert(ut*dir(i*360/4),if i = 3: 1 else: 0 fi);
+	gdaddvert(ut*dir(i*360/4),if i = 1: 1 else: 0 fi);
 	gdaddedge(0,i+1);
 endfor;
 
