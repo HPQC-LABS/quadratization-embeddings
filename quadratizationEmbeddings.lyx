@@ -105,6 +105,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -117,6 +118,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -129,7 +131,8 @@ Durham University
 status open
 
 \begin_layout Plain Layout
-SFR-ABCG-1 can be added if we fix n to be 3 or 4.
+Can combine sections for cubics and quartics and just have the subsection
+ titles say it all
 \end_layout
 
 \end_inset
@@ -141,20 +144,9 @@ We group all known quadratizations of cubic and quartic terms in binary
 \emph on
 Pegasus
 \emph default
- graph
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- using only one cell
-\end_layout
-
-\end_inset
-
-.
- In cases where two or more graphs have a minor embedding with the same
- overhead in terms of auxiliary variables, we make recommendations for which
- gadgets are best to use for certain problems.
+ graph.
+ We conclude with recommendations for which gadgets are best to use when
+ aiming to reduce the total number of qubits reuquired to embed a problem.
  
 \end_layout
 
@@ -687,7 +679,7 @@ Pegasus
 \begin_layout Standard
 \noindent
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -956,9 +948,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:allGraphGadgets"
@@ -975,7 +971,7 @@ Gadget graphs.
  the two corresponding qubits represented by vertices connected by the edge.
  
 \emph on
-Linear terms in the gadget are completely ignored in these gadget graphs.
+Linear and constant terms in the gadget are completely ignored here.
 \end_layout
 
 \end_inset
@@ -984,6 +980,8 @@ Linear terms in the gadget are completely ignored in these gadget graphs.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset ERT
 status open
 
@@ -1002,6 +1000,13 @@ thisfigheight}{1.5 cm}
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace -6mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1011,7 +1016,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
 Propeller
+\emph default
+
 \begin_inset Note Note
 status open
 
@@ -1291,7 +1300,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Coat hanger
+
+\emph on
+Coat Hanger
 \end_layout
 
 \end_inset
@@ -1617,9 +1628,7 @@ status open
 \begin_inset Formula $K_{5}$
 \end_inset
 
- 
-\emph default
-(2 aux)
+ (2 aux)
 \end_layout
 
 \end_inset
@@ -1866,6 +1875,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
 Tripod
 \end_layout
 
@@ -1941,14 +1952,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\emph on
 \begin_inset Formula $K_{5}$
 \end_inset
 
- 
-\emph default
-(1 aux)
+
+\emph on
+ (1 aux)
 \end_layout
 
 \end_inset
@@ -2259,7 +2268,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
 Double 
+\emph default
+
 \begin_inset Formula $K_{4}$
 \end_inset
 
@@ -2337,6 +2350,13 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -3mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Gadget graphs for all known single cubic terms and for all known single
  quartic terms are given in Figure 
 \begin_inset CommandInset ref
@@ -2351,13 +2371,11 @@ reference "fig:allGraphGadgets"
  difficult functions to optimize.
  Furthermore, some optimization methods only work if their corresponding
  graph has a certain connectivity, two examples of such connectivities being
- the ones in D-Wave's well-known Chimera graph
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- [?]
-\end_layout
+ the ones in D-Wave's well-known Chimera graph 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Neven2009"
+literal "false"
 
 \end_inset
 
@@ -2394,13 +2412,22 @@ status open
 
 
 \backslash
-captionof{table}[cubic]{Grouping of all known quadratization gadgets for
- singe cubic terms, into categories corresponding to their gadget graphs.
- For each unique gadget graph, the nuber of auxiliary qubits required for
+captionof{table}[cubic]{
+\backslash
+small{Grouping of all known quadratization gadgets for singe cubic terms,
+ into categories corresponding to their gadget graphs.
+ For each unique gadget graph, the number of auxiliary qubits required for
  construction of the gadget is listed, followed by the number of auxiliary
- qubits required to minor-embed the gadget graph onto Chimera and Pegasus}.
+ qubits required to minor-embed the gadget graph onto Chimera and Pegasus.}}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2mm
 \end_inset
 
 
@@ -4100,6 +4127,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\size small
 Grouping of all known quadratization gadgets for single 
 \series bold
 \emph on
@@ -5388,7 +5417,7 @@ Double
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTR-KZ(?)
+PTR-CZW
 \end_layout
 
 \end_inset
@@ -6755,36 +6784,103 @@ literal "false"
 , where the Chimera graph or the Pegasus graph is a graph minor of the graph
  representing the problem that needs to be optimized.
  This often means that one binary variable in the quadratic optimization
- problem needs to be represented by two qubits instead of one, making the
- number of qubits needed to solve the original problem larger than before,
- and sometimes completely impossible.
- For example a quartic function with 1000 binary variables has 
-\begin_inset Formula $\binom{1000}{3}>166$
+ problem needs to be represented by two (or more) qubits instead of one,
+ making the number of qubits needed to solve the original problem larger
+ than before, and sometimes impossibly large to solve.
+ For example if we wanted to factor the smallest RSA number which has not
+ yet been factored on a classical computer (RSA-230) by minimization of
+ a corresponding binary optimization problem, we would have to minimize
+ a quartic function of 6594 variables which can be turned into a quadratic
+ problem involving 148
+\begin_inset space ~
 \end_inset
 
- million possible cubic terms and 
-\begin_inset Formula $\binom{1000}{4}>40$
-\end_inset
-
- billion possible quartic terms which have to be quadratized, and then minor-emb
-edded.
- If our minimization method can only be applied for up to 50 billion qubits,
- we cannot afford for each quartic-to-quadratic gadget to require its own
- auxiliary qubit for minor-embedding
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-come up with better example
-\end_layout
+776 variables 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Li2017"
+literal "false"
 
 \end_inset
 
 .
+ Say we have a quantum annealer with 149
+\begin_inset space ~
+\end_inset
+
+000 qubits: This means that only 224 out of the 142
+\begin_inset space ~
+\end_inset
+
+182 gadget graphs can afford an auxiliary qubit for minor-embedding into
+ the hardware's native connectivity graph.
+ We therefore want 
+\emph on
+efficient gadgets
+\emph default
+ which can be minor-embedded into our hardware with 
+\emph on
+zero
+\emph default
+ or 
+\emph on
+very few
+\emph default
+ extra qubits.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For example a cubic function with 100 binary variables can have 
+\begin_inset Formula $\binom{100}{3}=161\,700$
+\end_inset
+
+ cubic terms which have to be quadratized, and then minor-embedded.
+ If we quadratize each of these by adding 1 variable to the problem, then
+ we have to solve a 161
+\begin_inset space ~
+\end_inset
+
+800 variable problem (161
+\begin_inset space ~
+\end_inset
+
+700 plus the original 100 logical variables).
+ Say we have a quantum annealer with 162
+\begin_inset space ~
+\end_inset
+
+000 qubits: This means that only 300 out of the 161
+\begin_inset space ~
+\end_inset
+
+700 gadgets graphs can afford an auxiliary qubit for minor-embedding into
+ the hardware's native connectivity graph.
+ We therefore want 
+\emph on
+efficient gadgets
+\emph default
+ which can be minor-embedded into our hardware with 
+\emph on
+zero
+\emph default
+ or 
+\emph on
+very few
+\emph default
+ extra qubits.
+ This becomes 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-We have provided minor-embeddings for all gadget graphs in Figure 
+In this paper we have provided minor-embeddings for all gadget graphs in
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:allGraphGadgets"
@@ -6822,6 +6918,20 @@ Nick said this sentence was quite confusing
 \end_inset
 
 .
+ Furthermore, 
+\emph on
+all
+\emph default
+ cubic and quartic gadgets were embeddable with a single `cell' of Pegasus
+ and with chains of length at most two, whereas three of the quartic gadgets
+ require multiple Chimera cells and two require chains of length three.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -4mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -6857,6 +6967,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\size small
 Minor embeddings of all 
 \series bold
 \emph on
@@ -6865,8 +6977,8 @@ cubic
 \emph default
 to quadratic gadgets onto a `unit cell' of a Chimera graph.
  Grey vertices and edges are not used.
- Thick black edges denote graph minors, in which two physical qubits (two
- vertices) represent one logical qubit (this is done when logical qubits
+ Thick edges denote chains for minor embedding, in which two or more qubits
+ (vertices) represent one logical qubit (this is done when logical qubits
  need to be connected to more qubits than the Chimera unit cell otherwise
  allows).
 \end_layout
@@ -6905,9 +7017,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Propeller
-\emph on
 
+\emph on
+Propeller
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:all-to-auxChimera"
@@ -6920,6 +7032,9 @@ name "fig:all-to-auxChimera"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -6953,8 +7068,60 @@ status open
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rotatebox{270}{
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
 \end_layout
 
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/all_to_aux_chimera.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -7029,6 +7196,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
 Coat hanger
 \end_layout
 
@@ -7199,9 +7368,9 @@ status open
 \begin_inset Formula $K_{5}$
 \end_inset
 
- 
+
 \emph default
-(2 aux)
+ (2 aux)
 \end_layout
 
 \end_inset
@@ -7255,8 +7424,22 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -14mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Pegasus graph
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -6mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7276,32 +7459,8 @@ Minor embeddings of all
 cubic 
 \series default
 \emph default
-to quadratic gadgets onto a `unit cell' of a Pegasus graph.
+to quadratic gadgets onto a Pegasus `cell'.
  Grey vertices and edges are not used.
- Figures 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:all-to-auxChimera"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Ychimera"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- do not need to be altered since the Chimera graph is a sub-graph of Pegasus,
- so only the gadgets that required auxiliary qubits for minor embedding
- onto Chimera are embedded for Pegasus here to show that with Pegasus no
- auxiliary qubits are needed for cubic to quadratic gadgets.
 \end_layout
 
 \end_inset
@@ -7338,6 +7497,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
 Propeller
 \end_layout
 
@@ -7406,6 +7567,8 @@ status open
 
 
 \backslash
+rotatebox{180}{(
+\backslash
 resizebox{!}{
 \backslash
 chimeraFigSize}{
@@ -7420,13 +7583,13 @@ filename "tikzit/k4_missing_2edge_pegasus.tikz"
 
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-}
+}}
 \end_layout
 
 \end_inset
@@ -7446,6 +7609,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
 Coat hanger
 \end_layout
 
@@ -7458,6 +7623,8 @@ status open
 \begin_layout Plain Layout
 
 
+\backslash
+rotatebox{180}{
 \backslash
 resizebox{!}{
 \backslash
@@ -7473,13 +7640,13 @@ filename "tikzit/k4_missing_edge_pegasus.tikz"
 
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-}
+}}
 \end_layout
 
 \end_inset
@@ -7487,6 +7654,14 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -7531,7 +7706,7 @@ filename "tikzit/logical_fork3_inPegasus.tikz"
 
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
@@ -7575,6 +7750,8 @@ status open
 
 
 \backslash
+rotatebox{180}{
+\backslash
 resizebox{!}{
 \backslash
 chimeraFigSize}{
@@ -7589,13 +7766,13 @@ filename "tikzit/k4_pegasus.tikz"
 
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-}
+}}
 \end_layout
 
 \end_inset
@@ -7603,6 +7780,14 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -7620,9 +7805,7 @@ status open
 \begin_inset Formula $K_{5}$
 \end_inset
 
- 
-\emph default
-(2 aux)
+ (2 aux)
 \end_layout
 
 \end_inset
@@ -7673,12 +7856,33 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -3mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Minor embeddings for quartic to quadratic gadgets
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -1mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Chimera graph
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7692,6 +7896,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\size small
 Minor embeddings of all 
 \series bold
 \emph on
@@ -7700,8 +7906,8 @@ quartic
 \emph default
  to quadratic gadgets onto a `unit cell' of a Chimera graph.
  Grey vertices and edges are not used.
- Thick black edges denote graph minors, in which two physical qubits (two
- vertices) represent one logical qubit (this is done when logical qubits
+ Thick edges denote chains for minor embedding, in which two or more qubits
+ (vertices) represent one logical qubit (this is done when logical qubits
  need to be connected to more qubits than the Chimera unit cell otherwise
  allows).
 \end_layout
@@ -7998,8 +8204,8 @@ status open
 
 \begin_layout Plain Layout
 
-\emph on
-\begin_inset Formula $K_{6}-4e$
+\color black
+\begin_inset Formula $K_{5}$
 \end_inset
 
 
@@ -8025,7 +8231,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/2aux_to_all4_1conn_inChimera.tikz"
+filename "tikzit/aux_to_all4_allConn_inChimera.tikz"
 
 \end_inset
 
@@ -8068,8 +8274,8 @@ status open
 
 \begin_layout Plain Layout
 
-\color black
-\begin_inset Formula $K_{5}$
+\emph on
+\begin_inset Formula $K_{6}-4e$
 \end_inset
 
 
@@ -8095,7 +8301,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/aux_to_all4_allConn_inChimera.tikz"
+filename "tikzit/2aux_to_all4_1conn_inChimera.tikz"
 
 \end_inset
 
@@ -8145,6 +8351,13 @@ shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
 status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -5mm
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -8377,7 +8590,7 @@ status open
 
 \begin_layout Plain Layout
 
-}}}
+}}
 \end_layout
 
 \end_inset
@@ -8411,8 +8624,22 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -10mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Pegasus graph
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -4mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8426,14 +8653,18 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Minor embeddings of all 
+
+\size small
+Minor embeddings of 
 \series bold
 \emph on
 quartic
 \series default
 \emph default
- to quadratic gadgets onto a `unit cell' of a Pegasus graph.
+ to quadratic gadgets onto a Pegasus `cell'.
  Grey vertices and edges are not used.
+
+\size default
  
 \begin_inset Note Note
 status open
@@ -8572,6 +8803,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\emph on
 Tripod
 \end_layout
 
@@ -8596,6 +8829,64 @@ chimeraFigSize}{
 \begin_inset CommandInset include
 LatexCommand input
 filename "tikzit/logical_fork3_inPegasus.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $K_{5}$
+\end_inset
+
+ 
+\emph on
+(1 aux)
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/aux_to_all4_allConn_inPegasus.tikz"
 
 \end_inset
 
@@ -8654,66 +8945,6 @@ chimeraFigSize}{
 \begin_inset CommandInset include
 LatexCommand input
 filename "tikzit/2aux_to_all4_1conn_inPegasus.tikz"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Formula $K_{5}$
-\end_inset
-
-
-\emph on
- 
-\emph default
-(1 aux)
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resizebox{!}{
-\backslash
-chimeraFigSize}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "tikzit/aux_to_all4_allConn_inPegasus.tikz"
 
 \end_inset
 
@@ -8863,9 +9094,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Double 
-\emph on
 
+\emph on
+Double 
 \begin_inset Formula $K_{4}$
 \end_inset
 
@@ -8925,9 +9156,29 @@ Recommended gadgets
 \end_layout
 
 \begin_layout Standard
+When reducing the number of total qubits is the most important factor, negative
+ terms (whether cubic or quartic) can be quadratized with only 1 auxiliary
+ qubit, and in such a way not to require any additional qubits for embedding
+ onto either Chimera and Pegasus (so only 1 auxiliary qubit is required
+ in total).
+ For positive terms the situation is a bit more complicated: Still only
+ 1 auxiliary qubit is required for quadratization of cubic terms, and for
+ Pegasus the quadratization can be done in such a way as to require no further
+ auxiliary qubits for the minor-embedding, however embedding with Chimera
+ will require at minimum 1 further auxiliary qubit (so 1 auxiliary cubit
+ is required in total for Pegaus, but 2 auxiliary qubits are required in
+ total for Chimera).
+ For quartic positive terms, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 All gadgets described in this work for quadratizing negative terms (whether
  cubic or quartic) can be quadratized with only one auxiliary qubit, and
- can be chimerized and pegasized wihout any futher auxiliary qubits.
+ can be `chimerized' and `pegasized' wihout any futher auxiliary qubits.
  On Pegasus, there is one 4-local to 2-local gadget for positive terms which
  stands out over the rest, and it is PTR (which has the 
 \begin_inset Quotes eld
@@ -8947,6 +9198,10 @@ gadget which embeds positive quartic terms onto Pegasus with only two total
  the Pegasus graph).
  All other gadgets for positive quartic terms require three or four total
  auxiliaries to embed onto Pegasus.
+\end_layout
+
+\end_inset
+
  
 \begin_inset Note Note
 status open
