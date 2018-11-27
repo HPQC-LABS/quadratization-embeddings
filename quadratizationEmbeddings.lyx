@@ -9153,19 +9153,59 @@ Recommended gadgets
 \end_layout
 
 \begin_layout Standard
-When reducing the number of total qubits is the most important factor, negative
- terms (whether cubic or quartic) can be quadratized with only 1 auxiliary
- qubit, and in such a way not to require any additional qubits for embedding
- onto either Chimera and Pegasus (so only 1 auxiliary qubit is required
- in total).
- For positive terms the situation is a bit more complicated: Still only
- 1 auxiliary qubit is required for quadratization of cubic terms, and for
+When reducing the number of total qubits is the most important factor in
+ compiling a discrete optimization problem, negative terms (whether cubic
+ or quartic) can be quadratized with only 1 auxiliary qubit, and in such
+ a way not to require any additional qubits for embedding onto either Chimera
+ and Pegasus (so only 1 auxiliary qubit is required in total).
+ 
+\end_layout
+
+\begin_layout Standard
+For positive terms the situation is a bit more complicated: Still only 1
+ auxiliary qubit is required for quadratization of cubic terms, and for
  Pegasus the quadratization can be done in such a way as to require no further
  auxiliary qubits for the minor-embedding, however embedding with Chimera
- will require at minimum 1 further auxiliary qubit (so 1 auxiliary cubit
+ will require at minimum 1 further auxiliary qubit (so 1 auxiliary qubit
  is required in total for Pegaus, but 2 auxiliary qubits are required in
  total for Chimera).
- For quartic positive terms, 
+ 
+\end_layout
+
+\begin_layout Standard
+For quartic positive terms, we need at least 2 total qubits on Pegasus and
+ at least 3 auxiliary qubits for Chimera.
+ It is interesting to note that for positive quartic terms, while the gadgets
+ leading to the 
+\begin_inset Formula $K_{5}$
+\end_inset
+
+ graph require 1 fewer auxiliary qubit than the gadgets leading to the 
+\begin_inset Formula $K_{6}-4e$
+\end_inset
+
+ graph for quadratization, the graph needs 2 more auxiliary qubits than
+ 
+\begin_inset Formula $K_{6}-4e$
+\end_inset
+
+ for embedding onto Chimera, and 1 more auxiliary qubit for embedding onto
+ Pegasus (which requires 0).
+ Therefore, while gadgets leading to 
+\begin_inset Formula $K_{5}$
+\end_inset
+
+ may appear at first sight to be more efficient than gadgets leading to
+ 
+\begin_inset Formula $K_{6}-4e$
+\end_inset
+
+, due to requiring fewer qubits for quadratization, they require more 
+\emph on
+total 
+\emph default
+auxiliary qubits for embedding onto Chimera and an equivalent number of
+ total qubits for embedding onto Pegasus.
 \end_layout
 
 \begin_layout Standard
