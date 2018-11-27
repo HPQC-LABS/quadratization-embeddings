@@ -8732,20 +8732,7 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-X
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
+Tripod
 \end_layout
 
 \end_inset
@@ -8768,7 +8755,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/all_to_aux4_inPegasus.tikz"
+filename "tikzit/logical_fork3_inPegasus.tikz"
 
 \end_inset
 
@@ -8800,12 +8787,15 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-Tripod
+X
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -8823,7 +8813,7 @@ chimeraFigSize}{
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "tikzit/logical_fork3_inPegasus.tikz"
+filename "tikzit/all_to_aux4_inPegasus.tikz"
 
 \end_inset
 
