@@ -22,6 +22,9 @@
 %  singlelinecheck=false,
 %  textfont=it,
 %}
+
+\usepackage{caption}
+\captionsetup{justification=raggedright,singlelinecheck=false}
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage
 \use_default_options false
@@ -105,6 +108,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -117,6 +121,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -136,7 +141,7 @@ Can combine sections for cubics and quartics and just have the subsection
 \end_inset
 
 We group all known quadratizations of cubic and quartic terms in binary
- optimization problems into five and eight unique graphs respectively.
+ optimization problems into six and seven unique graphs respectively.
  We then perform a minor embedding of these graphs onto the well-known Chimera
  graph, and the brand new 
 \emph on
@@ -162,7 +167,7 @@ literal "false"
 
 \end_inset
 
-, which is then `quadratized' into a quadratic function 
+, which is then `quadratized' into a quadratic function
 \begin_inset Note Note
 status open
 
@@ -219,7 +224,7 @@ book
 \end_inset
 
 , one should choose the best quadratization for a given problem, and for
- a given method for solving the problem.
+ a given method for solving the quadratized problem.
  
 \end_layout
 
@@ -234,12 +239,12 @@ literal "false"
 \end_inset
 
 , but when those methods cannot be applied we introduce auxiliary variables.
- The resulting quadratic functions (called `gadgets') that accurately or
- exactly simulate the original high-degree functions, will have some connectivit
-y between the binary variables (or bits, or qubits, herein referred to for
- convenience only, as qubits) which can be represented by a graph in which
- vertices represent qubits and edges indicate when two different qubits
- appear together in a quadratic term.
+ The resulting quadratic functions (called `gadgets') that with good accuracy
+ (or sometimes exact accuracy) simulate the original high-degree functions,
+ will have some connectivity between the binary variables (or bits, or qubits,
+ herein referred to for convenience only, as qubits) which can be represented
+ by a graph in which vertices represent qubits and edges indicate when two
+ different qubits appear together in a quadratic term.
  Since this graph incorporates no information about the linear terms, constant
  term, or the coefficients of the quadratic terms, many different gadgets
  have the same graph, therefore in this paper we will classify all known
@@ -250,218 +255,10 @@ y between the binary variables (or bits, or qubits, herein referred to for
 
 \begin_layout Standard
 \noindent
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\noindent
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:chimeraAndPegasus-1"
-
-\end_inset
-
-3x3 arrays
-\end_layout
-
+\begin_inset VSpace -6mm
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Chimera
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_ChimeraTT.pdf
-	width 23text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pegasus
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusTT.pdf
-	width 23text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Chimera repeated
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_ChimeraLL.pdf
-	width 23text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pegasus repeated
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusLL.pdf
-	width 23text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
 \begin_inset Float figure
 placement h
 wide false
@@ -479,6 +276,212 @@ name "fig:chimeraAndPegasus"
 \end_inset
 
 Graph connectivities for D-Wave's Chimera and Pegasus graphs.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -3mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Chimera (single cell)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename metapostfigs/fig_ChimeraDmdRectUC.pdf
+	width 23text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pegasus (single cell)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusDmdRectUC.pdf
+	width 23text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Chimera full (repeating)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
+	width 23text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pegasus full (repeating)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/topleft.pdf
+	width 23text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace -11mm
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -656,8 +659,13 @@ Pegasus
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusLLfull_allBlue_0_crop.pdf
+	filename metapostfigs/topleft.pdf
 	width 48text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -959,7 +967,11 @@ name "fig:allGraphGadgets"
 
 \end_inset
 
-Gadget graphs.
+
+\emph on
+Gadget graphs
+\emph default
+.
  Graphs showing the connectivity between qubits in quadratization gadgets
  for cubic to quadratic gadgets (top row), and quartic to quadratic gadgets
  (bottom row).
@@ -969,7 +981,7 @@ Gadget graphs.
  the two corresponding qubits represented by vertices connected by the edge.
  
 \emph on
-Linear and constant terms in the gadget are completely ignored here.
+Linear and constant terms in the gadgets are completely ignored here.
 \end_layout
 
 \end_inset
@@ -2353,7 +2365,8 @@ status collapsed
 
 \begin_layout Standard
 Gadget graphs for all known single cubic terms and for all known single
- quartic terms are given in Figure 
+ quartic terms are given in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:allGraphGadgets"
@@ -2374,11 +2387,11 @@ literal "false"
 
 \end_inset
 
-, and in their very recently presented 
+, and in their very recent 
 \emph on
 Pegasus
 \emph default
- graph, both shown in Figure.
+ graph, both shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2393,6 +2406,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace 0mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 placement b
 wide false
@@ -2400,6 +2420,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2442,7 +2466,7 @@ height "0.5pt"
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="15" columns="11">
+<lyxtabular version="3" rows="14" columns="11">
 <features tabularvalignment="middle" tabularwidth="100col%">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
@@ -3220,7 +3244,7 @@ NTR-ABCG
 \end_inset
 </cell>
 </row>
-<row topspace="2mm">
+<row topspace="2mm" bottomspace="2mm">
 <cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -3233,7 +3257,7 @@ Coat hanger
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3242,7 +3266,7 @@ PTR-A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3260,7 +3284,7 @@ PTR-A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3290,7 +3314,7 @@ PTR-A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3299,7 +3323,7 @@ PTR-A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3325,107 +3349,6 @@ PTR-A
 \series bold
 \color red
 1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row bottomspace="2mm">
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RBS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
@@ -4066,7 +3989,7 @@ PTR-RBL-(3
 \begin_inset Text
 
 \begin_layout Plain Layout
-0
+1
 \end_layout
 
 \end_inset
@@ -6776,9 +6699,17 @@ literal "false"
 , where the Chimera graph or the Pegasus graph is a graph minor of the graph
  representing the problem that needs to be optimized.
  This often means that one binary variable in the quadratic optimization
- problem needs to be represented by two (or more) qubits instead of one,
- making the number of qubits needed to solve the original problem larger
- than before, and sometimes impossibly large to solve.
+ problem needs to be represented by two (or more) qubits instead of one
+ (called a 
+\begin_inset Quotes eld
+\end_inset
+
+chain
+\begin_inset Quotes erd
+\end_inset
+
+), making the number of physical qubits needed to solve the original problem
+ larger than before, and sometimes impossibly large to solve.
  For example if we wanted to factor the smallest RSA number which has not
  yet been factored on a classical computer (RSA-230) by minimization of
  a corresponding binary optimization problem, we would have to minimize
@@ -6872,7 +6803,8 @@ very few
 
 \begin_layout Standard
 In this paper we have provided minor-embeddings for all gadget graphs in
- Figure 
+ Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:allGraphGadgets"
@@ -6920,7 +6852,7 @@ all
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -4mm
+\begin_inset VSpace -3mm
 \end_inset
 
 
@@ -7417,7 +7349,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -14mm
+\begin_inset VSpace -6mm
 \end_inset
 
 
