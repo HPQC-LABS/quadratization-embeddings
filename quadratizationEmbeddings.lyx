@@ -149,7 +149,7 @@ Pegasus
 \emph default
  graph.
  We conclude with recommendations for which gadgets are best to use when
- aiming to reduce the total number of qubits reuquired to embed a problem.
+ aiming to reduce the total number of qubits required to embed a problem.
  
 \end_layout
 
@@ -208,7 +208,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
- for example factoring, Ramsy, ...
+for example factoring, Ramsey, ...
 \end_layout
 
 \end_inset
@@ -4051,7 +4051,7 @@ quartic
 \series default
 \emph default
  terms, into categories corresponding to their gadget graphs.
- For each unique gadget graph, the nuber of auxiliary qubits required for
+ For each unique gadget graph, the number of auxiliary qubits required for
  construction of the gadget is listed, followed by the number of auxiliary
  qubits required to minor-embed the gadget graph onto Chimera and Pegasus.
 \end_layout
@@ -6818,7 +6818,7 @@ reference "fig:allGraphGadgets"
 all
 \series default
 \emph default
- cubic to quadratic gadgets involvnig one auxiliary qubit can be embedded
+ cubic to quadratic gadgets involving one auxiliary qubit can be embedded
  onto Pegasus without any further auxiliary qubits for the embedding, because
  Pegasus contains the 
 \begin_inset Formula $K_{4}$
@@ -6846,9 +6846,10 @@ Nick said this sentence was quite confusing
 \emph on
 all
 \emph default
- cubic and quartic gadgets were embeddable with a single `cell' of Pegasus
- and with chains of length at most two, whereas three of the quartic gadgets
- require multiple Chimera cells and two require chains of length three.
+ cubic and quartic gadgets are embeddable with a single `cell' of Pegasus
+ and with chains of length at most two, whereas with Chimera cells, three
+ of the quartic gadgets require multiple cells and two require chains of
+ length three.
 \end_layout
 
 \begin_layout Standard
@@ -8262,6 +8263,8 @@ status open
 \end_inset
 
 
+\emph on
+ (1 aux)
 \end_layout
 
 \end_inset
@@ -9257,14 +9260,14 @@ For positive terms the situation is a bit more complicated: Still only 1
  Pegasus the quadratization can be done in such a way as to require no further
  auxiliary qubits for the minor-embedding, however embedding with Chimera
  will require at minimum 1 further auxiliary qubit (so 1 auxiliary qubit
- is required in total for Pegaus, but 2 auxiliary qubits are required in
+ is required in total for Pegasus, but 2 auxiliary qubits are required in
  total for Chimera).
  
 \end_layout
 
 \begin_layout Standard
-For quartic positive terms, we need at least 2 total qubits on Pegasus and
- at least 3 auxiliary qubits for Chimera.
+For quartic positive terms, we need at least 2 total auxiliary qubits on
+ Pegasus and at least 3 auxiliary qubits for Chimera.
  It is interesting to note that for positive quartic terms, while the gadgets
  leading to the 
 \begin_inset Formula $K_{5}$
@@ -9280,7 +9283,7 @@ For quartic positive terms, we need at least 2 total qubits on Pegasus and
 \end_inset
 
  for embedding onto Chimera, and 1 more auxiliary qubit for embedding onto
- Pegasus (which requires 0).
+ Pegasus (which requires 0 in the former case).
  Therefore, while gadgets leading to 
 \begin_inset Formula $K_{5}$
 \end_inset
@@ -9305,7 +9308,7 @@ status open
 \begin_layout Plain Layout
 All gadgets described in this work for quadratizing negative terms (whether
  cubic or quartic) can be quadratized with only one auxiliary qubit, and
- can be `chimerized' and `pegasized' wihout any futher auxiliary qubits.
+ can be `chimerized' and `pegasized' without any further auxiliary qubits.
  On Pegasus, there is one 4-local to 2-local gadget for positive terms which
  stands out over the rest, and it is PTR (which has the 
 \begin_inset Quotes eld
@@ -9415,6 +9418,10 @@ pegasus_v_chimera_uc_k44.tikz: shows extra edges added to chimera unit cell
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section*
 \begin_inset Note Note
 status collapsed
 
@@ -10121,12 +10128,11 @@ Two copies of z-version of PTR-KZ sharing an auxilla
 
 \end_inset
 
+Acknowledgments
+\end_layout
 
-\begin_inset Note Note
-status open
-
-\begin_layout Section
-Acknowledgements
+\begin_layout Plain Layout
+We gratefully thank Nick Wormald of Monash University for 
 \end_layout
 
 \begin_layout Plain Layout
@@ -10157,11 +10163,12 @@ patch
 \end_inset
 
  is the right word.
+ 
 \end_layout
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
