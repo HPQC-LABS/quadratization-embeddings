@@ -108,7 +108,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -121,7 +120,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -7697,12 +7695,56 @@ status open
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
 
+\backslash
+rotatebox{90}{
+\backslash
+resizebox{!}{
+\backslash
+chimeraFigSize}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "tikzit/k4_missing_edge_pegasus.tikz"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+	
 \backslash
 resizebox{!}{
 \backslash
