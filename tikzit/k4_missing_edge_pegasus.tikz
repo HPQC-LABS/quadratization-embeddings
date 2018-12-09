@@ -1,12 +1,12 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
-		\node [style={logical_qubit}] (0) at (0, 2) {};
+		\node [style={auxiliary_qubit}] (0) at (0, 2) {};
 		\node [style={logical_qubit}] (1) at (0, 1) {};
 		\node [style={unused_qubit}] (2) at (0, -2) {};
 		\node [style={unused_qubit}] (3) at (-2, 0) {};
 		\node [style={unused_qubit}] (4) at (-1, 0) {};
 		\node [style={logical_qubit}] (5) at (1, 0) {};
-		\node [style={auxiliary_qubit}] (6) at (2, 0) {};
+		\node [style={logical_qubit}] (6) at (2, 0) {};
 		\node [style={unused_qubit}] (7) at (0, -1) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
