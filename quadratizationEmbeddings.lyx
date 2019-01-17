@@ -124,7 +124,7 @@ nicholas.chancellor@durham.ac.uk
 \end_layout
 
 \begin_layout Affiliation
-Durham University Joint Quantum Centre
+Durham University, Joint Quantum Centre
 \end_layout
 
 \begin_layout Abstract
@@ -212,12 +212,10 @@ for example factoring, Ramsey, ...
 \end_inset
 
 With dozens of quadratization methods available 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-book
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
 
 \end_inset
 
@@ -2400,7 +2398,7 @@ noprefix "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -2422,6 +2420,35 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grouping of all known quadratization gadgets for singe 
+\series bold
+\emph on
+\bar under
+cubic
+\series default
+\emph default
+\bar default
+ terms, into categories corresponding to their gadget graphs.
+ For each unique gadget graph, the number of auxiliary qubits required for
+ construction of the gadget is listed, followed by the number of auxiliary
+ qubits required to minor-embed the gadget graph onto Chimera and Pegasus
+\size small
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -2431,11 +2458,21 @@ status open
 \backslash
 captionof{table}[cubic]{
 \backslash
-small{Grouping of all known quadratization gadgets for singe cubic terms,
- into categories corresponding to their gadget graphs.
+small{Grouping of all known quadratization gadgets for singe 
+\backslash
+textbf
+\backslash
+textit{
+\backslash
+uline{cubic}}} terms, into categories corresponding to their gadget graphs.
  For each unique gadget graph, the number of auxiliary qubits required for
  construction of the gadget is listed, followed by the number of auxiliary
  qubits required to minor-embed the gadget graph onto Chimera and Pegasus.}}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2464,8 +2501,9 @@ height "0.5pt"
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="11">
+<lyxtabular version="3" rows="13" columns="12">
 <features tabularvalignment="middle" tabularwidth="100col%">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
@@ -2487,11 +2525,20 @@ Gadget Graph
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Example Gadgets
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -2603,11 +2650,20 @@ Example Gadgets
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+Example Gadgets
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reference
 \end_layout
 
 \end_inset
@@ -2719,7 +2775,24 @@ Total
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(see 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+ for acronyms)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2817,111 +2890,6 @@ Pegasus
 </cell>
 </row>
 <row topspace="2mm" bottomspace="2mm">
-<cell multicolumn="1" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Cubic 
-\begin_inset Formula $\rightarrow$
-\end_inset
-
- Quadratic
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topspace="2mm" bottomspace="2mm">
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -2939,6 +2907,15 @@ Bipod
 
 \begin_layout Plain Layout
 NTR-ABCB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3057,6 +3034,31 @@ NTR-KZFD
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg. 7"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Freedman2005"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3155,7 +3157,32 @@ NTR-KZFD
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-ABCG
+NTR-ABCG-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg. 9"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Anthony2016"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3259,7 +3286,16 @@ Coat hanger
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTR-A
+PTR-AC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3372,7 +3408,38 @@ PTR-A
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-AC
+NTR-AC 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+citation in book is to Ishikawa 2011 and Kahl Trandmark 2011 [11] & [14]
+ ..
+ figure out which came first?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+also NTR-ABCG on pg 8 of first arXiv version.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3499,6 +3566,15 @@ PTR-Ishikawa
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -3597,6 +3673,15 @@ NTR-RBL-(3
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3711,6 +3796,15 @@ PTR-BCR-1,2,3,4
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -3799,6 +3893,15 @@ PTR-BCR-1,2,3,4
 
 \begin_layout Plain Layout
 PTR-KZ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3913,6 +4016,15 @@ PTR-RBL-(3
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4045,9 +4157,11 @@ status open
 Grouping of all known quadratization gadgets for single 
 \series bold
 \emph on
+\bar under
 quartic
 \series default
 \emph default
+\bar default
  terms, into categories corresponding to their gadget graphs.
  For each unique gadget graph, the number of auxiliary qubits required for
  construction of the gadget is listed, followed by the number of auxiliary
@@ -4096,11 +4210,11 @@ Gadget Graph
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Example Gadgets
+
 \end_layout
 
 \end_inset
@@ -4212,11 +4326,11 @@ Example Gadgets
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Example Gadgets
 \end_layout
 
 \end_inset
@@ -4328,11 +4442,19 @@ Total
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+(see 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
 
+\end_inset
+
+ for acronyms)
 \end_layout
 
 \end_inset
@@ -4433,7 +4555,7 @@ Pegasus
 
 \series bold
 \color blue
-Bipod
+Tripod
 \end_layout
 
 \end_inset
@@ -4553,7 +4675,25 @@ X
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-KZFD
+NTR-KZFD 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Freedman2005"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+also NTR-ABCG-2 on pg 9 of first arXiv version
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8756,9 +8896,11 @@ status open
 Minor embeddings of 
 \series bold
 \emph on
+\bar under
 quartic
 \series default
 \emph default
+\bar default
  to quadratic gadgets onto a Pegasus `cell'.
  Grey vertices and edges are not used.
 
