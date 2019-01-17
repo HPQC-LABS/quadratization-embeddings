@@ -3296,7 +3296,7 @@ literal "false"
 \end_inset
 </cell>
 </row>
-<row topspace="2mm" bottomspace="2mm">
+<row topspace="2mm">
 <cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -3434,7 +3434,7 @@ literal "false"
 \end_inset
 </cell>
 </row>
-<row topspace="2mm" bottomspace="2mm">
+<row bottomspace="2mm">
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -4683,7 +4683,7 @@ Pegasus
 \end_inset
 </cell>
 </row>
-<row topspace="2mm" bottomspace="2mm">
+<row topspace="2mm">
 <cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -4819,7 +4819,7 @@ literal "false"
 \end_inset
 </cell>
 </row>
-<row topspace="2mm" bottomspace="2mm">
+<row bottomspace="2mm">
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
