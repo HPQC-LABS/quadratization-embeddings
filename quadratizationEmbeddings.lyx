@@ -25,6 +25,17 @@
 
 \usepackage{caption}
 \captionsetup{justification=raggedright,singlelinecheck=false}
+
+%\usepackage[hyphens]{url}  %% be sure to specify the option 'hyphens'
+%\usepackage[pdftex,bookmarksnumbered,hidelinks,breaklinks]{hyperref}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red},
+    citecolor={magenta},
+%    citecolor=[rgb]{1, 0.0784314, 0.184314},
+    urlcolor={blue}
+}
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage
 \use_default_options false
@@ -229,7 +240,7 @@ There are ways to quadratize functions of discrete variables without adding
  any auxiliary variables 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Ishikawa2014,Tanburn2015a,Okada2015,Dridi2017"
+key "Ishikawa2014,Tanburn2015a,Okada2015s,Dridi2017,Dattani2019"
 literal "false"
 
 \end_inset
@@ -2889,125 +2900,6 @@ Pegasus
 \end_inset
 </cell>
 </row>
-<row topspace="2mm" bottomspace="2mm">
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\color blue
-Bipod
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-NTR-ABCB
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\color red
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\color red
-1
-\end_layout
-
-\end_inset
-</cell>
-</row>
 <row topspace="2mm">
 <cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -3036,7 +2928,7 @@ NTR-KZFD
 \begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
-after "Pg. 7"
+after "Pg.7"
 key "Dattani2019"
 literal "false"
 
@@ -3045,7 +2937,7 @@ literal "false"
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Freedman2005"
+key "Kolmogorov2004,Freedman2005"
 literal "false"
 
 \end_inset
@@ -3168,7 +3060,7 @@ NTR-ABCG-2
 \begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
-after "Pg. 9"
+after "Pg.9"
 key "Dattani2019"
 literal "false"
 
@@ -3295,6 +3187,22 @@ PTR-AC
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.23"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Gallagher2011"
+literal "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -3389,7 +3297,7 @@ PTR-AC
 </cell>
 </row>
 <row topspace="2mm" bottomspace="2mm">
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3404,29 +3312,32 @@ PTR-AC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 NTR-AC 
-\begin_inset Note Note
-status open
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
-citation in book is to Ishikawa 2011 and Kahl Trandmark 2011 [11] & [14]
- ..
- figure out which came first?
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.10"
+key "Dattani2019"
+literal "false"
 
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-also NTR-ABCG on pg 8 of first arXiv version.
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Gallagher2011"
+literal "false"
 
 \end_inset
 
@@ -3435,7 +3346,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3444,16 +3355,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3462,7 +3364,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3471,7 +3373,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3480,7 +3382,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3492,7 +3394,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3501,7 +3403,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3510,7 +3412,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3519,7 +3421,7 @@ also NTR-ABCG on pg 8 of first arXiv version.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3527,6 +3429,132 @@ also NTR-ABCG on pg 8 of first arXiv version.
 \series bold
 \color red
 1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2mm" bottomspace="2mm">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NTR-ABCG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.8"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Anthony2014"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3561,6 +3589,22 @@ PTR-Ishikawa
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.14"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2011"
+literal "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -3681,6 +3725,22 @@ NTR-RBL-(3
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.11"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rocchetto2016"
+literal "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -3791,6 +3851,22 @@ PTR-BCR-1,2,3,4
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.15-18"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018,Boros2018a"
+literal "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -3901,6 +3977,22 @@ PTR-KZ
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.21"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Kolmogorov2004"
+literal "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -4024,6 +4116,22 @@ PTR-RBL-(3
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.24"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rocchetto2016"
+literal "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -4187,8 +4295,9 @@ height "0.5pt"
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="12" columns="11">
+<lyxtabular version="3" rows="12" columns="12">
 <features tabularvalignment="middle" tabularwidth="100col%">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
@@ -4206,6 +4315,15 @@ height "0.5pt"
 
 \begin_layout Plain Layout
 Gadget Graph
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4331,6 +4449,15 @@ Gadget Graph
 
 \begin_layout Plain Layout
 Example Gadgets
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reference
 \end_layout
 
 \end_inset
@@ -4477,6 +4604,15 @@ literal "false"
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -4548,28 +4684,54 @@ Pegasus
 </cell>
 </row>
 <row topspace="2mm" bottomspace="2mm">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 \color blue
-Tripod
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-ABCB
+NTR-KZFD
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.7"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Kolmogorov2004,Freedman2005"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4578,7 +4740,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4587,7 +4749,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4596,7 +4758,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4605,7 +4767,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4617,7 +4779,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4626,7 +4788,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4635,7 +4797,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4644,7 +4806,7 @@ NTR-ABCB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4658,15 +4820,11 @@ NTR-ABCB
 </cell>
 </row>
 <row topspace="2mm" bottomspace="2mm">
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\series bold
-\emph on
-\color blue
-X
 \end_layout
 
 \end_inset
@@ -4675,21 +4833,28 @@ X
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-KZFD 
+NTR-ABCG-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Freedman2005"
+after "Pg.9"
+key "Dattani2019"
 literal "false"
 
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-also NTR-ABCG-2 on pg 9 of first arXiv version
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Anthony2016"
+literal "false"
 
 \end_inset
 
@@ -4707,16 +4872,7 @@ also NTR-ABCG-2 on pg 9 of first arXiv version
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4729,19 +4885,25 @@ also NTR-ABCG-2 on pg 9 of first arXiv version
 \begin_inset Text
 
 \begin_layout Plain Layout
-0
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\series bold
-\color red
-1
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4764,23 +4926,20 @@ also NTR-ABCG-2 on pg 9 of first arXiv version
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-0
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\series bold
-\color red
-1
 \end_layout
 
 \end_inset
@@ -4810,6 +4969,23 @@ also NTR-ABCG-2 on pg 9 of first arXiv version
 
 \begin_layout Plain Layout
 PTR-BCR-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.16"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4925,6 +5101,23 @@ PTR-BCR-4
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.18"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5022,6 +5215,31 @@ NTR-RBL-(4
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.12"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rocchetto2016"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5146,6 +5364,15 @@ PTR
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 2
 \end_layout
 
@@ -5242,6 +5469,31 @@ PTR
 
 \begin_layout Plain Layout
 PTR-Ishikawa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.14"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2011"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5363,6 +5615,31 @@ PTR-BCR-3
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+after "Pg.17"
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018,Boros2018a"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5471,6 +5748,22 @@ Double
 
 \begin_layout Plain Layout
 PTR-CZW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Chancellor2017"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
