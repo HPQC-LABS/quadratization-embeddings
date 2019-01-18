@@ -67,12 +67,14 @@
 \author{Nike Dattani}
 \email{n.dattani@cfa.harvard.edu}
 
+\selectlanguage{english}%
 
 \affiliation{Harvard-Smithsonian Center for Astrophysics}
 
 \author{Nicholas Chancellor}
 \email{nicholas.chancellor@durham.ac.uk}
 
+\selectlanguage{english}%
 
 \affiliation{Durham University, Joint Quantum Centre}
 \begin{abstract}
@@ -86,13 +88,14 @@ to reduce the total number of qubits required to embed a problem.
 \maketitle
 Discrete optimization problems are often naturally formulated in terms
 of minimizing some polynomial of degree $>2$ \citep{Dattani2014j},
-which is then `quadratized' into a quadratic functionwhich can be
-solved using standard algorithms for universal classical computers
-\citep{Kolmogorov}, using special-purpose classical annealers \citep{MasanaoYamaoka2016},
-or using quantum annealers \citep{Johnson2011}. With dozens of quadratization
-methods available \citep{Dattani2019}, one should choose the best
-quadratization for a given problem, and for a given method for solving
-the quadratized problem. 
+which is then `quadratized' \citep{Dattani2019} into a quadratic
+function which can be solved using standard algorithms for universal
+classical computers \citep{Boros2002}, using special-purpose classical
+annealers \citep{MasanaoYamaoka2016}, or using quantum annealers
+\citep{Johnson2011}. With dozens of quadratization methods available
+\citep{Dattani2019}, one should choose the best quadratization for
+a given problem, and for a given method for solving the quadratized
+problem. 
 
 There are ways to quadratize functions of discrete variables without
 adding any auxiliary variables \citep{Ishikawa2014,Tanburn2015a,Okada2015s,Dridi2017,Dattani2019},
@@ -330,12 +333,12 @@ and two require chains of length three.
 \vspace{-5mm}
 
 \begin{figure}[H]
-\caption{{\small{}Minor embeddings of all }\textbf{\emph{\small{}cubic }}{\small{}to
-quadratic gadgets onto a `unit cell' of a Chimera graph. Grey vertices
-and edges are not used. Thick edges denote chains for minor embedding,
-in which two or more qubits (vertices) represent one logical qubit
-(this is done when logical qubits need to be connected to more qubits
-than the Chimera unit cell otherwise allows).}}
+\caption{{\small{}Minor embeddings of all }\textbf{\emph{\small{}\uline{cubic}}}\textbf{\emph{\small{}
+}}{\small{}to quadratic gadgets onto a `unit cell' of a Chimera graph.
+Grey vertices and edges are not used. Thick edges denote chains for
+minor embedding, in which two or more qubits (vertices) represent
+one logical qubit (this is done when logical qubits need to be connected
+to more qubits than the Chimera unit cell otherwise allows).}}
 
 \newcommand{\chimeraFigSize}{3cm}
 \centering{}\subfloat[\emph{Bipod\label{fig:Ychimera}}]{\resizebox{!}{\chimeraFigSize}{\input{tikzit/logical_fork_chimera.tikz}}}\subfloat[\emph{Propeller\label{fig:all-to-auxChimera}}]{
@@ -353,8 +356,9 @@ than the Chimera unit cell otherwise allows).}}
 \vspace{-6mm}
 
 \begin{figure}[H]
-\caption{Minor embeddings of all \textbf{\emph{cubic }}to quadratic gadgets
-onto a Pegasus `cell'. Grey vertices and edges are not used.}
+\caption{Minor embeddings of all \textbf{\emph{\uline{cubic}}}\textbf{\emph{
+}}to quadratic gadgets onto a Pegasus `cell'. Grey vertices and edges
+are not used.}
 
 \newcommand{\chimeraFigSize}{3cm}
 \centering{}\subfloat[\emph{Bipod}]{
@@ -375,7 +379,7 @@ onto a Pegasus `cell'. Grey vertices and edges are not used.}
 \vspace{-5mm}
 
 \begin{figure}[H]
-\caption{{\small{}Minor embeddings of all }\textbf{\emph{\small{}quartic}}{\small{}
+\caption{{\small{}Minor embeddings of all }\textbf{\emph{\small{}\uline{quartic}}}{\small{}
 to quadratic gadgets onto a `unit cell' of a Chimera graph. Grey vertices
 and edges are not used. Thick edges denote chains for minor embedding,
 in which two or more qubits (vertices) represent one logical qubit
@@ -474,6 +478,15 @@ Chimera and an equivalent number of total qubits for embedding onto
 Pegasus.
 
  
+
+
+\section*{Acknowledgments}
+
+We gratefully thank Nick Wormald of Monash University for helpful
+comments about our gadget graphs. We gratefully thank Szilard Szalay
+from the Wigner Research Centre for Physics of the Hungarian Academy
+of Sciences for assistance with making the graphs in Figures 1 and
+2. NC was funded by EPSRC (Project: EP/S00114X).
 
 \selectlanguage{british}%
 \bibliographystyle{apsrev4-1}

@@ -59,11 +59,22 @@
   {\bibinfo  {journal} {http://arxiv.org/abs/1411.6758}\ } (\bibinfo {year}
   {2014})},\ \Eprint {http://arxiv.org/abs/1411.6758} {arXiv:1411.6758}
   \BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Kolmogorov}()}]{Kolmogorov}%
+\bibitem [{\citenamefont {Dattani}(2019)}]{Dattani2019}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
-  {Kolmogorov}},\ }\href@noop {} {\enquote {\bibinfo {title} {{QPBO}},}\
-  }\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Dattani}},\ }\href {http://arxiv.org/abs/1901.04405} {\emph {\bibinfo
+  {title} {{Quadratization in discrete optimization and quantum mechanics}}}}\
+  (\bibinfo {year} {2019})\ \Eprint {http://arxiv.org/abs/1901.04405}
+  {arXiv:1901.04405} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Boros}\ and\ \citenamefont
+  {Hammer}(2002)}]{Boros2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Boros}}\ and\ \bibinfo {author} {\bibfnamefont {P.~L.}\ \bibnamefont
+  {Hammer}},\ }\href {\doibase 10.1016/S0166-218X(01)00341-9} {\bibfield
+  {journal} {\bibinfo  {journal} {Discrete Applied Mathematics}\ }\textbf
+  {\bibinfo {volume} {123}},\ \bibinfo {pages} {155} (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Yamaoka}\ \emph {et~al.}(2016)\citenamefont
   {Yamaoka}, \citenamefont {Yoshimura}, \citenamefont {Hayashi}, \citenamefont
   {Okuyama}, \citenamefont {Aoki},\ and\ \citenamefont
@@ -115,13 +126,6 @@
   {G.}~\bibnamefont {Rose}},\ }\href {\doibase 10.1038/nature10012} {\bibfield
   {journal} {\bibinfo  {journal} {Nature}\ }\textbf {\bibinfo {volume} {473}},\
   \bibinfo {pages} {194} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Dattani}(2019)}]{Dattani2019}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Dattani}},\ }\href {http://arxiv.org/abs/1901.04405} {\emph {\bibinfo
-  {title} {{Quadratization in discrete optimization and quantum mechanics}}}}\
-  (\bibinfo {year} {2019})\ \Eprint {http://arxiv.org/abs/1901.04405}
-  {arXiv:1901.04405} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ishikawa}(2014)}]{Ishikawa2014}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont

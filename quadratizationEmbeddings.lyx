@@ -119,6 +119,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -131,6 +132,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -176,21 +178,19 @@ literal "false"
 
 \end_inset
 
-, which is then `quadratized' into a quadratic function
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-book
-\end_layout
+, which is then `quadratized' 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
 
 \end_inset
 
-which can be solved using standard algorithms for universal classical computers
- 
+ into a quadratic function which can be solved using standard algorithms
+ for universal classical computers 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Kolmogorov"
+key "Boros2002"
 literal "false"
 
 \end_inset
@@ -7328,7 +7328,10 @@ status open
 Minor embeddings of all 
 \series bold
 \emph on
-cubic 
+\bar under
+cubic
+\bar default
+ 
 \series default
 \emph default
 to quadratic gadgets onto a `unit cell' of a Chimera graph.
@@ -7812,7 +7815,10 @@ status open
 Minor embeddings of all 
 \series bold
 \emph on
-cubic 
+\bar under
+cubic
+\bar default
+ 
 \series default
 \emph default
 to quadratic gadgets onto a Pegasus `cell'.
@@ -8430,9 +8436,11 @@ status open
 Minor embeddings of all 
 \series bold
 \emph on
+\bar under
 quartic
 \series default
 \emph default
+\bar default
  to quadratic gadgets onto a `unit cell' of a Chimera graph.
  Grey vertices and edges are not used.
  Thick edges denote chains for minor embedding, in which two or more qubits
@@ -9894,13 +9902,66 @@ pegasus_v_chimera_uc_k44.tikz: shows extra edges added to chimera unit cell
 
 \end_layout
 
+\begin_layout Section*
+Acknowledgments
+\end_layout
+
+\begin_layout Standard
+We gratefully thank Nick Wormald of Monash University for helpful comments
+ about our gadget graphs.
+ We gratefully thank Szilard Szalay from the Wigner Research Centre for
+ Physics of the Hungarian Academy of Sciences for assistance with making
+ the graphs in Figures 1 and 2.
+ NC was funded by EPSRC (Project: EP/S00114X).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We wish to thank Alexander Condellor of D-Wave for providing us with a more
+ efficient 
+\begin_inset Formula $K_{6}$
+\end_inset
+
+ gadget.
+ Welllllll my 23 November email at 19:30 gives an embedding that is equally
+ efficient, just with chain edges crossing, while Alex's doesn't have that.
+ Really Alex's contributions will probably come when we start embedding
+ higher-order gadgets (or SFR gadgets?) and start needing to embed things
+ on multi-cell Pegasus 
+\begin_inset Quotes eld
+\end_inset
+
+patches
+\begin_inset Quotes erd
+\end_inset
+
+ if 
+\begin_inset Quotes eld
+\end_inset
+
+patch
+\begin_inset Quotes erd
+\end_inset
+
+ is the right word.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Section*
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Gadgets with adjacency graph corresponding to all_to_aux.4tikz(
@@ -10605,42 +10666,7 @@ Two copies of z-version of PTR-KZ sharing an auxilla
 
 \end_inset
 
-Acknowledgments
-\end_layout
 
-\begin_layout Plain Layout
-We gratefully thank Nick Wormald of Monash University for 
-\end_layout
-
-\begin_layout Plain Layout
-We wish to thank Alexander Condellor of D-Wave for providing us with a more
- efficient 
-\begin_inset Formula $K_{6}$
-\end_inset
-
- gadget.
- Welllllll my 23 November email at 19:30 gives an embedding that is equally
- efficient, just with chain edges crossing, while Alex's doesn't have that.
- Really Alex's contributions will probably come when we start embedding
- higher-order gadgets (or SFR gadgets?) and start needing to embed things
- on multi-cell Pegasus 
-\begin_inset Quotes eld
-\end_inset
-
-patches
-\begin_inset Quotes erd
-\end_inset
-
- if 
-\begin_inset Quotes eld
-\end_inset
-
-patch
-\begin_inset Quotes erd
-\end_inset
-
- is the right word.
- 
 \end_layout
 
 \end_inset
