@@ -1023,10 +1023,14 @@ thisfigheight}{1.5 cm}
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1113,6 +1117,11 @@ status open
 \begin_inset Graphics
 	filename metapostfigs/fig_Gadget31_Bipod.pdf
 	width 12text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1771,6 +1780,10 @@ status open
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1839,6 +1852,11 @@ status collapsed
 \begin_inset Graphics
 	filename metapostfigs/fig_Gadget41_Tripod.pdf
 	width 12text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5788,7 +5806,17 @@ Double
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTR-CZW
+PTR-CZW 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This needs to be changed to LZL
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7410,6 +7438,11 @@ chimeraFigSize}{3cm}
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -7462,6 +7495,11 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7893,6 +7931,11 @@ chimeraFigSize}{3cm}
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -7941,6 +7984,11 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8624,6 +8672,11 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -8698,6 +8751,28 @@ status open
 
 
 \begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{-0.9 cm}
+\end_layout
+
 \end_inset
 
 
@@ -9311,6 +9386,11 @@ chimeraFigSize}{2.5cm}
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -9356,6 +9436,11 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
