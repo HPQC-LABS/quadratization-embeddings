@@ -119,7 +119,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -132,7 +131,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -4987,6 +4985,14 @@ literal "false"
 \end_inset
 
 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018,Boros2018a"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5107,6 +5113,24 @@ LatexCommand citep
 after "Pg.18"
 key "Dattani2019"
 literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018,Boros2018a"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+WHY DO WE HAVE 2 LINES FOR bcr2,4 WHEN IN CUBIC WE HAVE ONLY 1 ??
+\end_layout
 
 \end_inset
 
