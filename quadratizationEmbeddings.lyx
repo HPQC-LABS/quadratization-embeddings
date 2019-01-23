@@ -1156,7 +1156,6 @@ status open
 
 \begin_layout Plain Layout
 
-\emph on
 
 \backslash
 centering
@@ -5494,11 +5493,7 @@ WHY DO WE HAVE 2 LINES FOR bcr2,4 WHEN IN CUBIC WE HAVE ONLY 1 ??
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-LHZ-(4
-\begin_inset Formula $\rightarrow2$
-\end_inset
-
-)
+NTR-LHZ
 \end_layout
 
 \end_inset
