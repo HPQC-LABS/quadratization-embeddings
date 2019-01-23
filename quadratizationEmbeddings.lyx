@@ -261,7 +261,7 @@ literal "false"
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace -6mm
+\begin_inset VSpace -3mm
 \end_inset
 
 
@@ -468,12 +468,12 @@ Pegasus (repeating)
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace -11mm
+\begin_inset VSpace -5mm
 \end_inset
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -1016,7 +1016,16 @@ thisfigheight}{1.5 cm}
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset VSpace -6mm
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -1142,6 +1151,19 @@ status open
 \begin_layout Plain Layout
 
 \emph on
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
 Propeller
 \emph default
 
@@ -1316,6 +1338,14 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -1325,6 +1355,18 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
 
 \emph on
 Coat Hanger
@@ -1438,6 +1480,14 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -1447,6 +1497,19 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $K_{4}-e$
 \end_inset
 
@@ -1561,6 +1624,14 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -1570,6 +1641,19 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $K_{4}$
 \end_inset
 
@@ -1639,6 +1723,14 @@ status collapsed
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -1648,8 +1740,21 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
 
 \emph on
+
 \begin_inset Formula $K_{5}$
 \end_inset
 
@@ -1875,6 +1980,18 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
 
 \emph on
 X
@@ -1974,6 +2091,22 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -1983,6 +2116,19 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $K_{5}$
 \end_inset
 
@@ -2058,6 +2204,18 @@ status collapsed
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -2067,6 +2225,19 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $K_{6}-4e$
 \end_inset
 
@@ -2130,6 +2301,18 @@ status collapsed
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -2139,8 +2322,21 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
 
 \emph on
+
 \begin_inset Formula $K_{6}-e$
 \end_inset
 
@@ -2210,6 +2406,18 @@ status collapsed
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -2219,8 +2427,21 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
 
 \emph on
+
 \begin_inset Formula $K_{6}$
 \end_inset
 
@@ -2290,6 +2511,18 @@ status collapsed
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -2299,6 +2532,18 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
 
 \emph on
 Double 
@@ -5249,7 +5494,7 @@ WHY DO WE HAVE 2 LINES FOR bcr2,4 WHEN IN CUBIC WE HAVE ONLY 1 ??
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-RBL-(4
+NTR-LHZ-(4
 \begin_inset Formula $\rightarrow2$
 \end_inset
 
@@ -5273,7 +5518,7 @@ literal "false"
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Rocchetto2016"
+key "Lechner2015a"
 literal "false"
 
 \end_inset
@@ -7636,6 +7881,10 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -7688,6 +7937,14 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -7747,6 +8004,10 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -7800,6 +8061,10 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -8107,6 +8372,14 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -8203,10 +8476,6 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 
@@ -8313,6 +8582,14 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -8859,6 +9136,22 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -8916,6 +9209,22 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -9518,6 +9827,14 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -9573,6 +9890,14 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -9634,6 +9959,14 @@ status open
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -9689,6 +10022,14 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -9751,6 +10092,14 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
