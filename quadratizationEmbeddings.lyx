@@ -3195,7 +3195,7 @@ Coat hanger
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTR-GBP 
+PTR-GBP
 \end_layout
 
 \end_inset
@@ -3333,7 +3333,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-GBP 
+NTR-GBP
 \end_layout
 
 \end_inset
@@ -3729,7 +3729,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTR-RBL-(3
+NTR-RBL-(3
 \begin_inset Formula $\rightarrow2$
 \end_inset
 
@@ -4005,7 +4005,7 @@ literal "false"
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Kolmogorov2004"
+key "Kolmogorov2004,Chancellor2017,Leib2016"
 literal "false"
 
 \end_inset
@@ -4120,11 +4120,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-NTR-LHZ-(3
-\begin_inset Formula $\rightarrow2$
-\end_inset
-
-)
+PTR-RBL
 \end_layout
 
 \end_inset
@@ -4146,16 +4142,6 @@ literal "false"
 LatexCommand citep
 key "Rocchetto2016"
 literal "false"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-add LHZ reference
-\end_layout
 
 \end_inset
 
@@ -5263,7 +5249,7 @@ WHY DO WE HAVE 2 LINES FOR bcr2,4 WHEN IN CUBIC WE HAVE ONLY 1 ??
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTR-RBL-(4
+NTR-RBL-(4
 \begin_inset Formula $\rightarrow2$
 \end_inset
 
@@ -5817,6 +5803,19 @@ Double
 
 \begin_layout Plain Layout
 PTR-LZL
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+not actually a gadget in any book, it's a combination of two gadgets...
+ such things that do k-local to 3-local and then 3-local to 2-local were
+ not considered for the other gadget graphs as far as I know, so questionable
+ whether or not this should be included and how it should be named.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
