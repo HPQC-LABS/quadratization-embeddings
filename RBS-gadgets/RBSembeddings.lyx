@@ -35,6 +35,25 @@
 %    citecolor=[rgb]{1, 0.0784314, 0.184314},
     urlcolor={blue}
 }
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage
 \use_default_options false
@@ -124,6 +143,121 @@ n.dattani@cfa.harvard.edu
 
 \begin_layout Affiliation
 Harvard-Smithsonian Center for Astrophysics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+A monomial of order 
+\begin_inset Formula $k$
+\end_inset
+
+, quadratized by RBS, has ___ possible types of gadget graphs, where ___
+ is the half-catalan number of 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ All gadget graphs for a given value of 
+\begin_inset Formula $k$
+\end_inset
+
+, have either Degree Profile A, or Degree Profile B.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+A monomial of order 
+\begin_inset Formula $k$
+\end_inset
+
+, quadratized by RBS, can be embedded onto Pegasus with 
+\emph on
+zero
+\emph default
+ auxiliary qubits, and ___ Pegasus cells (and how many 
+\begin_inset Quotes eld
+\end_inset
+
+available
+\begin_inset Quotes erd
+\end_inset
+
+ qubits?).
+ For Chimera, we have at least ___ triangles, which means ___ auxiliary
+ qubits.
+ The number of 
+\begin_inset Quotes eld
+\end_inset
+
+cells
+\begin_inset Quotes erd
+\end_inset
+
+ erquired is unknown.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
