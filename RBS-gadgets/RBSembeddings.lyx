@@ -261,13 +261,13 @@ end{theorem}
 \end_layout
 
 \begin_layout Standard
-Consider the symmetric function: 
+Consider the function: 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}+b_{2}b_{3}b_{4}+b_{3}b_{4}b_{1}+b_{4}b_{1}b_{2}
+Ab_{1}b_{2}b_{3}+Bb_{2}b_{3}b_{4}+Cb_{3}b_{4}b_{1}+Db_{4}b_{1}b_{2}
 \end{equation}
 
 \end_inset
@@ -298,69 +298,50 @@ re-use
 
 \begin_layout Standard
 Here only 2 auxiliary variables are required in total.
- This is 
-\emph on
-\bar under
-more
-\emph default
-\bar default
- than BCR which requires only 1 auxiliary (
-\begin_inset Formula $\lceil\log k\rceil-1$
-\end_inset
-
- auxiliary qubits for a degree 
-\begin_inset Formula $k$
-\end_inset
-
- function in general).
- However, BCR is fully connected (
-\begin_inset Formula $K_{5}$
-\end_inset
-
-) and Chau's graph (
-\begin_inset Formula $Ch_{6}$
-\end_inset
-
-) for the RBS is not.
  
-\begin_inset Formula $K_{5}$
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is commented because once we add the coefficients, it's not necessarily
+ symmetric anymore
+\end_layout
+
 \end_inset
 
- requires one auxiliary qubit on pegasus (see paper: https://arxiv.org/pdf/1901.07
-676.pdf).
+This can be compared with the lower bound which states that there exist
+ symmetric functions for which we only need 
+\begin_inset Formula $\Omega(\sqrt{n})$
+\end_inset
+
+ where in this case 
+\begin_inset Formula $\sqrt{n}=2$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
  
 \series bold
-How many does 
-\begin_inset Formula $Ch_{6}$
-\end_inset
-
- require? 
-\begin_inset Formula $K_{5}$
-\end_inset
-
-can be embedded in Pegasus with a total of 6 qubits in a single cell.
- Can 
-\begin_inset Formula $Ch_{6}$
-\end_inset
-
- do that?
-\series default
-
-\begin_inset Newline newline
-\end_inset
-
-
+If 2 auxiliaries is the best we can do for this function, is the above quadratiz
+ation the best we can do in terms of graph connectivity?
 \end_layout
 
 \begin_layout Standard
-Let us continue with all possible cubic terms, but with 5 variables instead
- of 4:
+Let us continue with a cyclic function of cubic terms, but with 5 variables
+ instead of 4:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}+b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}+b_{4}b_{5}b_{1}+b_{5}b_{1}b_{2}
+Ab_{1}b_{2}b_{3}+Bb_{2}b_{3}b_{4}+Cb_{3}b_{4}b_{5}+Db_{4}b_{5}b_{1}+Eb_{5}b_{1}b_{2}
 \end{equation}
 
 \end_inset
@@ -375,37 +356,19 @@ Now 3 auxuliary variables are required in total:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\textcolor{red}{\ensuremath{b_{1}b_{2}}}b_{3}+b_{2}c+\textcolor{green}{\ensuremath{b_{3}b_{4}}}b_{5}+\textcolor{blue}{\ensuremath{b_{4}b_{5}}}b_{1}+b_{5}\textcolor{red}{\ensuremath{b_{1}b_{2}}}
+\textcolor{red}{\ensuremath{b_{1}b_{2}}}b_{3}+b_{2}\textcolor{green}{\ensuremath{b_{3}b_{4}}}+\textcolor{green}{\ensuremath{b_{3}b_{4}}}b_{5}+\textcolor{blue}{\ensuremath{b_{4}b_{5}}}b_{1}+b_{5}\textcolor{red}{\ensuremath{b_{1}b_{2}}}
 \end{equation}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-this means the graph will be 
-\begin_inset Formula $Ch_{8}$
-\end_inset
-
- as opposed to 
-\begin_inset Formula $K_{7}$
-\end_inset
-
- (2 auxiliary, 5 logical) in the case of BCR.
- 
 \series bold
-My guess is that 
-\begin_inset Formula $Ch_{8}$
-\end_inset
-
- (8 variables) is much easier to embed than 
-\begin_inset Formula $K_{7}$
-\end_inset
-
- (7 variables).
+\color blue
+Is it possible to quadratize this with fewer qubits?
 \series default
-
+ 
+\color inherit
+Maybe we need to do a brute force check.
 \begin_inset Newline newline
 \end_inset
 
@@ -427,34 +390,24 @@ Let us now try with
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
- & b_{1}b_{2}b_{3}+b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}+b_{4}b_{5}b_{6}+b_{5}b_{6}b_{1}+b_{6}b_{1}b_{2}\\
+ & Ab_{1}b_{2}b_{3}+Bb_{2}b_{3}b_{4}+Cb_{3}b_{4}b_{5}+Db_{4}b_{5}b_{6}+Eb_{5}b_{6}b_{1}+Fb_{6}b_{1}b_{2}\\
 = & \textcolor{red}{\ensuremath{b_{1}b_{2}}}b_{3}+b_{2}\textcolor{green}{\ensuremath{b_{3}b_{4}}}+\textcolor{green}{\ensuremath{b_{3}b_{4}}}b_{5}+b_{4}\textcolor{blue}{\ensuremath{b_{5}b_{6}}}+\textcolor{blue}{\ensuremath{b_{5}b_{6}}}b_{1}+b_{6}\textcolor{red}{\ensuremath{b_{1}b_{2}}}
 \end{align}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-We therefore only need auxiliaries, plus the 6 original logicals, meaning
- that we have 
-\begin_inset Formula $Ch_{9}$
-\end_inset
-
-, compared to 
-\begin_inset Formula $K_{8}$
-\end_inset
-
- for BCR.
+We therefore only 3 need auxiliaries.
  
 \series bold
-
-\begin_inset Formula $Ch_{9}$
+\color blue
+Is it possible to quadratize this with fewer qubits?
+\series default
+ 
+\color inherit
+Maybe we need to do a brute force check.
+\begin_inset Newline newline
 \end_inset
 
- definitely wins here!
-\series default
 
 \begin_inset Newline newline
 \end_inset
@@ -492,7 +445,7 @@ Let's now look at
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{1}+b_{4}b_{5}b_{1}b_{2}+b_{5}b_{1}b_{2}b_{3}.
+Ab_{1}b_{2}b_{3}b_{4}+Bb_{2}b_{3}b_{4}b_{5}+Cb_{3}b_{4}b_{5}b_{1}+Db_{4}b_{5}b_{1}b_{2}+Eb_{5}b_{1}b_{2}b_{3}.
 \end{equation}
 
 \end_inset
@@ -513,42 +466,69 @@ Here we will pair some variables again (2 auxiliaries):
 
 \end_inset
 
-
+We cannot pair anymore variables, so we need 4 more auxiliaries.
+ In total we have 6 auxiliaries.
+ 
 \end_layout
 
 \begin_layout Standard
-We cannot pair anymore variables, so we need 4 more auxiliaries.
- In total we have 6 auxiliaries plus 5 logical variables, meaning we have
- 
-\begin_inset Formula $Ch_{11}$
-\end_inset
 
-.
- For BCR we have only 1 auxiliary variable, so it is 
-\begin_inset Formula $K_{6}$
-\end_inset
-
- vs 
-\begin_inset Formula $Ch_{11}$
-\end_inset
-
-.
- 
+\series bold
+\color blue
+Is it possible to quadratize this with fewer than 6 qubits? 
+\series default
+\color inherit
+Some symmetric functions of 5 variables only need 3 auxiliaries
 \series bold
 
-\begin_inset Formula $K_{6}$
+\begin_inset Newline newline
 \end_inset
 
- probably wins because it only need 2 auxiliary qubits for pegasus on a
- single cell.
- It is impossible for 
-\begin_inset Formula $Ch_{11}$
-\end_inset
-
- to work on a single cell.
 
 \series default
  
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Interestingly, by adding a degre-5 term (
+\begin_inset Formula $n=5,k=5$
+\end_inset
+
+), we can do it with 4 auxiliaries:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Ab_{1}b_{2}b_{3}b_{4}b_{5}+Bb_{1}b_{2}b_{3}b_{4}+Cb_{2}b_{3}b_{4}b_{5}+Db_{3}b_{4}b_{5}b_{1}+Eb_{4}b_{5}b_{1}b_{2}+Fb_{5}b_{1}b_{2}b_{3}.
+\end{equation}
+
+\end_inset
+
+Here we will pair some variables again (2 auxiliaries):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & \textcolor{red}{\ensuremath{b_{1}b_{2}}}\textcolor{green}{\ensuremath{b_{3}b_{4}}}b_{5}+\textcolor{red}{\ensuremath{b_{1}b_{2}}}\textcolor{green}{\ensuremath{b_{3}b_{4}}}+b_{2}\textcolor{green}{\ensuremath{b_{3}b_{4}}}b_{5}+\textcolor{green}{\ensuremath{b_{3}b_{4}}}b_{5}b_{1}+b_{4}b_{5}\textcolor{red}{\ensuremath{b_{1}b_{2}}}+b_{5}\textcolor{red}{\ensuremath{b_{1}b_{2}}}b_{3}\\
+= & \textcolor{red}{\ensuremath{b_{a_{12}}}}\textcolor{green}{\ensuremath{b_{a_{34}}}}b_{5}+\textcolor{red}{\ensuremath{b_{a_{12}}}}\textcolor{green}{\ensuremath{b_{a_{34}}}}+b_{2}\textcolor{green}{\ensuremath{\ensuremath{b_{a_{34}}}}}b_{5}+\textcolor{green}{\ensuremath{b_{a_{34}}}}b_{5}b_{1}+b_{4}b_{5}\textcolor{red}{b_{a_{12}}}+b_{5}\textcolor{red}{\ensuremath{b_{a_{12}}}}b_{3}\\
+= & \textcolor{red}{\ensuremath{b_{a_{12}}}}\textcolor{blue}{\ensuremath{b_{a_{34,5}}}}+\textcolor{red}{\ensuremath{b_{a_{12}}}}\textcolor{green}{\ensuremath{b_{a_{34}}}}+b_{2}\textcolor{blue}{\ensuremath{b_{a_{34,5}}}}+\textcolor{blue}{\ensuremath{b_{a_{34,5}}}}b_{1}+b_{4}\textcolor{magenta}{\ensuremath{b_{a_{12,5}}}}+\textcolor{magenta}{\ensuremath{b_{a_{12,5}}}}b_{3}
+\end{align}
+
+\end_inset
+
+ 
+\series bold
+\color blue
+Is it possible to quadratize this with fewer than 4 qubits?
+\series default
+ 
+\color inherit
+Some symmetric functions of 5 variables only need 3 auxiliaries.
 \end_layout
 
 \begin_layout Standard
@@ -566,7 +546,7 @@ Now let's look at
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}b_{4}b_{5}+b_{2}b_{3}b_{4}b_{5}b_{6}+b_{3}b_{4}b_{5}b_{6}b_{1}+b_{4}b_{5}b_{6}b_{1}b_{2}+b_{5}b_{6}b_{1}b_{2}b_{3}+b_{6}b_{1}b_{2}b_{3}b_{4}.
+Ab_{1}b_{2}b_{3}b_{4}b_{5}+Bb_{2}b_{3}b_{4}b_{5}b_{6}+Cb_{3}b_{4}b_{5}b_{6}b_{1}+Db_{4}b_{5}b_{6}b_{1}b_{2}+Eb_{5}b_{6}b_{1}b_{2}b_{3}+Fb_{6}b_{1}b_{2}b_{3}b_{4}.
 \end{equation}
 
 \end_inset
@@ -606,28 +586,12 @@ Let us now pair up some of the auxiliary qubits!
 \end_layout
 
 \begin_layout Standard
-This is now quadratic, with 6 total auxiliaries and 6 original logicals.
- We therefore have 
-\begin_inset Formula $Ch_{12}$
-\end_inset
+This is now quadratic, with 6 total auxiliaries.
 
-, compared to 
-\begin_inset Formula $K_{8}$
-\end_inset
-
- with BCR.
- 
 \series bold
-It is my guess that 
-\begin_inset Formula $Ch_{12}$
-\end_inset
-
- will win for Pegasus.
  
-\begin_inset Formula $K_{8}$
-\end_inset
-
- will not be easy at all.
+\color blue
+Can it be done with fewer?
 \end_layout
 
 \begin_layout Standard
