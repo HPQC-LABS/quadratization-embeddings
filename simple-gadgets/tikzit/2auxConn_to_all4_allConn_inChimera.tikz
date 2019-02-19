@@ -63,9 +63,7 @@
 		\draw [style=simple] (4) to (2);
 		\draw [style={embedding_aux}] (1) to (5);
 		\draw [style=simple] (5) to (2);
-		\draw [style={embedding_aux}] (0) to (6);
 		\draw [style=simple] (6) to (2);
-		\draw [style=simple] (6) to (1);
 		\draw [style=simple] (0) to (3);
 		\draw [style=simple] (1) to (3);
 		\draw [style=simple] (7) to (4);
@@ -80,5 +78,9 @@
 		\draw [style=simple] (20) to (18);
 		\draw [style=embedding] (3) to (19);
 		\draw [style=embedding] (4) to (20);
+		\draw [style=unused] (6) to (22);
+		\draw [style=unused] (5) to (21);
+		\draw [style={embedding_aux}] (6) to (0);
+		\draw [style=simple] (6) to (1);
 	\end{pgfonlayer}
 \end{tikzpicture}
