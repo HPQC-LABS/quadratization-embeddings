@@ -294,6 +294,7 @@ endfor;
 gdaddedge(1,3);
 gdaddedge(2,4);
 
+
 gdadd("41_AllToAuxp3");
 gdaddvert((0,+ut*0.3),1);
 for i = 0 upto 3:
@@ -320,6 +321,20 @@ endfor;
 gdaddedge(5,1);
 
 
+gdadd("42_AllToAuxp3");
+for i = 0 upto 1:
+	gdaddvert(.35ut*dir(i*360/2),1);
+	for j = 1 upto 2:
+		gdaddvert(ut*dir((2i+j)*360/4-135),0);
+		gdaddedge(3i,3i+j);
+		gdaddedge(3(1-i),3i+j);
+	endfor;
+endfor;
+gdaddedge(5,1);
+gdaddedge(4,1);
+gdaddedge(5,2);
+
+
 gdadd("42_K6m1");
 for i = 0 upto 1:
 	gdaddvert(.35ut*dir(i*360/2),1);
@@ -333,6 +348,8 @@ gdaddedge(1,2);
 gdaddedge(2,4);
 gdaddedge(4,5);
 gdaddedge(5,1);
+gdaddedge(4,1);
+gdaddedge(5,2);
 
 
 gdadd("42_K6");
@@ -349,6 +366,8 @@ gdaddedge(2,4);
 gdaddedge(4,5);
 gdaddedge(5,1);
 gdaddedge(0,3);
+gdaddedge(4,1);
+gdaddedge(5,2);
 
 
 % ** 3+3 gadgets ***************************************************************
