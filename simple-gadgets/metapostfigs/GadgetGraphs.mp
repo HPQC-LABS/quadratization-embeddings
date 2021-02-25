@@ -57,9 +57,13 @@ vardef grvertexaux(expr A) =
 enddef;
 
 % default edge for the graph
-vardef gredge(expr A,B) =
-	draw A--B withpen pencircle scaled it withcolor black;
+vardef gredge(expr A,B,s) =
+pair C;
+	C := 0.5[A,B]+s*((B-A) rotated 90);
+        draw A..C..B withpen pencircle scaled it withcolor black;
+%	draw A--B withpen pencircle scaled it withcolor black;
 enddef;
+
 
 
 % ** gadget definitions ********************************************************
@@ -70,10 +74,13 @@ picture gadget[];
 % internal database, don't touch direclty, only through "gdadd..." routines.
 string gdlabel[];
 numeric gdNvert[];
+numeric gdNedge[];
+
 pair gdvert[][];
 numeric gdverttype[][];		% 0: data, 1: aux
-numeric gdNedge[];
+
 numeric gdedge[][][];
+numeric gdedgeh[][];		% 0: straight, >0: curvature ("height")
 
 numeric gd,gdN;
 gd := 0;
@@ -95,6 +102,14 @@ enddef;
 def gdaddedge(expr ei,ej)=
 	gdedge[gd][ gdNedge[gd] ][0] := ei;
 	gdedge[gd][ gdNedge[gd] ][1] := ej;
+	gdedgeh[gd][ gdNedge[gd] ] := 0 ;
+	gdNedge[gd] := gdNedge[gd]+1;
+enddef;
+
+def gdaddedgecurv(expr ei,ej,s)=
+	gdedge[gd][ gdNedge[gd] ][0] := ei;
+	gdedge[gd][ gdNedge[gd] ][1] := ej;
+	gdedgeh[gd][ gdNedge[gd] ] := s ;
 	gdNedge[gd] := gdNedge[gd]+1;
 enddef;
 
@@ -294,6 +309,16 @@ endfor;
 gdaddedge(1,3);
 gdaddedge(2,4);
 
+gdadd("41_K5v");	% variant with curved edges
+gdaddvert((0,0),1);
+for i = 0 upto 3:
+	gdaddvert(ut*dir(i*360/4+45),0);
+	gdaddedge(0,i+1);
+	gdaddedge(i+1,(i+1) mod 4 +1);
+endfor;
+gdaddedgecurv(1,3,-.15);
+gdaddedgecurv(2,4,+.15);
+
 
 gdadd("41_AllToAuxp3");
 gdaddvert((0,+ut*0.3),1);
@@ -419,7 +444,7 @@ gdN := gd;
 for gd = 1 upto gdN:
 gadget[gd]:= image(
 	for ie = 0 upto gdNedge[gd]-1:
-		gredge( gdvert[gd][gdedge[gd][ie][0]], gdvert[gd][gdedge[gd][ie][1]] );
+		gredge( gdvert[gd][gdedge[gd][ie][0]], gdvert[gd][gdedge[gd][ie][1]], gdedgeh[gd][ie]  );
 	endfor;
 	for iv = 0 upto gdNvert[gd]-1:
 		if gdverttype[gd][iv] = 0:
