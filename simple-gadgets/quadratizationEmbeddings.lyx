@@ -2187,8 +2187,24 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_Gadget41_K5.pdf
+	width 12text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename metapostfigs/fig_Gadget41_K5v.pdf
 	width 12text%
 
 \end_inset
