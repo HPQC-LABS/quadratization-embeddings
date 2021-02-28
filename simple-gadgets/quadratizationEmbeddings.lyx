@@ -2253,7 +2253,7 @@ centering
 \end_inset
 
 
-\begin_inset Formula $K_{6}-4e$
+\begin_inset Formula $K_{6}-6e$
 \end_inset
 
 
@@ -2305,7 +2305,7 @@ status collapsed
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_Gadget42_AllToAuxp3.pdf
+	filename metapostfigs/fig_Gadget42_AllToAuxp1.pdf
 	width 12text%
 
 \end_inset
@@ -5629,7 +5629,7 @@ literal "false"
 
 \series bold
 \color blue
-\begin_inset Formula $\boldsymbol{\boldsymbol{K_{6}}-4e}$
+\begin_inset Formula $\boldsymbol{\boldsymbol{K_{6}}-6e}$
 \end_inset
 
 
@@ -9262,7 +9262,7 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-\begin_inset Formula $K_{6}-4e$
+\begin_inset Formula $K_{6}-6e$
 \end_inset
 
 
@@ -9923,7 +9923,7 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-\begin_inset Formula $K_{6}-4e$
+\begin_inset Formula $K_{6}-6e$
 \end_inset
 
 
@@ -10257,12 +10257,12 @@ For quartic positive terms, we need at least 2 total auxiliary qubits on
 \end_inset
 
  graph require 1 fewer auxiliary qubit than the gadgets leading to the 
-\begin_inset Formula $K_{6}-4e$
+\begin_inset Formula $K_{6}-6e$
 \end_inset
 
  graph for quadratization, the graph needs 2 more auxiliary qubits than
  
-\begin_inset Formula $K_{6}-4e$
+\begin_inset Formula $K_{6}-6e$
 \end_inset
 
  for embedding onto Chimera, and 1 more auxiliary qubit for embedding onto
@@ -10273,7 +10273,7 @@ For quartic positive terms, we need at least 2 total auxiliary qubits on
 
  may appear at first sight to be more efficient than gadgets leading to
  
-\begin_inset Formula $K_{6}-4e$
+\begin_inset Formula $K_{6}-6e$
 \end_inset
 
  due to requiring fewer qubits for quadratization, they require more 
