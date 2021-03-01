@@ -1151,6 +1151,12 @@ status open
 \begin_layout Plain Layout
 
 \emph on
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
 \begin_inset ERT
 status open
 
@@ -1159,6 +1165,11 @@ status open
 
 \backslash
 centering
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1509,7 +1520,7 @@ centering
 \end_inset
 
 
-\begin_inset Formula $K_{4}-e$
+\begin_inset Formula $K_{4}-e_{LL}$
 \end_inset
 
 
@@ -2253,7 +2264,17 @@ centering
 \end_inset
 
 
-\begin_inset Formula $K_{6}-6e$
+\begin_inset Formula $K_{4L,2A}-e_{L_{1}A_{2}}+e_{L_{3}L_{4}}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Also K6-6e
+\end_layout
+
 \end_inset
 
 
@@ -2565,6 +2586,16 @@ Double
 \emph default
 
 \begin_inset Formula $K_{4}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Also K4,3 +2eLL+2eAA-4eLA, or K7-10e
+\end_layout
+
 \end_inset
 
 
@@ -3581,7 +3612,7 @@ literal "false"
 
 \series bold
 \color blue
-\begin_inset Formula $\boldsymbol{\textcolor{blue}{\ensuremath{\boldsymbol{K_{4}}}-e}}$
+\begin_inset Formula $\boldsymbol{\textcolor{blue}{\ensuremath{\boldsymbol{K_{4}}}-e_{LL}}}$
 \end_inset
 
 
@@ -5629,7 +5660,7 @@ literal "false"
 
 \series bold
 \color blue
-\begin_inset Formula $\boldsymbol{\boldsymbol{K_{6}}-6e}$
+\begin_inset Formula $\boldsymbol{K_{4L,2A}-e_{L_{1}A_{2}}+e_{L_{3}L_{4}}}$
 \end_inset
 
 
@@ -7968,7 +7999,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Formula $K_{4}-e$
+\begin_inset Formula $K_{4}-e_{LL}$
 \end_inset
 
 
@@ -8505,7 +8536,7 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-\begin_inset Formula $K_{4}-e$
+\begin_inset Formula $K_{4}-e_{LL}$
 \end_inset
 
 
@@ -9262,7 +9293,7 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-\begin_inset Formula $K_{6}-6e$
+\begin_inset Formula $K_{4L,2A}-e_{L_{1}A_{2}}+e_{L_{3}L_{4}}$
 \end_inset
 
 
@@ -9923,7 +9954,7 @@ status open
 \begin_layout Plain Layout
 
 \emph on
-\begin_inset Formula $K_{6}-6e$
+\begin_inset Formula $K_{4L,2A}-e_{L_{1}A_{2}}+e_{L_{3}L_{4}}$
 \end_inset
 
 
@@ -10257,12 +10288,12 @@ For quartic positive terms, we need at least 2 total auxiliary qubits on
 \end_inset
 
  graph require 1 fewer auxiliary qubit than the gadgets leading to the 
-\begin_inset Formula $K_{6}-6e$
+\begin_inset Formula $K_{4L,2A}-e_{L_{1}A_{2}}+e_{L_{3}L_{4}}$
 \end_inset
 
  graph for quadratization, the graph needs 2 more auxiliary qubits than
  
-\begin_inset Formula $K_{6}-6e$
+\begin_inset Formula $K_{4L,2A}-e_{L_{1}A_{2}}+e_{L_{3}L_{4}}$
 \end_inset
 
  for embedding onto Chimera, and 1 more auxiliary qubit for embedding onto
@@ -10273,7 +10304,7 @@ For quartic positive terms, we need at least 2 total auxiliary qubits on
 
  may appear at first sight to be more efficient than gadgets leading to
  
-\begin_inset Formula $K_{6}-6e$
+\begin_inset Formula $K_{4L,2A}-e_{L_{1}A_{2}}+e_{L_{3}L_{4}}$
 \end_inset
 
  due to requiring fewer qubits for quadratization, they require more 
